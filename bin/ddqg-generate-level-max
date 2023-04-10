@@ -1,0 +1,59 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use mxr576\ddqg\Infrastructure\UpdateStatusApi\DrupalUpdateStatusApiUsingGuzzleRepository;
+use mxr576\ddqg\Infrastructure\UpdateStatusApi\Guzzle7ClientFactory;
+
+if (file_exists(__DIR__ . '/../vendor/autoload.php')) {
+  require __DIR__ . '/../vendor/autoload.php';
+} elseif (is_file(__DIR__ . '/../../../autoload.php')) {
+  require_once __DIR__ . '/../../../autoload.php';
+}
+else {
+  echo 'Composer autoload file not found.' . PHP_EOL;
+  exit(1);
+}
+
+if (class_exists('\Symfony\Component\Stopwatch\Stopwatch')) {
+  $stopwatch = new Symfony\Component\Stopwatch\Stopwatch();
+  $stopwatch->start('process');
+}
+
+$repo = new DrupalUpdateStatusApiUsingGuzzleRepository(new Guzzle7ClientFactory());
+
+$conflicts = $repo->fetchUnsupportedVersions(...$repo->fetchProjectIds());
+
+$composer = [
+  'name' => "mxr576/ddqg",
+  'description' => 'Ensures that your project does not have installed dependencies with known quality problems.',
+  'type' => 'metapackage',
+  'license' => 'MIT',
+  'conflict' => [],
+  '_comment' => [
+    'level=max'
+  ]
+];
+
+foreach ($conflicts as $package => $constraints) {
+  natsort($constraints);
+  $composer['conflict'][$package] = implode('|', $constraints);
+}
+
+// drupal/core is a subtree split for drupal/drupal and has no own SAs.
+// @see https://github.com/drush-ops/drush/issues/3448
+if (isset($composer['conflict']['drupal/drupal']) && !isset($composer['conflict']['drupal/core'])) {
+  $composer['conflict']['drupal/core'] = $composer['conflict']['drupal/drupal'];
+}
+
+ksort($composer['conflict']);
+file_put_contents(__DIR__ . '/composer.json', json_encode($composer, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE) . "\n");
+
+if (isset($stopwatch)) {
+  $event = $stopwatch->stop('process');
+  echo $event->getDuration() / 1000 . 's' . PHP_EOL;
+  echo $event->getMemory() / 1024 / 1024 . 'MB' . PHP_EOL;
+}
+
+exit(0);
