@@ -1,0 +1,54 @@
+name: Release dev-quality-level-N versions
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "master" ]
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate --strict
+
+    - name: Cache Composer packages
+      id: composer-cache
+      uses: actions/cache@v3
+      with:
+        path: vendor
+        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-php-
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress
+
+    - name: Set up GIT in bin
+      run: |
+        cd bin
+        git init
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git remote add origin https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}
+        git fetch origin
+        git checkout quality-level-max -f
+
+    - name: Run build
+      run: |
+        ./bin/ddqg-generate-level-max
+        composer validate
+
+    - name: Commit changes if there is any
+      run: |
+        cd bin
+        if [[ `git status --porcelain --untracked-files=no` ]]; then
+          git commit -a -m "Updated composer.json"
+          git push -f -u origin quality-level-max
+        fi
