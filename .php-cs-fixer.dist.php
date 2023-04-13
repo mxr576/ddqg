@@ -1,11 +1,25 @@
 <?php
 
+declare(strict_types=1);
+
+use Symfony\Component\Finder\SplFileInfo as FinderSplFileInfo;
+
+$files_in_bin = PhpCsFixer\Finder::create()
+  ->files()
+  // Scan files without PHP extension too.
+  // https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/fb7f3523d563406554a3e739ecc98c25b7943867/src/Finder.php#L29-L33
+  ->name('/.*/')
+  ->in([__DIR__ . '/bin']);
+
+$bin_file_names = array_map(static fn (FinderSplFileInfo $file): string => $file->getFilename(), iterator_to_array($files_in_bin));
+
 $finder = PhpCsFixer\Finder::create()
-    ->files()
-    ->name('*.php')
-    ->in([__DIR__ . '/bin'])
-    ->in([__DIR__ . '/src'])
-    ->notPath('*/vendor/*');
+  ->files()
+  ->ignoreDotFiles(false)
+  ->ignoreVCS(true)
+  ->in([__DIR__])
+  ->name(array_merge(['*.php'], $bin_file_names))
+  ->notPath('*/vendor/*');
 
 $config = new PhpCsFixer\Config();
 $config->setRiskyAllowed(true)
