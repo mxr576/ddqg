@@ -8,6 +8,7 @@ use Composer\InstalledVersions;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\HandlerStack;
+use GuzzleRetry\GuzzleRetryMiddleware;
 use Kevinrob\GuzzleCache\CacheMiddleware;
 use Kevinrob\GuzzleCache\Storage\FlysystemStorage;
 use Kevinrob\GuzzleCache\Strategy\GreedyCacheStrategy;
@@ -24,11 +25,12 @@ final class Guzzle7ClientFactory implements Contract\Guzzle7ClientFactory
     {
         if (null === $this->client) {
             $stack = HandlerStack::create();
+            $stack->push(GuzzleRetryMiddleware::factory());
             $stack->push(
                 new CacheMiddleware(
                     new GreedyCacheStrategy(
                         new FlysystemStorage(
-                            // TODO Move location.
+                            // TODO Make location configurable.
                             new Local(sys_get_temp_dir() . '/mxr576/ddqg/' . InstalledVersions::getPrettyVersion('mxr576/ddqg') . '/cache')
                         ),
                         3600
