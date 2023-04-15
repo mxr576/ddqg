@@ -9,7 +9,7 @@ This project aims to help run Drupal projects on secure and high-quality Drupal 
 known quality problems.
 
 ```shell
-$ composer require mxr576/ddqg:dev-quality-level-1 (2, 3...)
+$ composer require --dev mxr576/ddqg:dev-quality-level-1 (2, 3...)
 ```
 
 * [PLANNED] `quality-level-1`: Project releases (versions) with public security advisories (PSAs)
