@@ -22,11 +22,13 @@
         "guzzlehttp/guzzle": "^7.5",
         "kevinrob/guzzle-cache-middleware": "^4.0",
         "league/flysystem": "^1.1.10",
-        "prewk/xml-string-streamer": "^1.2"
+        "prewk/xml-string-streamer": "^1.2",
+        "psr/log": "^3.0"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.30",
         "friendsofphp/php-cs-fixer": "^3.16",
+        "monolog/monolog": "^3.3",
         "phpstan/phpstan": "^1.10",
         "phpstan/phpstan-deprecation-rules": "^1.0",
         "symfony/stopwatch": "^6.2"
@@ -38,7 +40,7 @@
         }
     },
     "bin": [
-        "bin/ddqg-generate-level-max"
+        "bin/ddqg-generate-no-no-unsupported-versions"
     ],
     "config": {
         "allow-plugins": {

@@ -1,0 +1,36 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use mxr576\ddqg\Infrastructure\ComposerJsonWriter;
+use mxr576\ddqg\Infrastructure\UpdateStatusApi\DrupalUpdateStatusApiUsingGuzzleRepository;
+use mxr576\ddqg\Infrastructure\UpdateStatusApi\Guzzle7ClientFactory;
+
+require_once $_composer_autoload_path ?? __DIR__ . '/../vendor/autoload.php';
+
+if (class_exists('\Symfony\Component\Stopwatch\Stopwatch')) {
+    $stopwatch = new Symfony\Component\Stopwatch\Stopwatch();
+    $stopwatch->start('process');
+}
+$logger = new \Psr\Log\NullLogger();
+if (class_exists('\Monolog\Logger')) {
+    $logger = new Monolog\Logger('mxr576/ddqg', [new Monolog\Handler\StreamHandler(STDERR)]);
+}
+
+$repo = new DrupalUpdateStatusApiUsingGuzzleRepository(new Guzzle7ClientFactory(), $logger);
+
+$conflicts = $repo->fetchInsecureVersionRanges(...$repo->fetchProjectIds());
+
+(new ComposerJsonWriter())(__DIR__ . '/composer.json', [
+  'description' => 'Ensures that your project does not have installed dependencies with insecure versions by maintainer or the Drupal Security team.',
+  'conflict' => $conflicts,
+]);
+
+if (isset($stopwatch)) {
+    $event = $stopwatch->stop('process');
+    echo $event->getDuration() / 1000 . 's' . PHP_EOL;
+    echo $event->getMemory() / 1024 / 1024 . 'MB' . PHP_EOL;
+}
+
+exit(0);

@@ -38,17 +38,29 @@ jobs:
         git config user.email github-actions@github.com
         git remote add origin https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}
         git fetch origin
-        git checkout quality-level-max -f
 
-    - name: Run build
-      run: |
-        ./bin/ddqg-generate-level-max
-        composer validate
-
-    - name: Commit changes if there is any
+    - name: Generate no unsupported versions release
       run: |
         cd bin
+        git checkout no-no-unsupported-versions -f || git checkout -b no-no-unsupported-versions 7c16065
+        ./ddqg-generate-no-no-unsupported-versions
+        composer validate
+        # If this is a newly created branch then composer.json is not being tracked.
+        git add composer.json
         if [[ `git status --porcelain --untracked-files=no` ]]; then
           git commit -a -m "Updated composer.json"
-          git push -f -u origin quality-level-max
+          git push -f -u origin no-no-unsupported-versions
+        fi
+
+    - name: Generate no insecure versions release
+      run: |
+        cd bin
+        git checkout no-no-insecure-versions -f || git checkout -b no-no-insecure-versions 7c16065
+        ./ddqg-generate-no-no-insecure-versions
+        composer validate
+        # If this is a newly created branch then composer.json is not being tracked.
+        git add composer.json
+        if [[ `git status --porcelain --untracked-files=no` ]]; then
+          git commit -a -m "Updated composer.json"
+          git push -f -u origin no-no-insecure-versions
         fi

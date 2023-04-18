@@ -1,6 +1,11 @@
 parameters:
 	ignoreErrors:
 		-
+			message: "#^Method mxr576\\\\ddqg\\\\Infrastructure\\\\ComposerJsonWriter\\:\\:__invoke\\(\\) has parameter \\$composer_data with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Infrastructure/ComposerJsonWriter.php
+
+		-
 			message: "#^Method mxr576\\\\ddqg\\\\Infrastructure\\\\UpdateStatusApi\\\\XmlStreamBridgeForPsrStream\\:\\:getChunk\\(\\) throws checked exception RuntimeException but it's missing from the PHPDoc @throws tag\\.$#"
 			count: 1
 			path: src/Infrastructure/UpdateStatusApi/XmlStreamBridgeForPsrStream.php
