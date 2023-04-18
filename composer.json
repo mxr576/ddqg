@@ -5366,7 +5366,7 @@
         "drupal/fully_translatable_menu_links": "1.x-dev",
         "drupal/function_autoload": "1.x-dev",
         "drupal/function_filter": "1.x-dev|2.0.0|2.x-dev",
-        "drupal/funding": "1.x-dev",
+        "drupal/funding": "1.0.x-dev|1.x-dev",
         "drupal/funnel": "1.x-dev",
         "drupal/funnelback": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-beta1|1.x-dev",
         "drupal/fusepump": "1.0.0-beta1",
