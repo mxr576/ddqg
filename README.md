@@ -3,6 +3,9 @@ Drupal Dependency Quality Gate (DDQG)
 
 This project aims to help run Drupal projects on secure and high-quality Drupal dependencies.
 
+**CHECK OUT** the [mxr576/ddqg-composer-audit](https://packagist.org/packages/mxr576/ddqg-composer-audit) package that
+extends `composer audit` command with advisories originating from the `^dev-no-no-[a-zA-Z]+-versions$` releases.
+
 ## Releases
 
 Releases of this package that matches the `^dev-no-no-[a-zA-Z]+-versions$` regex ensure that your project
@@ -20,11 +23,6 @@ $ composer require --dev mxr576/ddqg:[dev-no-no-insecure-versions|dev-no-unsuppo
   releases (versions) by project maintainers or the Drupal Security team.
   * Inspired by: https://github.com/drupal-composer/drupal-security-advisories/issues/29
 * [PLANNED] An opinionated list of projects that should be avoided
-
-## Planned features
-
-* A `composer validate` plugin to ensure only high-quality dependencies are used on a project
-* A custom Composer command for analyzing locked dependencies on a project
 
 ## TODOs
 

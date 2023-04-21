@@ -28,6 +28,9 @@ final class Guzzle7ClientFactory implements Contract\Guzzle7ClientFactory
             $stack->push(GuzzleRetryMiddleware::factory());
             $stack->push(
                 new CacheMiddleware(
+                    // Greedy strategy is necessary because important Cache-Control
+                    // header values are missing from the response.
+                    // @see https://www.drupal.org/project/infrastructure/issues/3353610
                     new GreedyCacheStrategy(
                         new FlysystemStorage(
                             // TODO Make location configurable.

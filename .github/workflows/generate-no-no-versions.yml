@@ -1,4 +1,4 @@
-name: Release dev-quality-level-N versions
+name: Generate no-no versions
 
 on:
   workflow_dispatch:
