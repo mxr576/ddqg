@@ -125,7 +125,6 @@
         "drupal/webform": ">=6.0.0,<6.0.6|>=6.1.0,<6.1.2",
         "drupal/wingsuit_companion": ">=1.0.0,<1.1.0|>=1.0.0,<1.1.0|>=2.0.0,<2.0.0-beta8|>=2.0.0,<2.0.0-beta8",
         "drupal/workbench_moderation": ">=1.0.0,<1.4.0|>=1.0.0,<1.4.0",
-        "drupal/xmlsitemap": ">=1.0.0,<1.0.0-alpha2|>=1.0.0,<1.0.0-alpha2",
-        "drupal/xray_audit": ">=1.1.0,<1.1.1"
+        "drupal/xmlsitemap": ">=1.0.0,<1.0.0-alpha2|>=1.0.0,<1.0.0-alpha2"
     }
 }
