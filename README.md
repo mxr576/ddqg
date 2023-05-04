@@ -17,12 +17,22 @@ doesn't have installed dependencies with known quality problems.
 $ composer require --dev mxr576/ddqg:[dev-no-no-insecure-versions|dev-no-unsupported-versions]
 ```
 
-* `dev-no-no-insecure-versions`: Project releases (versions) with public security advisories (PSAs)
-  * Pretty much what `drupal-composer/drupal-security-advisories` does today.
-* `dev-no-no-unsupported-versions`: Unsupported projects by maintainers or and unsupported project
-  releases (versions) by project maintainers or the Drupal Security team.
-  * Inspired by: https://github.com/drupal-composer/drupal-security-advisories/issues/29
+* `dev-no-no-insecure-versions`: Project releases (versions) affected by public security advisories (PSAs), only
+  in currently _supported branches_ of a project.
+* `dev-no-no-unsupported-versions`: This was inspired by [this thread](https://github.com/drupal-composer/drupal-security-advisories/issues/29)
+  and it is a list of:
+  * Unsupported (abandoned) projects by maintainers
+  * Unsupported project releases (versions) by maintainers
+  * Project releases that are not [covered by the Drupal Security Team](https://www.drupal.org/node/475848)
 * [PLANNED] An opinionated list of projects that should be avoided
+
+**Should you depend on both `dev-no-no-insecure-versions` and `dev-no-no-unsupported-versions` and at the same time?**
+
+YES, you should. The `dev-no-no-insecure-versions` only contains version ranges affected by a PSA if they are in a
+supported branch by maintainers. When a branch becomes unsupported, related version ranges disappear from this list.
+The reasoning behind this implementation is that if a branch is not supported by maintainers (neither covered Drupal
+Security Team) then your biggest problem is not depending on a version that has known PSA (which may or may not be
+leveraged on your project) but the fact that your project depends on an unsupported version.
 
 ## TODOs
 
