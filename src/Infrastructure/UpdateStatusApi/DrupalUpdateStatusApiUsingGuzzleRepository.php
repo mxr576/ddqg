@@ -275,7 +275,10 @@ final class DrupalUpdateStatusApiUsingGuzzleRepository implements ProjectIdRepos
             }
 
             if (!empty($constraints)) {
-                $conflicts[$composer_namespace] = array_values($constraints);
+                // If multiple constraints contain the same version range
+                // we should only keep one.
+                // @see https://github.com/mxr576/ddqg/issues/3
+                $conflicts[$composer_namespace] = array_unique(array_values($constraints));
             }
         },
         'rejected' => static function (RequestException $reason, $index): void {
