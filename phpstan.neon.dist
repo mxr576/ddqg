@@ -18,8 +18,8 @@ parameters:
     checkedExceptionClasses:
       - 'RuntimeException'
   paths:
-    - bin/ddqg-generate-no-no-insecure-versions
-    - bin/ddqg-generate-no-no-unsupported-versions
+    - bin/ddqg-generate-no-insecure-versions
+    - bin/ddqg-generate-no-unsupported-versions
     - bin/ddqg-generate-non-d10-compatible-versions
     - src
   excludePaths:

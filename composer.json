@@ -41,7 +41,7 @@
         }
     },
     "bin": [
-        "bin/ddqg-generate-no-no-unsupported-versions"
+        "bin/ddqg-generate-no-unsupported-versions"
     ],
     "config": {
         "allow-plugins": {

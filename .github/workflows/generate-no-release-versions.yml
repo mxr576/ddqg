@@ -1,4 +1,4 @@
-name: Generate no-no versions
+name: Generate no release versions
 
 on:
   workflow_dispatch:
@@ -42,27 +42,27 @@ jobs:
     - name: Generate no unsupported versions release
       run: |
         cd bin
-        git checkout no-no-unsupported-versions -f || git checkout -b no-no-unsupported-versions 7c16065
-        ./ddqg-generate-no-no-unsupported-versions
+        git checkout no-unsupported-versions -f || git checkout -b no-unsupported-versions 7c16065
+        ./ddqg-generate-no-unsupported-versions
         composer validate
         # If this is a newly created branch then composer.json is not being tracked.
         git add composer.json
         if [[ `git status --porcelain --untracked-files=no` ]]; then
           git commit -a -m "Updated composer.json"
-          git push -f -u origin no-no-unsupported-versions
+          git push -f -u origin no-unsupported-versions
         fi
 
     - name: Generate no insecure versions release
       run: |
         cd bin
-        git checkout no-no-insecure-versions -f || git checkout -b no-no-insecure-versions 7c16065
-        ./ddqg-generate-no-no-insecure-versions
+        git checkout no-insecure-versions -f || git checkout -b no-insecure-versions 7c16065
+        ./ddqg-generate-no-insecure-versions
         composer validate
         # If this is a newly created branch then composer.json is not being tracked.
         git add composer.json
         if [[ `git status --porcelain --untracked-files=no` ]]; then
           git commit -a -m "Updated composer.json"
-          git push -f -u origin no-no-insecure-versions
+          git push -f -u origin no-insecure-versions
         fi
 
     - name: Generate non-Drupal 10 compatible versions release
