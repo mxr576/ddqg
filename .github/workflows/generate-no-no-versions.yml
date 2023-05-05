@@ -64,3 +64,16 @@ jobs:
           git commit -a -m "Updated composer.json"
           git push -f -u origin no-no-insecure-versions
         fi
+
+    - name: Generate non-Drupal 10 compatible versions release
+      run: |
+        cd bin
+        git checkout non-d10-compatible-versions -f || git checkout -b non-d10-compatible-versions 7c16065
+        ./ddqg-generate-non-d10-compatible-versions
+        composer validate
+        # If this is a newly created branch then composer.json is not being tracked.
+        git add composer.json
+        if [[ `git status --porcelain --untracked-files=no` ]]; then
+          git commit -a -m "Updated composer.json"
+          git push -f -u origin non-d10-compatible-versions
+        fi

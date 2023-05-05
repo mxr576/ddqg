@@ -5,12 +5,15 @@ declare(strict_types=1);
 namespace mxr576\ddqg\Infrastructure\UpdateStatusApi;
 
 use Composer\Semver\Comparator;
+use Composer\Semver\Constraint\Constraint;
+use Composer\Semver\VersionParser;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Pool;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
 use mxr576\ddqg\Domain\InsecureVersionRangesRepository;
+use mxr576\ddqg\Domain\NonDrupal10CompatibleReleasesRepository;
 use mxr576\ddqg\Domain\ProjectIdRepository;
 use mxr576\ddqg\Domain\UnsupportedReleasesRepository;
 use mxr576\ddqg\Infrastructure\UpdateStatusApi\Type\SemVer;
@@ -21,7 +24,11 @@ use Psr\Log\LoggerInterface;
 /**
  * @internal
  */
-final class DrupalUpdateStatusApiUsingGuzzleRepository implements ProjectIdRepository, UnsupportedReleasesRepository, InsecureVersionRangesRepository
+final class DrupalUpdateStatusApiUsingGuzzleRepository implements
+    ProjectIdRepository,
+    UnsupportedReleasesRepository,
+    InsecureVersionRangesRepository,
+    NonDrupal10CompatibleReleasesRepository
 {
     private ClientInterface $client;
 
@@ -279,6 +286,131 @@ final class DrupalUpdateStatusApiUsingGuzzleRepository implements ProjectIdRepos
                 // we should only keep one.
                 // @see https://github.com/mxr576/ddqg/issues/3
                 $conflicts[$composer_namespace] = array_unique(array_values($constraints));
+            }
+        },
+        'rejected' => static function (RequestException $reason, $index): void {
+            throw new \RuntimeException(sprintf('Failed to fetch project information for "%s". Reason: "%s".', $index, $reason->getMessage()), $reason->getCode(), $reason);
+        },
+      ]);
+
+      $promise = $pool->promise();
+      $promise->wait();
+
+      return $conflicts;
+  }
+
+  public function fetchNonDrupal10CompatibleVersions(string ...$project_ids): array
+  {
+      $client = $this->client;
+      $version_parser = new VersionParser();
+      $provider = new Constraint('>=', $version_parser->normalize('10.0.0'));
+
+      // Drupal (core) should not be on the list.
+      $drupal_array_index = array_search('drupal', $project_ids, true);
+      if (false !== $drupal_array_index) {
+          unset($project_ids[$drupal_array_index]);
+      }
+
+      $requests = static function (string ...$project_ids) {
+          foreach ($project_ids as $project_id) {
+              yield $project_id => new Request('GET', $project_id . '/current');
+          }
+      };
+
+      $conflicts = [];
+
+      $pool = new Pool($client, $requests(...$project_ids), [
+        'concurrency' => 10,
+        'fulfilled' => function (Response $response, $index) use (&$conflicts, $version_parser, $provider) {
+            $project_as_simple_xml = simplexml_load_string($response->getBody()->getContents());
+            assert(!is_bool($project_as_simple_xml));
+            $all_unsupported_versions = [];
+
+            // No project release.
+            if (!empty($project_as_simple_xml->xpath('/error'))) {
+                // TODO Consider logging this as it should not happen at this point.
+                return $response;
+            }
+
+            // Skip distributions because they cannot be installed with Composer.
+            if ('project_distribution' === (string) $project_as_simple_xml->type) {
+                return $response;
+            }
+
+            $composer_namespace = $project_as_simple_xml->xpath('/project/composer_namespace/text()');
+            if (empty($composer_namespace)) {
+                $composer_namespace = 'drupal/' . (string) $project_as_simple_xml->short_name;
+            } else {
+                $composer_namespace = (string) $composer_namespace[0];
+            }
+
+            // @todo Find a better workaround for packages with invalid name,
+            //   like _config, or dummy__common that cannot be installed with
+            //   Composer anyway.
+            if (false == preg_match('#^[a-z0-9]([_.-]?[a-z0-9]+)*/[a-z0-9](([_.]?|-{0,2})[a-z0-9]+)*$#', $composer_namespace)) {
+                return $response;
+            }
+
+            $releases = $project_as_simple_xml->xpath('//release');
+            if (!empty($releases)) {
+                foreach ($releases as $release) {
+                    if ($release->core_compatibility) {
+                        $core_version_constraint_string = (string) $release->core_compatibility;
+                    } elseif (str_contains((string) $release->version, '.x-')) {
+                        [$core_version_constraint_string] = explode('-', (string) $release->version, 2);
+                    } else {
+                        $this->logger->warning('Core version requirement could not be identified for "{project}:{version}".', [
+                          'project' => (string) $project_as_simple_xml->short_name,
+                          'version' => (string) $release->version,
+                        ]);
+                        continue;
+                    }
+                    try {
+                        $parsed_constraints = $version_parser->parseConstraints($core_version_constraint_string);
+                    } catch (\Exception) {
+                        $this->logger->warning('Unable to parse "{core_compatibility_string}" core version compatibility string of {project}:{version}.', [
+                          'core_compatibility_string' => $core_version_constraint_string,
+                          'project' => (string) $project_as_simple_xml->short_name,
+                          'version' => (string) $release->version,
+                        ]);
+                        continue;
+                    }
+                    if (!$parsed_constraints->matches($provider)) {
+                        $all_unsupported_versions[] = (string) $release->version;
+                    }
+                }
+            }
+
+            $logger = $this->logger;
+            $all_unsupported_version_constraints = array_reduce($all_unsupported_versions, static function (array $carry, string $version) use ($index, $logger) {
+                // 10.x-dev, 9.x-dev...
+                if (preg_match('/^[1-9]\d*\.x-dev$/', $version)) {
+                    $carry[] = $version;
+
+                    return $carry;
+                }
+
+                // 2.0.x-dev, 8.x-1.x-dev...
+                $matches = [];
+                if (preg_match('/^(?P<core_compat>0|[1-9]\d*\.x-)?(?P<dev_branch_tag>(?:0|[1-9]\d*)\.(?:x|(?:(?:0|[1-9]\d*)\.x))-dev)$/', $version, $matches)) {
+                    $carry[] = $matches['dev_branch_tag'];
+                } else {
+                    $semver = SemVer::tryFromPackageVersionString($version);
+                    if (null === $semver) {
+                        // There are invalid semver releases on Drupal.org like:
+                        //  * aes:2.0-unstable1
+                        //  * https://www.drupal.org/project/amazon/releases/8.x-1.0-unstable3
+                        $logger->warning(sprintf('Unable to parse version of "%s" with "%s".', $index, $version));
+                    } else {
+                        $carry[] = $semver->asString;
+                    }
+                }
+
+                return $carry;
+            }, []);
+
+            if (!empty($all_unsupported_version_constraints)) {
+                $conflicts[$composer_namespace] = $all_unsupported_version_constraints;
             }
         },
         'rejected' => static function (RequestException $reason, $index): void {

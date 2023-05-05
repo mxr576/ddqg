@@ -20,10 +20,10 @@ if (class_exists('\Monolog\Logger')) {
 
 $repo = new DrupalUpdateStatusApiUsingGuzzleRepository(new Guzzle7ClientFactory(), $logger);
 
-$conflicts = $repo->fetchInsecureVersionRanges(...$repo->fetchProjectIds());
+$conflicts = $repo->fetchNonDrupal10CompatibleVersions(...$repo->fetchProjectIds());
 
 (new ComposerJsonWriter())(__DIR__ . '/composer.json', [
-  'description' => 'Ensures that versions affected by PSAs or just marked as insecure by maintainers or Drupal Security team cannot be installed.',
+  'description' => 'Ensures that new dependencies without an available Drupal 10 compatible version cannot be installed on a project that still running on < Drupal 10.',
   'conflict' => $conflicts,
 ]);
 
