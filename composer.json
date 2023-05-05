@@ -1,6 +1,6 @@
 {
     "name": "mxr576/ddqg",
-    "description": "Ensures that your project does not have installed dependencies with insecure versions by maintainer or the Drupal Security team.",
+    "description": "Ensures that versions affected by PSAs or just marked as insecure by maintainers or Drupal Security team cannot be installed.",
     "type": "metapackage",
     "license": "MIT",
     "conflict": {
