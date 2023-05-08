@@ -52,19 +52,6 @@ jobs:
           git push -f -u origin no-unsupported-versions
         fi
 
-    - name: Generate no insecure versions release
-      run: |
-        cd bin
-        git checkout no-insecure-versions -f || git checkout -b no-insecure-versions 7c16065
-        ./ddqg-generate-no-insecure-versions
-        composer validate
-        # If this is a newly created branch then composer.json is not being tracked.
-        git add composer.json
-        if [[ `git status --porcelain --untracked-files=no` ]]; then
-          git commit -a -m "Updated composer.json"
-          git push -f -u origin no-insecure-versions
-        fi
-
     - name: Generate non-Drupal 10 compatible versions release
       run: |
         cd bin
@@ -76,4 +63,17 @@ jobs:
         if [[ `git status --porcelain --untracked-files=no` ]]; then
           git commit -a -m "Updated composer.json"
           git push -f -u origin non-d10-compatible-versions
+        fi
+
+    - name: Generate no insecure versions release
+      run: |
+        cd bin
+        git checkout no-insecure-versions -f || git checkout -b no-insecure-versions 7c16065
+        ./ddqg-generate-no-insecure-versions
+        composer validate
+        # If this is a newly created branch then composer.json is not being tracked.
+        git add composer.json
+        if [[ `git status --porcelain --untracked-files=no` ]]; then
+          git commit -a -m "Updated composer.json"
+          git push -f -u origin no-insecure-versions
         fi
