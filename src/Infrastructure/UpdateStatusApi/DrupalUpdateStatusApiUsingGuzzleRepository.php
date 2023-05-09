@@ -359,8 +359,16 @@ final class DrupalUpdateStatusApiUsingGuzzleRepository implements
                     } elseif (str_contains((string) $release->version, '.x-')) {
                         [$core_version_constraint_string] = explode('-', (string) $release->version, 2);
                     } else {
-                        $this->logger->warning('Core version requirement could not be identified for "{project}:{version}".', [
+                        // The majority of this should be noise caused by weird
+                        // things done my maintainers... like a tagged 1.0.0
+                        // with a README only, etc.
+                        // It looks like the core compatibility information is
+                        // also missing from project_drupalorg and
+                        // project_general type of packages by design.
+                        // @see https://www.drupal.org/project/drupalorg/issues/3358784
+                        $this->logger->warning('Core version requirement could not be identified for "{project}:{version}" with "{type}" type.', [
                           'project' => (string) $project_as_simple_xml->short_name,
+                          'type' => (string) $project_as_simple_xml->type,
                           'version' => (string) $release->version,
                         ]);
                         continue;
