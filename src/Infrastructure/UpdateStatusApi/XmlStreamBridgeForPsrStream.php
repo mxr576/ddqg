@@ -27,9 +27,6 @@ final class XmlStreamBridgeForPsrStream implements StreamInterface
         $this->chunkSize = $chunkSize;
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function getChunk(): string|bool
     {
         if (!$this->stream->eof()) {
@@ -42,17 +39,11 @@ final class XmlStreamBridgeForPsrStream implements StreamInterface
         return false;
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function isSeekable(): bool
     {
         return $this->stream->isSeekable();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function rewind(): void
     {
         if (false === $this->isSeekable()) {

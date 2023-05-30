@@ -36,9 +36,6 @@ final class DrupalOrgApiRepository implements AbandonedProjectsRepository
         $this->client = $clientFactory->getClient();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     public function fetchAllAbandonedProjectIds(): array
     {
         return array_merge(
