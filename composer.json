@@ -7957,7 +7957,6 @@
         "drupal/openmeetings": "1.x-dev",
         "drupal/openmeetings4": "1.x-dev",
         "drupal/openportal_core": "1.x-dev",
-        "drupal/openquestions": "1.0.x-dev",
         "drupal/openseadragon": "1.0.0|1.x-dev",
         "drupal/opensearchtab": "1.0.0|1.0.0-alpha1|1.0.0-alpha2|1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.0.0-rc1|1.0.0-rc2|1.0.0-rc3|1.0.0-rc4|1.0.0-rc5|1.1.0",
         "drupal/openstack-openstack": "1.x-dev",
