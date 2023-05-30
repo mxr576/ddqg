@@ -4,8 +4,9 @@
 declare(strict_types=1);
 
 use mxr576\ddqg\Infrastructure\ComposerJsonWriter;
+use mxr576\ddqg\Infrastructure\DrupalOrgApi\DrupalOrgApiRepository;
+use mxr576\ddqg\Infrastructure\UpdateStatusApi\DrupalUpdateStatusApiClientFactory;
 use mxr576\ddqg\Infrastructure\UpdateStatusApi\DrupalUpdateStatusApiUsingGuzzleRepository;
-use mxr576\ddqg\Infrastructure\UpdateStatusApi\Guzzle7ClientFactory;
 
 require_once $_composer_autoload_path ?? __DIR__ . '/../vendor/autoload.php';
 
@@ -18,13 +19,26 @@ if (class_exists('\Monolog\Logger')) {
     $logger = new Monolog\Logger('mxr576/ddqg', [new Monolog\Handler\StreamHandler(STDERR)], [new \Monolog\Processor\PsrLogMessageProcessor()]);
 }
 
-$repo = new DrupalUpdateStatusApiUsingGuzzleRepository(new Guzzle7ClientFactory(), $logger);
+$dapi_repo = new DrupalOrgApiRepository(new \mxr576\ddqg\Infrastructure\DrupalOrgApi\DrupalOrgApiClientFactory());
+$update_status_repo = new DrupalUpdateStatusApiUsingGuzzleRepository(new DrupalUpdateStatusApiClientFactory(), $logger);
 
-$conflicts = $repo->fetchUnsupportedVersions(...$repo->fetchProjectIds());
+$all_project_ids = $update_status_repo->fetchProjectIds();
+$unsupported_project_releases = $update_status_repo->fetchUnsupportedVersions(...$all_project_ids);
+$abandoned_project_constraints = array_reduce($dapi_repo->fetchAllAbandonedProjectIds(), static function (array $carry, string $project_name): array {
+    $carry['drupal/' . $project_name] = ['*'];
+
+    return $carry;
+}, []);
+// Ideally, the list of abandoned projects should be a pre-filtering condition for the unsupported project releases
+// query because we should not care about those project releases that belong to an abandoned project. However, the
+// abandoned projects query returns other kinds of projects - only D5-D7 compatible ones, projects without releases,
+// etc. - that we equally do not care about either; therefore, we only keep those abandoned projects that had D8+
+// releases and adjust their conflicting constraints accordingly.
+$abandoned_project_constraints_for_projects_with_releases = array_intersect_key($abandoned_project_constraints, $unsupported_project_releases);
 
 (new ComposerJsonWriter())(__DIR__ . '/composer.json', [
   'description' => 'Ensures that your project does not have installed dependencies with unsupported versions by maintainer or the Drupal Security team.',
-  'conflict' => $conflicts,
+  'conflict' => array_merge($unsupported_project_releases, $abandoned_project_constraints_for_projects_with_releases),
 ]);
 
 if (isset($stopwatch)) {

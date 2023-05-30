@@ -32,12 +32,9 @@ final class DrupalUpdateStatusApiUsingGuzzleRepository implements
 {
     private ClientInterface $client;
 
-    private LoggerInterface $logger;
-
-    public function __construct(Contract\Guzzle7ClientFactory $clientFactory, LoggerInterface $logger)
+    public function __construct(\mxr576\ddqg\Infrastructure\HttpClient\Guzzle7ClientFactory $clientFactory, private readonly LoggerInterface $logger)
     {
         $this->client = $clientFactory->getClient();
-        $this->logger = $logger;
     }
 
       public function fetchProjectIds(): array

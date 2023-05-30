@@ -21,7 +21,7 @@ $ composer require --dev mxr576/ddqg:[dev-no-insecure-versions|dev-no-unsupporte
   in currently _supported branches_ of a project.
 * `dev-no-unsupported-versions`: This was inspired by [this thread](https://github.com/drupal-composer/drupal-security-advisories/issues/29)
   and it is a list of:
-  * Unsupported (abandoned) projects by maintainers
+  * [Unsupported or obsolete](https://www.drupal.org/node/1066982) projects by maintainers
   * Unsupported project releases (versions) by maintainers
   * Project releases that are not [covered by the Drupal Security Team](https://www.drupal.org/node/475848)
 * `dev-non-d10-compatible-versions`: For Drupal 9 projects only, prevents installation of package versions that are not

@@ -4,8 +4,8 @@
 declare(strict_types=1);
 
 use mxr576\ddqg\Infrastructure\ComposerJsonWriter;
+use mxr576\ddqg\Infrastructure\UpdateStatusApi\DrupalUpdateStatusApiClientFactory;
 use mxr576\ddqg\Infrastructure\UpdateStatusApi\DrupalUpdateStatusApiUsingGuzzleRepository;
-use mxr576\ddqg\Infrastructure\UpdateStatusApi\Guzzle7ClientFactory;
 
 require_once $_composer_autoload_path ?? __DIR__ . '/../vendor/autoload.php';
 
@@ -18,7 +18,7 @@ if (class_exists('\Monolog\Logger')) {
     $logger = new Monolog\Logger('mxr576/ddqg', [new Monolog\Handler\StreamHandler(STDERR)], [new \Monolog\Processor\PsrLogMessageProcessor()]);
 }
 
-$repo = new DrupalUpdateStatusApiUsingGuzzleRepository(new Guzzle7ClientFactory(), $logger);
+$repo = new DrupalUpdateStatusApiUsingGuzzleRepository(new DrupalUpdateStatusApiClientFactory(), $logger);
 
 $conflicts = $repo->fetchInsecureVersionRanges(...$repo->fetchProjectIds());
 

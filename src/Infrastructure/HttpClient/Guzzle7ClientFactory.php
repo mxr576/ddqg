@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace mxr576\ddqg\Infrastructure\UpdateStatusApi\Contract;
+namespace mxr576\ddqg\Infrastructure\HttpClient;
 
 use GuzzleHttp\ClientInterface;
 
