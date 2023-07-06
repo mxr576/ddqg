@@ -16,6 +16,7 @@ use mxr576\ddqg\Domain\InsecureVersionRangesRepository;
 use mxr576\ddqg\Domain\NonDrupal10CompatibleReleasesRepository;
 use mxr576\ddqg\Domain\ProjectIdRepository;
 use mxr576\ddqg\Domain\UnsupportedReleasesRepository;
+use mxr576\ddqg\Infrastructure\HttpClient\Guzzle7ClientFactory;
 use mxr576\ddqg\Infrastructure\UpdateStatusApi\Type\SemVer;
 use Prewk\XmlStringStreamer;
 use Prewk\XmlStringStreamer\Parser\UniqueNode;
@@ -32,7 +33,7 @@ final class DrupalUpdateStatusApiUsingGuzzleRepository implements
 {
     private ClientInterface $client;
 
-    public function __construct(\mxr576\ddqg\Infrastructure\HttpClient\Guzzle7ClientFactory $clientFactory, private readonly LoggerInterface $logger)
+    public function __construct(Guzzle7ClientFactory $clientFactory, private readonly LoggerInterface $logger)
     {
         $this->client = $clientFactory->getClient();
     }
