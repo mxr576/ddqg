@@ -8,75 +8,99 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  build:
-
+  unsupported:
     runs-on: ubuntu-latest
-
     permissions:
       contents: write
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Validate composer.json and composer.lock
-      run: composer validate --strict
+      - name: Cache Composer packages
+        id: composer-cache
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-php-
 
-    - name: Cache Composer packages
-      id: composer-cache
-      uses: actions/cache@v3
-      with:
-        path: vendor
-        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-php-
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
 
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-progress
+      - name: Set up GIT in bin
+        run: |
+          cd bin
+          git init
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git remote add origin https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}
+          git fetch origin
 
-    - name: Set up GIT in bin
-      run: |
-        cd bin
-        git init
-        git config user.name github-actions
-        git config user.email github-actions@github.com
-        git remote add origin https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}
-        git fetch origin
+      - name: Generate no unsupported versions release
+        run: |
+          cd bin
+          git checkout no-unsupported-versions -f || git checkout -b no-unsupported-versions 7c16065
+          ./ddqg-generate-no-unsupported-versions
+          composer validate
+          # If this is a newly created branch then composer.json is not being tracked.
+          git add composer.json
+          if [[ `git status --porcelain --untracked-files=no` ]]; then
+            git commit -a -m "Updated composer.json"
+            git push -f -u origin no-unsupported-versions
+          fi
 
-    - name: Generate no unsupported versions release
-      run: |
-        cd bin
-        git checkout no-unsupported-versions -f || git checkout -b no-unsupported-versions 7c16065
-        ./ddqg-generate-no-unsupported-versions
-        composer validate
-        # If this is a newly created branch then composer.json is not being tracked.
-        git add composer.json
-        if [[ `git status --porcelain --untracked-files=no` ]]; then
-          git commit -a -m "Updated composer.json"
-          git push -f -u origin no-unsupported-versions
-        fi
+  insecure-and-non-d10-compatible:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
-    - name: Generate non-Drupal 10 compatible versions release
-      run: |
-        cd bin
-        git checkout non-d10-compatible-versions -f || git checkout -b non-d10-compatible-versions 7c16065
-        ./ddqg-generate-non-d10-compatible-versions
-        composer validate
-        # If this is a newly created branch then composer.json is not being tracked.
-        git add composer.json
-        if [[ `git status --porcelain --untracked-files=no` ]]; then
-          git commit -a -m "Updated composer.json"
-          git push -f -u origin non-d10-compatible-versions
-        fi
+    steps:
+      - uses: actions/checkout@v3
 
-    - name: Generate no insecure versions release
-      run: |
-        cd bin
-        git checkout no-insecure-versions -f || git checkout -b no-insecure-versions 7c16065
-        ./ddqg-generate-no-insecure-versions
-        composer validate
-        # If this is a newly created branch then composer.json is not being tracked.
-        git add composer.json
-        if [[ `git status --porcelain --untracked-files=no` ]]; then
-          git commit -a -m "Updated composer.json"
-          git push -f -u origin no-insecure-versions
-        fi
+      - name: Cache Composer packages
+        id: composer-cache
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-php-
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
+
+      - name: Set up GIT in bin
+        run: |
+          cd bin
+          git init
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git remote add origin https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}
+          git fetch origin
+
+      - name: Generate non-Drupal 10 compatible versions release
+        run: |
+          cd bin
+          git checkout non-d10-compatible-versions -f || git checkout -b non-d10-compatible-versions 7c16065
+          ./ddqg-generate-non-d10-compatible-versions
+          composer validate
+          # If this is a newly created branch then composer.json is not being tracked.
+          git add composer.json
+          if [[ `git status --porcelain --untracked-files=no` ]]; then
+            git commit -a -m "Updated composer.json"
+            git push -f -u origin non-d10-compatible-versions
+          fi
+
+      - name: Generate no insecure versions release
+        run: |
+          cd bin
+          git checkout no-insecure-versions -f || git checkout -b no-insecure-versions 7c16065
+          ./ddqg-generate-no-insecure-versions
+          composer validate
+          # If this is a newly created branch then composer.json is not being tracked.
+          git add composer.json
+          if [[ `git status --porcelain --untracked-files=no` ]]; then
+            git commit -a -m "Updated composer.json"
+            git push -f -u origin no-insecure-versions
+          fi
