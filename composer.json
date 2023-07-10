@@ -2,7 +2,7 @@
     "name": "mxr576/ddqg",
     "description": "Drupal Dependency Quality Gate - aims to helps with running Drupal projects on secure and high quality Drupal dependencies",
     "license": "MIT",
-    "type": "library",
+    "type": "project",
     "keywords": [
         "Drupal",
         "QA",
