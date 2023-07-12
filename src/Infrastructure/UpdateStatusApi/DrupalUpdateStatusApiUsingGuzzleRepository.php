@@ -55,7 +55,8 @@ final class DrupalUpdateStatusApiUsingGuzzleRepository implements
               $node_as_simplexml = @simplexml_load_string($node);
               assert(!is_bool($node_as_simplexml));
 
-              $id = $node_as_simplexml->xpath("//project[link[not(contains(text(), 'sandbox'))] and project_status = 'published']/short_name/text()");
+              // Only these type of projects can be installed from D.o packagist via Composer as dependencies.
+              $id = $node_as_simplexml->xpath("//project[project_status = 'published' and (type = 'project_module' or type = 'project_theme' or type = 'project_core' or type = 'project_general') and link[not(contains(text(), 'sandbox'))]]/short_name/text()");
               if ([] === $id) {
                   continue;
               }

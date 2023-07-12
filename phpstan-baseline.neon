@@ -6,6 +6,11 @@ parameters:
 			path: src/Infrastructure/ComposerJsonWriter.php
 
 		-
+			message: "#^Cannot access offset 0 on non\\-empty\\-array\\<SimpleXMLElement\\>\\|false\\|null\\.$#"
+			count: 1
+			path: src/Infrastructure/UpdateStatusApi/DrupalUpdateStatusApiUsingGuzzleRepository.php
+
+		-
 			message: "#^Method mxr576\\\\ddqg\\\\Infrastructure\\\\UpdateStatusApi\\\\XmlStreamBridgeForPsrStream\\:\\:getChunk\\(\\) throws checked exception RuntimeException but it's missing from the PHPDoc @throws tag\\.$#"
 			count: 1
 			path: src/Infrastructure/UpdateStatusApi/XmlStreamBridgeForPsrStream.php
