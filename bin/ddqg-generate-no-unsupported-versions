@@ -23,7 +23,7 @@ if (class_exists('\Monolog\Logger')) {
 $dapi_repo = new DrupalOrgApiRepository(new DrupalOrgApiClientFactory());
 $update_status_repo = new DrupalUpdateStatusApiUsingGuzzleRepository(new DrupalUpdateStatusApiClientFactory(), $logger);
 
-$all_project_ids = $update_status_repo->fetchProjectIds();
+$all_project_ids = $dapi_repo->fetchProjectIds();
 $unsupported_project_releases = $update_status_repo->fetchUnsupportedVersions(...$all_project_ids);
 $abandoned_project_constraints = array_reduce($dapi_repo->fetchAllAbandonedProjectIds(), static function (array $carry, string $project_name): array {
     $carry['drupal/' . $project_name] = ['*'];

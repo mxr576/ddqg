@@ -8,7 +8,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  unsupported:
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -56,42 +56,6 @@ jobs:
             git commit -a -m "Updated composer.json"
             git push -f -u origin no-unsupported-versions
           fi
-
-  insecure-and-non-d10-compatible:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: "Install PHP"
-        uses: "shivammathur/setup-php@2.25.1"
-        with:
-          coverage: "none"
-          php-version: "8.2"
-          ini-values: memory_limit=-1
-
-      - name: Cache Composer packages
-        id: composer-cache
-        uses: actions/cache@v3
-        with:
-          path: vendor
-          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-php-
-
-      - name: Install dependencies
-        run: composer install --prefer-dist --no-progress
-
-      - name: Set up GIT in bin
-        run: |
-          cd bin
-          git init
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git remote add origin https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}
-          git fetch origin
 
       - name: Generate non-Drupal 10 compatible versions release
         run: |

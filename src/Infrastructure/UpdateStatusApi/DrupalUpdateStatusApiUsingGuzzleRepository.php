@@ -108,7 +108,6 @@ final class DrupalUpdateStatusApiUsingGuzzleRepository implements
                 $all_unsupported_versions = array_map(static fn (\SimpleXMLElement $e): string => (string) $e, $project_as_simple_xml->xpath('//releases/release/version'));
             } else {
                 $supported_branches = explode(',', (string) $project_as_simple_xml->xpath('/project/supported_branches/text()')[0]);
-                // //release[not(starts-with(version, "5.2.")) and not(starts-with(version, "6.0."))]
                 $supported_release_xpath_as_array = array_map(static function (string $branch): string {
                     return sprintf('starts-with(version, "%s")', $branch);
                 }, $supported_branches);

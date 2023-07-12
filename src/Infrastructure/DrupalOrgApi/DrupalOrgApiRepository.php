@@ -15,11 +15,13 @@ use JsonMachine\Items;
 use JsonMachine\JsonDecoder\ExtJsonDecoder;
 use loophp\collection\Collection;
 use mxr576\ddqg\Domain\AbandonedProjectsRepository;
+use mxr576\ddqg\Domain\ProjectIdRepository;
+use mxr576\ddqg\Infrastructure\HttpClient\Guzzle7ClientFactory;
 
 /**
  * @internal
  */
-final class DrupalOrgApiRepository implements AbandonedProjectsRepository
+final class DrupalOrgApiRepository implements AbandonedProjectsRepository, ProjectIdRepository
 {
     private const VOCAB_ID_DEVELOPMENT_STATUS = 46;
 
@@ -31,7 +33,7 @@ final class DrupalOrgApiRepository implements AbandonedProjectsRepository
 
     private readonly ClientInterface $client;
 
-    public function __construct(\mxr576\ddqg\Infrastructure\HttpClient\Guzzle7ClientFactory $clientFactory)
+    public function __construct(Guzzle7ClientFactory $clientFactory)
     {
         $this->client = $clientFactory->getClient();
     }
@@ -56,19 +58,33 @@ final class DrupalOrgApiRepository implements AbandonedProjectsRepository
         );
     }
 
-    /**
-     * @phpstan-param array{filter_by_term: object{"vocab_id":int,"term_id": int}, "page": 0|positive-int} $filter
-     *
-     * @throws \JsonMachine\Exception\InvalidArgumentException
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     *
-     * @return string[]
-     */
+  public function fetchProjectIds(): array
+  {
+      return $this->fetchProjectNames([
+        'page' => 0,
+      ]);
+  }
+
+  /**
+   * @phpstan-param array{filter_by_term?: object{"vocab_id":int,"term_id": int}, "page": 0|positive-int} $filter
+   *
+   * @throws \JsonMachine\Exception\InvalidArgumentException
+   * @throws \GuzzleHttp\Exception\GuzzleException
+   *
+   * @return string[]
+   */
     private function fetchProjectNames(array $filter): array
     {
         $url_builder = static function (array $filter): string {
-            /* @var array{filter_by_term: object{"vocab_id":int,"term_id": int}, "page": 0|positive-int} $filter */
-            return "node.json?taxonomy_vocabulary_{$filter['filter_by_term']->vocab_id}={$filter['filter_by_term']->term_id}&type%5B%5D=project_module&type%5B%5D=project_theme&field_project_type=full&sort=changed&direction=DESC&page={$filter['page']}";
+            /* @var array{filter_by_term?: object{"vocab_id":int,"term_id": int}, "page": 0|positive-int} $filter */
+            // Hot take... maybe sorting result by last change date (changed) leads to data loss? Some project names
+            // were missing from previous results when we compared the output by this API and the Update Status API.
+            $output = "node.json?type%5B%5D=project_module&type%5B%5D=project_theme&type%5B%5D=project_core&type%5B%5D=project_general&field_project_has_releases=1&field_project_type=full&sort=field_project_machine_name&direction=DESC&page={$filter['page']}";
+            if (array_key_exists('filter_by_term', $filter)) {
+                $output .= "&taxonomy_vocabulary_{$filter['filter_by_term']->vocab_id}={$filter['filter_by_term']->term_id}";
+            }
+
+            return $output;
         };
 
         $page_count = 0;
