@@ -16,6 +16,7 @@ use JsonMachine\JsonDecoder\ExtJsonDecoder;
 use loophp\collection\Collection;
 use mxr576\ddqg\Domain\AbandonedProjectsRepository;
 use mxr576\ddqg\Domain\ProjectIdRepository;
+use mxr576\ddqg\Infrastructure\Enum\ProjectTypesExposedViaDrupalPackagist;
 use mxr576\ddqg\Infrastructure\HttpClient\Guzzle7ClientFactory;
 
 /**
@@ -58,31 +59,40 @@ final class DrupalOrgApiRepository implements AbandonedProjectsRepository, Proje
         );
     }
 
-  public function fetchProjectIds(): array
-  {
-      return $this->fetchProjectNames([
-        'page' => 0,
-      ]);
-  }
+    public function fetchProjectIds(): array
+    {
+        return $this->fetchProjectNames([
+          'page' => 0,
+        ]);
+    }
 
-  /**
-   * @phpstan-param array{filter_by_term?: object{"vocab_id":int,"term_id": int}, "page": 0|positive-int} $filter
-   *
-   * @throws \JsonMachine\Exception\InvalidArgumentException
-   * @throws \GuzzleHttp\Exception\GuzzleException
-   *
-   * @return string[]
-   */
+    /**
+     * @phpstan-param array{types?: array<value-of<ProjectTypesExposedViaDrupalPackagist>>,filter_by_term?: object{"vocab_id":int,"term_id": int}, "page": 0|positive-int} $filter
+     *
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \JsonMachine\Exception\InvalidArgumentException
+     *
+     * @return string[]
+     */
     private function fetchProjectNames(array $filter): array
     {
         $url_builder = static function (array $filter): string {
+            $output = 'node.json?';
             /* @var array{filter_by_term?: object{"vocab_id":int,"term_id": int}, "page": 0|positive-int} $filter */
             // Hot take... maybe sorting result by last change date (changed) leads to data loss? Some project names
             // were missing from previous results when we compared the output by this API and the Update Status API.
-            $output = "node.json?type%5B%5D=project_module&type%5B%5D=project_theme&type%5B%5D=project_core&type%5B%5D=project_general&field_project_has_releases=1&field_project_type=full&sort=field_project_machine_name&direction=DESC&page={$filter['page']}";
+            $query = [
+              'type' => $filter['type'] ?? array_column(ProjectTypesExposedViaDrupalPackagist::cases(), 'value'),
+              'field_project_has_releases' => 1,
+              'field_project_type' => 'full',
+              'sort' => 'field_project_machine_name',
+              'page' => $filter['page'],
+            ];
             if (array_key_exists('filter_by_term', $filter)) {
-                $output .= "&taxonomy_vocabulary_{$filter['filter_by_term']->vocab_id}={$filter['filter_by_term']->term_id}";
+                $query['taxonomy_vocabulary_' . $filter['filter_by_term']->vocab_id] = $filter['filter_by_term']->term_id;
             }
+
+            $output .= http_build_query($query);
 
             return $output;
         };

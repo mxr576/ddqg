@@ -16,6 +16,7 @@ use mxr576\ddqg\Domain\InsecureVersionRangesRepository;
 use mxr576\ddqg\Domain\NonDrupal10CompatibleReleasesRepository;
 use mxr576\ddqg\Domain\ProjectIdRepository;
 use mxr576\ddqg\Domain\UnsupportedReleasesRepository;
+use mxr576\ddqg\Infrastructure\Enum\ProjectTypesExposedViaDrupalPackagist;
 use mxr576\ddqg\Infrastructure\HttpClient\Guzzle7ClientFactory;
 use mxr576\ddqg\Infrastructure\UpdateStatusApi\Type\SemVer;
 use Prewk\XmlStringStreamer;
@@ -56,7 +57,8 @@ final class DrupalUpdateStatusApiUsingGuzzleRepository implements
               assert(!is_bool($node_as_simplexml));
 
               // Only these type of projects can be installed from D.o packagist via Composer as dependencies.
-              $id = $node_as_simplexml->xpath("//project[project_status = 'published' and (type = 'project_module' or type = 'project_theme' or type = 'project_core' or type = 'project_general') and link[not(contains(text(), 'sandbox'))]]/short_name/text()");
+              $type_condition = implode(' or ', array_map(static fn (string $type): string => "type = '{$type}'", array_column(ProjectTypesExposedViaDrupalPackagist::cases(), 'value')));
+              $id = $node_as_simplexml->xpath("//project[project_status = 'published' and ($type_condition) and link[not(contains(text(), 'sandbox'))]]/short_name/text()");
               if ([] === $id) {
                   continue;
               }
