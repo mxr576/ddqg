@@ -114,7 +114,6 @@
         "drupal/simple_amp": ">=1.0.0,<1.16.0",
         "drupal/smtp": ">=1.0.0,<1.0.0-beta3",
         "drupal/socialbase": ">=2.4.0,<2.4.3",
-        "drupal/spamspan": ">=1.0.0,<1.1.0",
         "drupal/subgroup": ">=1.0.0,<1.0.1",
         "drupal/svg_formatter": ">=1.0.0,<1.17.0|>=2.0.0,<2.0.1",
         "drupal/svg_image": ">=1.0.0,<1.10.0",
