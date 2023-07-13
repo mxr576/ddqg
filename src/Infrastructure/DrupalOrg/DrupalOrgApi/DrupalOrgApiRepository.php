@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace mxr576\ddqg\Infrastructure\DrupalOrgApi;
+namespace mxr576\ddqg\Infrastructure\DrupalOrg\DrupalOrgApi;
 
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
@@ -16,8 +16,8 @@ use JsonMachine\JsonDecoder\ExtJsonDecoder;
 use loophp\collection\Collection;
 use mxr576\ddqg\Domain\AbandonedProjectsRepository;
 use mxr576\ddqg\Domain\ProjectIdRepository;
-use mxr576\ddqg\Infrastructure\Enum\ProjectTypesExposedViaDrupalPackagist;
-use mxr576\ddqg\Infrastructure\HttpClient\Guzzle7ClientFactory;
+use mxr576\ddqg\Infrastructure\DrupalOrg\Enum\ProjectTypesExposedViaDrupalPackagist;
+use mxr576\ddqg\Supportive\Guzzle\Guzzle7ClientFactory;
 
 /**
  * @internal

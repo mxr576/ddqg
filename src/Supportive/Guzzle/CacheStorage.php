@@ -11,7 +11,7 @@ use League\Flysystem\Adapter\Local;
 
 /**
  * symfony/cache:6.3.1 was tried out as an alternative, but it caused and endless loop
- * in \mxr576\ddqg\Infrastructure\UpdateStatusApi\DrupalUpdateStatusApiUsingGuzzleRepository::fetchProjectIds().
+ * in \mxr576\ddqg\Infrastructure\DrupalOrg\UpdateStatusApi\DrupalUpdateStatusApiUsingGuzzleRepository::fetchProjectIds().
  * Somehow non-sandbox project ids that would have matched the filtering criteria were never returned
  * when cache was warmed up.
  *

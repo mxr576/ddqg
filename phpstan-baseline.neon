@@ -8,9 +8,9 @@ parameters:
 		-
 			message: "#^Cannot access offset 0 on non\\-empty\\-array\\<SimpleXMLElement\\>\\|false\\|null\\.$#"
 			count: 1
-			path: src/Infrastructure/UpdateStatusApi/DrupalUpdateStatusApiUsingGuzzleRepository.php
+			path: src/Infrastructure/DrupalOrg/UpdateStatusApi/DrupalUpdateStatusApiUsingGuzzleRepository.php
 
 		-
-			message: "#^Method mxr576\\\\ddqg\\\\Infrastructure\\\\UpdateStatusApi\\\\XmlStreamBridgeForPsrStream\\:\\:getChunk\\(\\) throws checked exception RuntimeException but it's missing from the PHPDoc @throws tag\\.$#"
+			message: "#^Method mxr576\\\\ddqg\\\\Infrastructure\\\\DrupalOrg\\\\UpdateStatusApi\\\\XmlStreamBridgeForPsrStream\\:\\:getChunk\\(\\) throws checked exception RuntimeException but it's missing from the PHPDoc @throws tag\\.$#"
 			count: 1
-			path: src/Infrastructure/UpdateStatusApi/XmlStreamBridgeForPsrStream.php
+			path: src/Infrastructure/DrupalOrg/UpdateStatusApi/XmlStreamBridgeForPsrStream.php

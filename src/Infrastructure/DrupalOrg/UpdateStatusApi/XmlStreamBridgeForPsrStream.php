@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace mxr576\ddqg\Infrastructure\UpdateStatusApi;
+namespace mxr576\ddqg\Infrastructure\DrupalOrg\UpdateStatusApi;
 
 use Prewk\XmlStringStreamer\StreamInterface;
 use Psr\Http\Message\StreamInterface as PsrStreamInterface;

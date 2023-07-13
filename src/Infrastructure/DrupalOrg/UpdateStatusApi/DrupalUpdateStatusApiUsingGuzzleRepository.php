@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace mxr576\ddqg\Infrastructure\UpdateStatusApi;
+namespace mxr576\ddqg\Infrastructure\DrupalOrg\UpdateStatusApi;
 
 use Composer\Semver\Comparator;
 use Composer\Semver\Constraint\Constraint;
@@ -16,9 +16,9 @@ use mxr576\ddqg\Domain\InsecureVersionRangesRepository;
 use mxr576\ddqg\Domain\NonDrupal10CompatibleReleasesRepository;
 use mxr576\ddqg\Domain\ProjectIdRepository;
 use mxr576\ddqg\Domain\UnsupportedReleasesRepository;
-use mxr576\ddqg\Infrastructure\Enum\ProjectTypesExposedViaDrupalPackagist;
-use mxr576\ddqg\Infrastructure\HttpClient\Guzzle7ClientFactory;
-use mxr576\ddqg\Infrastructure\UpdateStatusApi\Type\SemVer;
+use mxr576\ddqg\Infrastructure\DrupalOrg\Enum\ProjectTypesExposedViaDrupalPackagist;
+use mxr576\ddqg\Infrastructure\DrupalOrg\UpdateStatusApi\Type\SemVer;
+use mxr576\ddqg\Supportive\Guzzle\Guzzle7ClientFactory;
 use Prewk\XmlStringStreamer;
 use Prewk\XmlStringStreamer\Parser\UniqueNode;
 use Psr\Log\LoggerInterface;

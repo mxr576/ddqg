@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace mxr576\ddqg\Infrastructure\UpdateStatusApi\Type;
+namespace mxr576\ddqg\Infrastructure\DrupalOrg\UpdateStatusApi\Type;
 
 /**
  * Semver according to Composer/Drupal Packagist.

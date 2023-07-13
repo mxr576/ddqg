@@ -4,10 +4,10 @@
 declare(strict_types=1);
 
 use mxr576\ddqg\Infrastructure\ComposerJsonWriter;
-use mxr576\ddqg\Infrastructure\DrupalOrgApi\DrupalOrgApiClientFactory;
-use mxr576\ddqg\Infrastructure\DrupalOrgApi\DrupalOrgApiRepository;
-use mxr576\ddqg\Infrastructure\UpdateStatusApi\DrupalUpdateStatusApiClientFactory;
-use mxr576\ddqg\Infrastructure\UpdateStatusApi\DrupalUpdateStatusApiUsingGuzzleRepository;
+use mxr576\ddqg\Infrastructure\DrupalOrg\DrupalOrgApi\DrupalOrgApiClientFactory;
+use mxr576\ddqg\Infrastructure\DrupalOrg\DrupalOrgApi\DrupalOrgApiRepository;
+use mxr576\ddqg\Infrastructure\DrupalOrg\UpdateStatusApi\DrupalUpdateStatusApiClientFactory;
+use mxr576\ddqg\Infrastructure\DrupalOrg\UpdateStatusApi\DrupalUpdateStatusApiUsingGuzzleRepository;
 
 require_once $_composer_autoload_path ?? __DIR__ . '/../vendor/autoload.php';
 

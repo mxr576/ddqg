@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace mxr576\ddqg\Infrastructure\DrupalOrgApi;
+namespace mxr576\ddqg\Infrastructure\DrupalOrg\DrupalOrgApi;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -10,8 +10,8 @@ use GuzzleHttp\HandlerStack;
 use GuzzleRetry\GuzzleRetryMiddleware;
 use Kevinrob\GuzzleCache\CacheMiddleware;
 use Kevinrob\GuzzleCache\Strategy\PublicCacheStrategy;
-use mxr576\ddqg\Infrastructure\HttpClient\Guzzle7ClientFactory;
 use mxr576\ddqg\Supportive\Guzzle\CacheStorage;
+use mxr576\ddqg\Supportive\Guzzle\Guzzle7ClientFactory;
 
 /**
  * @internal
