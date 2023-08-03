@@ -72,6 +72,7 @@
         "drupal/mail_login": ">=2.0.0,<2.5.0",
         "drupal/mailchimp": ">=2.2.0,<2.2.2",
         "drupal/mapbox_ui": ">=1.0.0,<1.2.0",
+        "drupal/matomo": ">=1.0.0,<1.22.0",
         "drupal/media_library_block": ">=1.0.0,<1.0.4",
         "drupal/media_library_form_element": ">=2.0.0,<2.0.6",
         "drupal/media_responsive_thumbnail": ">=1.0.0,<1.5.0",
