@@ -12453,7 +12453,7 @@
         "drupal/yamaps": "1.0.0|1.1.0|1.x-dev",
         "drupal/yaml2php": "1.0.0|1.1.0|1.2.0|1.x-dev",
         "drupal/yaml_content": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-alpha6|1.0.0-alpha7|1.0.0-alpha8|2.x-dev",
-        "drupal/yaml_editor": "1.0.0|1.1.0|1.x-dev",
+        "drupal/yaml_editor": "1.0.0|1.1.0",
         "drupal/yaml_sandbox": "1.x-dev",
         "drupal/yaml_translation_import": "1.0.0|1.0.0-alpha1|1.0.0-beta1|1.1.0",
         "drupal/yamlblock": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-beta1|1.x-dev",
