@@ -3481,7 +3481,7 @@
         "drupal/drush_sql_sync_pipe": "2.0.0|2.0.0-beta1|2.x-dev",
         "drupal/drush_task": "1.x-dev",
         "drupal/drush_taxonomyinfo": "1.x-dev",
-        "drupal/drush_tools": "1.0.0|1.0.1|1.0.2|1.0.3|1.0.4|1.0.x-dev",
+        "drupal/drush_tools": "1.0.0|1.0.1|1.0.2|1.0.3|1.0.4|1.0.5|1.0.x-dev",
         "drupal/drush_typeinfo": "1.x-dev",
         "drupal/drush_useful": "1.0.0-alpha1|1.x-dev",
         "drupal/drusys_landing_page_builder": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-beta1|1.0.x-dev",
