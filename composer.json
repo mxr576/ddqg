@@ -10,7 +10,6 @@
         "drupal/auto_login_url": ">=1.0.0,<1.2.0",
         "drupal/bat": ">=1.0.0,<1.2.0",
         "drupal/better_social_sharing_buttons": ">=4.0.0,<4.0.3",
-        "drupal/block_content_revision_ui": ">=2.127.0,<2.127.2",
         "drupal/bootstrap": ">=3.0.0,<3.5.0|>=3.0.0,<3.14.0",
         "drupal/business_responsive_theme": ">=2.0.0,<2.0.3",
         "drupal/civicccookiecontrol": ">=4.4.0,<4.4.13",
