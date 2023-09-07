@@ -61,6 +61,7 @@
         "drupal/group_forum": ">=2.0.0,<2.0.2",
         "drupal/gutenberg": ">=1.0.0,<1.12.0|>=2.0.0,<2.7.0",
         "drupal/h5p": ">=2.0.0,<2.0.0-alpha3",
+        "drupal/highlight_php": ">=1.0.0,<1.0.1",
         "drupal/htmlmail": ">=3.0.0,<3.0.0-alpha2",
         "drupal/image_field_caption": ">=1.0.0,<1.2.0",
         "drupal/img_annotator": ">=1.0.0,<1.2.0",
@@ -142,6 +143,7 @@
         "drupal/viewsreference": ">=2.0.0,<2.0.0-beta2",
         "drupal/vppr": ">=1.0.0,<1.2.0",
         "drupal/webform": ">=6.0.0,<6.0.6|>=6.1.0,<6.1.2",
+        "drupal/webprofiler": "10.0.0|>=10.1.0,<10.1.1",
         "drupal/wingsuit_companion": ">=1.0.0,<1.1.0|>=2.0.0,<2.0.0-beta8",
         "drupal/workbench_moderation": ">=1.0.0,<1.4.0",
         "drupal/xmlsitemap": ">=1.0.0,<1.0.0-alpha2"
