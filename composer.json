@@ -20,6 +20,7 @@
         "drupal/config_terms": ">=1.0.0,<1.6.0",
         "drupal/config_update": ">=1.0.0,<1.5.0",
         "drupal/consent_popup": ">=1.0.0,<1.0.3",
+        "drupal/content_moderation_notifications": ">=3.0.0,<3.6.0",
         "drupal/core": ">=9.5.0,<9.5.11|>=10.0.0,<10.0.11|>=10.1.0,<10.1.4",
         "drupal/cshs": ">=3.0.0,<3.5.0",
         "drupal/ctools": ">=3.0.0,<3.7.0",
