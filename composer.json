@@ -8,7 +8,6 @@
         "drupal/acquia_contenthub": ">=1.0.0,<1.4.0",
         "drupal/addtoany": ">=1.0.0,<1.21.0|>=2.0.0,<2.0.4",
         "drupal/auto_login_url": ">=1.0.0,<1.2.0",
-        "drupal/bat": ">=1.0.0,<1.2.0",
         "drupal/better_social_sharing_buttons": ">=4.0.0,<4.0.3",
         "drupal/bootstrap": ">=3.0.0,<3.5.0|>=3.0.0,<3.14.0",
         "drupal/business_responsive_theme": ">=2.0.0,<2.0.3",
