@@ -73,7 +73,7 @@
         "drupal/linkit": ">=5.0.0,<5.0.0-beta13|>=6.0.0,<6.0.0-beta3",
         "drupal/linky_revision_ui": ">=2.127.0,<2.127.2",
         "drupal/loft_data_grids": ">=1.0.0,<1.4.0",
-        "drupal/mail_login": ">=2.0.0,<2.8.0",
+        "drupal/mail_login": ">=2.0.0,<2.9.0",
         "drupal/mailchimp": ">=2.2.0,<2.2.2",
         "drupal/mapbox_ui": ">=1.0.0,<1.2.0",
         "drupal/matomo": ">=1.0.0,<1.22.0",
