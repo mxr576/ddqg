@@ -23,7 +23,6 @@
         "drupal/core": ">=9.5.0,<9.5.11|>=10.0.0,<10.0.11|>=10.1.0,<10.1.4",
         "drupal/cshs": ">=3.0.0,<3.5.0",
         "drupal/ctools": ">=3.0.0,<3.7.0",
-        "drupal/custom_breadcrumbs": ">=1.0.0,<1.0.1",
         "drupal/datafield": ">=1.0.0,<1.0.16",
         "drupal/dfp": ">=1.0.0,<1.2.0",
         "drupal/die_in_twig": "2.0.0",
