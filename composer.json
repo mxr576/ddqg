@@ -54,7 +54,7 @@
         "drupal/gdpr_alert": ">=1.0.0,<1.0.1",
         "drupal/google_index_api": ">=1.0.0,<1.3.0",
         "drupal/govuk_theme": ">=1.0.0,<1.9.0",
-        "drupal/graphql": ">=4.0.0,<4.2.0",
+        "drupal/graphql": ">=3.0.0,<3.4.0|>=4.0.0,<4.6.0",
         "drupal/gridstack": ">=2.0.0,<2.11.0",
         "drupal/group": ">=1.0.0,<1.2.0",
         "drupal/group_forum": ">=2.0.0,<2.0.2",
