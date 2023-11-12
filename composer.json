@@ -10427,7 +10427,7 @@
         "drupal/styles_api": "1.0.0|1.1.0",
         "drupal/stylescomboplus": "1.0.0",
         "drupal/stylestripper": "1.x-dev",
-        "drupal/styleswitcher": "2.0.0|2.0.0-alpha1|2.0.0-alpha2|2.0.0-beta1|2.1.0|2.x-dev",
+        "drupal/styleswitcher": "2.0.0|2.0.0-alpha1|2.0.0-alpha2|2.0.0-beta1|2.1.0",
         "drupal/subdirectory": "1.0.x-dev",
         "drupal/subentity": "1.0.0|1.0.0-rc1|1.1.0|1.2.0|1.x-dev",
         "drupal/subgroup": "1.0.0|1.0.0-rc1|1.0.1|1.0.2",
