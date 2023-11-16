@@ -85,6 +85,7 @@
         "drupal/minifyhtml": ">=1.0.0,<1.13.0|>=2.0.0,<2.0.3",
         "drupal/miniorange_saml": ">=2.0.0,<2.24.0",
         "drupal/modal_form": ">=1.0.0,<1.2.0",
+        "drupal/mollie": ">=2.2.0,<2.2.1",
         "drupal/node_view_permissions": ">=1.0.0,<1.1.0",
         "drupal/nodeaccess": ">=1.0.0,<1.0.0-beta3",
         "drupal/nodejs": "1.0.0",
