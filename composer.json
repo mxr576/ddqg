@@ -30,6 +30,7 @@
         "drupal/drd_agent": ">=3.0.0,<3.7.0",
         "drupal/drupal": ">=10.0.0,<10.0.11|>=10.1.0,<10.1.4",
         "drupal/ds": "3.0.0",
+        "drupal/dvf": ">=2.0.0,<2.0.2",
         "drupal/dynamic_banner": ">=1.0.0,<1.0.0-beta1",
         "drupal/dynamic_entity_reference": ">=1.0.0,<1.0.0-beta2",
         "drupal/echo": ">=1.0.0,<1.7.0",
