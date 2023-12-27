@@ -2557,7 +2557,6 @@
         "drupal/content_browser": "1.0.0|1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4",
         "drupal/content_callback": "1.0.0|1.1.0|2.0.x-dev",
         "drupal/content_check": "1.x-dev|2.0.0-rc1|2.x-dev",
-        "drupal/content_close": "1.x-dev",
         "drupal/content_connected": "1.0.0|1.1.0|1.x-dev|2.0.x-dev",
         "drupal/content_csv_export_import": "1.0.1|1.0.1-beta1|1.0.1-beta2|1.0.x-dev",
         "drupal/content_deploy": "1.0.1|1.0.x-dev",
