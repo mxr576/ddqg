@@ -19,10 +19,12 @@ $ composer require --dev mxr576/ddqg:[dev-no-insecure-versions|dev-no-unsupporte
 
 * `dev-no-insecure-versions`: Project releases (versions) affected by public security advisories (PSAs), only
   in currently _supported branches_ of a project.
+* `dev-no-deprecated-versions`:
+  * Projects flagged with [Obsolete](https://www.drupal.org/node/1066982) development status by maintainers
 * `dev-no-unsupported-versions`: This was inspired by [this thread](https://github.com/drupal-composer/drupal-security-advisories/issues/29)
   and it is a list of:
-  * [Unsupported or obsolete](https://www.drupal.org/node/1066982) projects by maintainers
-  * Unsupported project releases (versions) by maintainers
+  * Projects flagged with [Unsupported](https://www.drupal.org/node/1066982) maintenance status by maintainers
+  * Project releases (versions) from [unsupported branches](https://www.drupal.org/node/2212549)
   * Project releases that are not [covered by the Drupal Security Team](https://www.drupal.org/node/475848)
 * `dev-non-d10-compatible-versions`: For Drupal 9 projects only, prevents installation of package versions that are not
   Drupal 10 compatible. It can make the Drupal 10 upgrade more painless.

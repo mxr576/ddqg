@@ -1,0 +1,52 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use mxr576\ddqg\Infrastructure\ComposerJsonWriter;
+use mxr576\ddqg\Infrastructure\DrupalOrg\DrupalOrgApi\DrupalOrgApiClientFactory;
+use mxr576\ddqg\Infrastructure\DrupalOrg\DrupalOrgApi\DrupalOrgApiRepository;
+use mxr576\ddqg\Infrastructure\DrupalOrg\UpdateStatusApi\DrupalUpdateStatusApiClientFactory;
+use mxr576\ddqg\Infrastructure\DrupalOrg\UpdateStatusApi\DrupalUpdateStatusApiUsingGuzzleRepository;
+
+require_once $_composer_autoload_path ?? __DIR__ . '/../vendor/autoload.php';
+
+if (class_exists('\Symfony\Component\Stopwatch\Stopwatch')) {
+    $stopwatch = new Symfony\Component\Stopwatch\Stopwatch();
+    $stopwatch->start('process');
+}
+$logger = new \Psr\Log\NullLogger();
+if (class_exists('\Monolog\Logger')) {
+    $logger = new Monolog\Logger('mxr576/ddqg', [new Monolog\Handler\StreamHandler(STDERR)], [new \Monolog\Processor\PsrLogMessageProcessor()]);
+}
+
+$dapi_repo = new DrupalOrgApiRepository(new DrupalOrgApiClientFactory());
+$update_status_repo = new DrupalUpdateStatusApiUsingGuzzleRepository(new DrupalUpdateStatusApiClientFactory(), $logger);
+
+$all_project_ids = $dapi_repo->fetchProjectIds();
+$deprecated_project_constraints = array_reduce($dapi_repo->fetchAllDeprecatedProjectIds(), static function (array $carry, string $project_name): array {
+    // @todo Find a better approach for filtering out projects with invalid package names.
+    //   conflict.drupal/dummy__common is invalid, it should have a vendor name, a forward slash,
+    //   and a package name. The vendor and package name can be words
+    //   separated by -, . or _. The complete name should match "^[a-z0-9]([_.-]?[a-z0-9]+)*/[a-z0-9](([_.]?|-{0,2})[a-z0-9]+)*$".
+    if ('dummy__common' === $project_name) {
+        return $carry;
+    }
+
+    $carry['drupal/' . $project_name] = ['*'];
+
+    return $carry;
+}, []);
+
+(new ComposerJsonWriter())(__DIR__ . '/composer.json', [
+  'description' => 'Ensures that your project does not have deprecated dependency versions installed.',
+  'conflict' => array_merge($deprecated_project_constraints),
+]);
+
+if (isset($stopwatch)) {
+    $event = $stopwatch->stop('process');
+    echo $event->getDuration() / 1000 . 's' . PHP_EOL;
+    echo $event->getMemory() / 1024 / 1024 . 'MB' . PHP_EOL;
+}
+
+exit(0);

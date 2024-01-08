@@ -15,6 +15,7 @@ use JsonMachine\Items;
 use JsonMachine\JsonDecoder\ExtJsonDecoder;
 use loophp\collection\Collection;
 use mxr576\ddqg\Domain\AbandonedProjectsRepository;
+use mxr576\ddqg\Domain\DeprecatedProjectsRepository;
 use mxr576\ddqg\Domain\ProjectIdRepository;
 use mxr576\ddqg\Infrastructure\DrupalOrg\Enum\ProjectTypesExposedViaDrupalPackagist;
 use mxr576\ddqg\Supportive\Guzzle\Guzzle7ClientFactory;
@@ -22,7 +23,7 @@ use mxr576\ddqg\Supportive\Guzzle\Guzzle7ClientFactory;
 /**
  * @internal
  */
-final class DrupalOrgApiRepository implements AbandonedProjectsRepository, ProjectIdRepository
+final class DrupalOrgApiRepository implements AbandonedProjectsRepository, DeprecatedProjectsRepository, ProjectIdRepository
 {
     private const VOCAB_ID_DEVELOPMENT_STATUS = 46;
 
@@ -51,6 +52,19 @@ final class DrupalOrgApiRepository implements AbandonedProjectsRepository, Proje
             ]),
         );
     }
+
+  public function fetchAllDeprecatedProjectIds(): array
+  {
+      return array_merge(
+          $this->fetchProjectNames([
+            'filter_by_term' => (object) [
+              'vocab_id' => self::VOCAB_ID_DEVELOPMENT_STATUS,
+              'term_id' => self::TERM_ID_DEVELOPMENT_STATUS_OBSOLETE,
+            ],
+            'page' => 0,
+          ]),
+      );
+  }
 
     public function fetchProjectIds(): array
     {
