@@ -44,13 +44,6 @@ final class DrupalOrgApiRepository implements AbandonedProjectsRepository, Proje
         return array_merge(
             $this->fetchProjectNames([
               'filter_by_term' => (object) [
-                'vocab_id' => self::VOCAB_ID_DEVELOPMENT_STATUS,
-                'term_id' => self::TERM_ID_DEVELOPMENT_STATUS_OBSOLETE,
-              ],
-              'page' => 0,
-            ]),
-            $this->fetchProjectNames([
-              'filter_by_term' => (object) [
                 'vocab_id' => self::VOCAB_ID_MAINTENANCE_STATUS,
                 'term_id' => self::TERM_ID_MAINTENANCE_STATUS_UNSUPPORTED,
               ],
