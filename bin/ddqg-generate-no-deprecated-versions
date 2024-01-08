@@ -15,9 +15,9 @@ if (class_exists('\Symfony\Component\Stopwatch\Stopwatch')) {
     $stopwatch = new Symfony\Component\Stopwatch\Stopwatch();
     $stopwatch->start('process');
 }
-$logger = new \Psr\Log\NullLogger();
+$logger = new Psr\Log\NullLogger();
 if (class_exists('\Monolog\Logger')) {
-    $logger = new Monolog\Logger('mxr576/ddqg', [new Monolog\Handler\StreamHandler(STDERR)], [new \Monolog\Processor\PsrLogMessageProcessor()]);
+    $logger = new Monolog\Logger('mxr576/ddqg', [new Monolog\Handler\StreamHandler(STDERR)], [new Monolog\Processor\PsrLogMessageProcessor()]);
 }
 
 $dapi_repo = new DrupalOrgApiRepository(new DrupalOrgApiClientFactory());

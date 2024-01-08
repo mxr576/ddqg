@@ -53,18 +53,18 @@ final class DrupalOrgApiRepository implements AbandonedProjectsRepository, Depre
         );
     }
 
-  public function fetchAllDeprecatedProjectIds(): array
-  {
-      return array_merge(
-          $this->fetchProjectNames([
-            'filter_by_term' => (object) [
-              'vocab_id' => self::VOCAB_ID_DEVELOPMENT_STATUS,
-              'term_id' => self::TERM_ID_DEVELOPMENT_STATUS_OBSOLETE,
-            ],
-            'page' => 0,
-          ]),
-      );
-  }
+    public function fetchAllDeprecatedProjectIds(): array
+    {
+        return array_merge(
+            $this->fetchProjectNames([
+              'filter_by_term' => (object) [
+                'vocab_id' => self::VOCAB_ID_DEVELOPMENT_STATUS,
+                'term_id' => self::TERM_ID_DEVELOPMENT_STATUS_OBSOLETE,
+              ],
+              'page' => 0,
+            ]),
+        );
+    }
 
     public function fetchProjectIds(): array
     {
