@@ -2081,6 +2081,7 @@
         "drupal/search_api_string_sanitization": "*",
         "drupal/search_attachments": "*",
         "drupal/search_block": "*",
+        "drupal/search_form_history": "*",
         "drupal/search_rss": "*",
         "drupal/search_type": "*",
         "drupal/sections": "*",
