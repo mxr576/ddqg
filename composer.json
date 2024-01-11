@@ -2368,6 +2368,7 @@
         "drupal/tipsy_tooltips": "*",
         "drupal/title_rewrite": "*",
         "drupal/titon": "*",
+        "drupal/tlds": "*",
         "drupal/tlh": "*",
         "drupal/todo": "*",
         "drupal/token_language": "*",
