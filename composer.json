@@ -9,6 +9,7 @@
         "drupal/auto_login_url": ">=1.0.0,<1.2.0",
         "drupal/better_social_sharing_buttons": ">=4.0.0,<4.0.3",
         "drupal/bootstrap": ">=3.0.0,<3.5.0|>=3.0.0,<3.14.0",
+        "drupal/business_responsive_theme": ">=2.0.0,<2.0.3",
         "drupal/commerce": ">=2.0.0,<2.27.0",
         "drupal/commerce_elavon": ">=2.0.0,<2.3.0",
         "drupal/config_pages": ">=2.0.0,<2.9.0",
