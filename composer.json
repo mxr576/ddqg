@@ -1776,6 +1776,7 @@
         "drupal/openscholar_vsite": "*",
         "drupal/opensocial": "*",
         "drupal/openstory": "*",
+        "drupal/opentracker": "*",
         "drupal/openy_addthis": "*",
         "drupal/opera_sd": "*",
         "drupal/opigno_module_app": "*",
