@@ -1873,6 +1873,7 @@
         "drupal/piwik_api": "*",
         "drupal/piwik_reporting_api": "*",
         "drupal/piwik_reports": "*",
+        "drupal/piwik_rules": "*",
         "drupal/pki_authentication": "*",
         "drupal/plaingrail": "*",
         "drupal/platform": "*",
