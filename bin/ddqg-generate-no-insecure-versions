@@ -26,7 +26,7 @@ $dapi_repo = new DrupalOrgApiRepository(new DrupalOrgApiClientFactory());
 $conflicts = $update_status_repo->fetchInsecureVersionRanges(...$dapi_repo->fetchProjectIds());
 
 (new ComposerJsonWriter())(__DIR__ . '/composer.json', [
-  'description' => 'Ensures that versions affected by PSAs or just marked as insecure by maintainers or Drupal Security team cannot be installed.',
+  'description' => 'Ensures that versions affected by security advisories or just marked as insecure by maintainers or Drupal Security team cannot be installed.',
   'conflict' => $conflicts,
 ]);
 

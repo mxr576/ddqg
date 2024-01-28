@@ -444,6 +444,6 @@ final class DrupalUpdateStatusApiUsingGuzzleRepository implements
             return $highest_boundary->asString;
         }
 
-        return ">=$constraint_lowest_boundary,<$highest_boundary->asString";
+        return ">=$constraint_lowest_boundary, <$highest_boundary->asString";
     }
 }
