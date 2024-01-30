@@ -2483,6 +2483,7 @@
         "drupal/unicorn": "*",
         "drupal/unique": "*",
         "drupal/units_ui_show_factors": "*",
+        "drupal/untranslated_paragraph_warning": "*",
         "drupal/upcfield": "*",
         "drupal/upcload": "*",
         "drupal/upcomingorg": "*",
