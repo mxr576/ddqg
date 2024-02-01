@@ -78,7 +78,6 @@
         "drupal/ahah_forms": "*",
         "drupal/ahah_helper": "*",
         "drupal/ai_interpolator_ollama": "*",
-        "drupal/ai_interpolator_scenex": "*",
         "drupal/aimodels": "*",
         "drupal/airplane_reservation": "*",
         "drupal/ajax_content": "*",
