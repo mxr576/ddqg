@@ -1456,7 +1456,7 @@
         "drupal/civic_job_posting": "1.0.1|1.0.2|1.0.3",
         "drupal/civicactions_empowered": "1.x-dev",
         "drupal/civicccookiecontrol": "3.5.0-rc1|3.6.0-rc1|3.7.0-rc1|4.2.0-rc1|4.3.0-rc1|4.3.1-rc1|4.3.2-rc1|4.3.3-rc1|4.4.0|4.4.1|4.4.2|4.4.4|4.4.5|4.4.6|4.4.7|4.4.8|4.4.9|4.4.10|4.4.11|4.4.12|4.4.13",
-        "drupal/civicrm_afform_block": "1.0.0|1.0.1|1.0.x-dev",
+        "drupal/civicrm_afform_block": "1.0.0|1.0.1",
         "drupal/civicrm_contact_distance_search": "1.0.0-beta1",
         "drupal/civicrm_contact_form": "1.x-dev",
         "drupal/civicrm_cron": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.x-dev",
