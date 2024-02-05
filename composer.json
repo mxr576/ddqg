@@ -36,7 +36,6 @@
         "drupal/exif": ">=2.0.0, <2.3.0",
         "drupal/expandable_formatter": ">=1.0.0, <1.4.0",
         "drupal/fancy_file_delete": ">=2.0.0, <2.0.7",
-        "drupal/file_extractor": ">=3.0.0, <3.0.1|>=4.0.0, <4.0.1",
         "drupal/filefield_paths": ">=1.0.0, <1.0.0-beta6",
         "drupal/fontawesome": ">=2.0.0, <2.12.0",
         "drupal/forms_steps": ">=1.0.0, <1.2.0",
