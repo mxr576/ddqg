@@ -63,6 +63,7 @@
         "drupal/menu_export": ">=1.0.0, <1.2.0",
         "drupal/menu_item_extras": ">=2.0.0, <2.5.0",
         "drupal/metatag": ">=1.0.0, <1.9.0",
+        "drupal/migrate_tools": ">=6.0.0, <6.0.3",
         "drupal/minifyhtml": ">=2.0.0, <2.0.3",
         "drupal/mollie": ">=2.2.0, <2.2.1",
         "drupal/node_view_permissions": ">=1.0.0, <1.1.0",
