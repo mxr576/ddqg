@@ -1126,6 +1126,7 @@
         "drupal/fruity": "*",
         "drupal/fully_translatable_menu_links": "*",
         "drupal/function_autoload": "*",
+        "drupal/functional_content": "*",
         "drupal/fusemobile": "*",
         "drupal/fusion_commons_starterkit": "*",
         "drupal/g2sandbox": "*",
