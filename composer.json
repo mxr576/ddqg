@@ -455,6 +455,7 @@
         "drupal/commerce_exchanger_hnb": "*",
         "drupal/commerce_file_bundle": "*",
         "drupal/commerce_fix_orders": "*",
+        "drupal/commerce_guest_registration": "*",
         "drupal/commerce_instamozo": "*",
         "drupal/commerce_ipay88": "*",
         "drupal/commerce_kickstart_novalnet": "*",
