@@ -2001,6 +2001,7 @@
         "drupal/referral_links": "*",
         "drupal/reflek": "*",
         "drupal/refresco": "*",
+        "drupal/regex_reg_deny": "*",
         "drupal/region": "*",
         "drupal/region_assign": "*",
         "drupal/region_conf": "*",
