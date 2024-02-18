@@ -2332,7 +2332,7 @@
         "drupal/communities": "1.x-dev",
         "drupal/community_builder": "1.0.0-alpha1|1.0.x-dev|8.x-dev",
         "drupal/community_funded": "1.x-dev",
-        "drupal/community_tasks": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-beta1|1.0.0-beta2|1.x-dev|2.0.0-beta1|2.0.x-dev",
+        "drupal/community_tasks": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-beta1|1.0.0-beta2|1.x-dev|2.0.0-beta1",
         "drupal/compare_role_permissions": "1.0.0|1.10.0|1.20.0|1.x-dev|2.0.x-dev",
         "drupal/comparison_builder": "1.0.0|1.x-dev",
         "drupal/compatible": "1.x-dev",
