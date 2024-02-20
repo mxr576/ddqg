@@ -1668,6 +1668,7 @@
         "drupal/na_theme": "*",
         "drupal/naggregator": "*",
         "drupal/namespice": "*",
+        "drupal/native_lazy_loading": "*",
         "drupal/naver": "*",
         "drupal/navin": "*",
         "drupal/nc": "*",
