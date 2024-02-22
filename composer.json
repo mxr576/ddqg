@@ -67,6 +67,7 @@
         "drupal/migrate_tools": ">=6.0.0, <6.0.3",
         "drupal/minifyhtml": ">=2.0.0, <2.0.3",
         "drupal/mollie": ">=2.2.0, <2.2.1",
+        "drupal/node_access_rebuild_progressive": ">=2.0.0, <2.0.2",
         "drupal/node_view_permissions": ">=1.0.0, <1.1.0",
         "drupal/nodejs": "1.0.0",
         "drupal/oauth": ">=2.0.0, <2.1.0",
