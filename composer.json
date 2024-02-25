@@ -1968,7 +1968,7 @@
         "drupal/commerce_export": "1.0.0-alpha1|1.x-dev",
         "drupal/commerce_ext": "1.0.1",
         "drupal/commerce_extra_items": "1.0.0|1.1.0|1.2.0|1.x-dev",
-        "drupal/commerce_fedex": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.x-dev",
+        "drupal/commerce_fedex": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-beta1|1.0.0-beta2|1.0.0-beta3",
         "drupal/commerce_fee": "1.0.x-dev",
         "drupal/commerce_feeds": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3",
         "drupal/commerce_feefo": "1.0.1|1.0.2",
