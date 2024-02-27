@@ -278,6 +278,7 @@
         "drupal/browserid": "*",
         "drupal/bs_shortcodes": "*",
         "drupal/bulk_user_registeration": "*",
+        "drupal/bunnycdn": "*",
         "drupal/business_we": "*",
         "drupal/buzzworthy": "*",
         "drupal/bynder_orbit": "*",
