@@ -120,6 +120,7 @@
         "drupal/app_manifest": "*",
         "drupal/appear2mee": "*",
         "drupal/applique": "*",
+        "drupal/apstyle_augment": "*",
         "drupal/arc_rdf_store": "*",
         "drupal/arctica": "*",
         "drupal/argue_proscons": "*",
