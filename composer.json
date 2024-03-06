@@ -889,6 +889,7 @@
         "drupal/emailpanels": "*",
         "drupal/embargo": "*",
         "drupal/embed_widgets": "*",
+        "drupal/ember": "*",
         "drupal/employment_field": "*",
         "drupal/empty_tags": "*",
         "drupal/emulsify": "*",
