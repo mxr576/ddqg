@@ -1962,6 +1962,7 @@
         "drupal/provision_hosting_injections": "*",
         "drupal/pspp": "*",
         "drupal/pubgold": "*",
+        "drupal/public_key_credential": "*",
         "drupal/publishing": "*",
         "drupal/pure_storage": "*",
         "drupal/purl_static": "*",
