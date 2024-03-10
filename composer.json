@@ -12010,7 +12010,7 @@
         "drupal/webform_analysis": "1.0.0-beta1|1.0.0-beta2|1.0.0-beta4|1.0.0-beta5|1.0.0-beta6|1.0.0-beta7|1.0.0-beta8",
         "drupal/webform_anonymizer": "1.0.0|1.0.x-dev",
         "drupal/webform_as_block": "1.0.0-alpha1|1.x-dev",
-        "drupal/webform_attachment_gated_download": "1.0.0|1.1.0|1.2.0|1.3.0|1.4.0|1.x-dev",
+        "drupal/webform_attachment_gated_download": "1.0.0|1.1.0|1.2.0|1.3.0|1.4.0",
         "drupal/webform_authorizenet": "1.0.0",
         "drupal/webform_bgcolor": "1.0.0|1.x-dev",
         "drupal/webform_bulk_email": "1.0.0-alpha1|1.0.0-alpha2|2.0.0-alpha3",
