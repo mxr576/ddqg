@@ -2007,6 +2007,8 @@
         "drupal/recurly_aegir": "*",
         "drupal/recurly_basic": "*",
         "drupal/redirect_match": "*",
+        "drupal/redsys_bizum": "*",
+        "drupal/redys_bizum_gateway": "*",
         "drupal/referral_links": "*",
         "drupal/reflek": "*",
         "drupal/refresco": "*",
