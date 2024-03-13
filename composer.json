@@ -2269,7 +2269,7 @@
         "drupal/commerce_tax_wa": "1.0.0|1.0.0-alpha1|1.x-dev|2.0.0|2.0.0-alpha1|2.1.0|2.2.0",
         "drupal/commerce_taxcloud": "1.x-dev",
         "drupal/commerce_taxjar": "1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.x-dev|2.0.0|2.0.1|2.x-dev",
-        "drupal/commerce_ticketing": "1.0.0|1.0.1|1.0.2|1.x-dev|2.0.0-alpha1|2.0.0-alpha2|2.0.0-alpha3|2.0.0-alpha4|2.0.0-alpha5|2.0.0-alpha6|2.0.0-alpha7|2.x-dev",
+        "drupal/commerce_ticketing": "1.0.0|1.0.1|1.0.2|1.x-dev|2.0.0-alpha1|2.0.0-alpha2|2.0.0-alpha3|2.0.0-alpha4|2.0.0-alpha5|2.0.0-alpha6|2.0.0-alpha7",
         "drupal/commerce_ticketing_checkin": "1.0.x-dev",
         "drupal/commerce_ticketing_scanner": "1.0.x-dev",
         "drupal/commerce_timeslots": "1.0.0|1.0.1",
