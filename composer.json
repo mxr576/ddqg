@@ -405,6 +405,7 @@
         "drupal/cmrf_form_processor_mollie": "*",
         "drupal/cms_blog": "*",
         "drupal/cms_bootstrap3": "*",
+        "drupal/cms_breadcrumbs": "*",
         "drupal/cms_contact": "*",
         "drupal/cms_core": "*",
         "drupal/cms_event_registrations": "*",
