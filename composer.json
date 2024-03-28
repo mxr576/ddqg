@@ -1794,6 +1794,7 @@
         "drupal/open_summary": "*",
         "drupal/opencfp": "*",
         "drupal/openchurch_apps": "*",
+        "drupal/openlaszlo": "*",
         "drupal/openlayers_field": "*",
         "drupal/openlayers_heatmaps": "*",
         "drupal/openlayers_taxonomy": "*",
