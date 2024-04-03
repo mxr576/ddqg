@@ -122,7 +122,12 @@ final class DrupalUpdateStatusApiUsingGuzzleRepository implements
 
                   // Add all versions that are not part of any supported branches or in a
                   // supported branch but not covered by security team.
-                  $all_unsupported_versions = array_map(static fn (\SimpleXMLElement $e): string => (string) $e, $project_as_simple_xml->xpath(sprintf('//releases/release[((%s) and security[not(@covered or @covered=0)]) or %s]/version', $supported_release_xpath, $not_supported_release_xpath)) ?: []);
+                  // Also, even if the project is opted-in for security coverage but the release
+                  // is unstable (e.g, 0.0.1) it has to be considered unsupported. At the time when
+                  // the code was written Drupal Update status returned <security covered="1"> for
+                  // 0.x.y releases too.
+                  // @see https://www.drupal.org/project/infrastructure/issues/3437828
+                  $all_unsupported_versions = array_map(static fn (\SimpleXMLElement $e): string => (string) $e, $project_as_simple_xml->xpath(sprintf('//releases/release[((%s) and security[not(@covered or @covered=0)]) or %s or starts-with(version, "0.")]/version', $supported_release_xpath, $not_supported_release_xpath)) ?: []);
               }
 
               $logger = $this->logger;
