@@ -204,6 +204,7 @@
         "drupal/bef_layout": "*",
         "drupal/bespin_embedded": "*",
         "drupal/better_fields_report": "*",
+        "drupal/better_menus": "*",
         "drupal/better_normalizers": "*",
         "drupal/bettermenus": "*",
         "drupal/betterselect": "*",
