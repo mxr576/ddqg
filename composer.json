@@ -1241,6 +1241,7 @@
         "drupal/guzzle": "*",
         "drupal/guzzle_oauth": "*",
         "drupal/hackpad": "*",
+        "drupal/harmonize": "*",
         "drupal/harvest": "*",
         "drupal/head2head": "*",
         "drupal/headdesk": "*",
