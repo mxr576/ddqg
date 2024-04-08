@@ -41,6 +41,7 @@
         "drupal/filefield_paths": ">=1.0.0, <1.0.0-beta6",
         "drupal/fontawesome": ">=2.0.0, <2.12.0",
         "drupal/forms_steps": ">=1.0.0, <1.2.0",
+        "drupal/forum_access": "1.0.0",
         "drupal/gdpr_alert": ">=1.0.0, <1.0.1",
         "drupal/govuk_theme": ">=1.0.0, <1.9.0",
         "drupal/graphql": ">=3.0.0, <3.4.0|>=4.0.0, <4.6.0",
