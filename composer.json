@@ -2043,6 +2043,7 @@
         "drupal/repository": "*",
         "drupal/resizer": "*",
         "drupal/responsive_images": "*",
+        "drupal/resque": "*",
         "drupal/rest_api_doc": "*",
         "drupal/rest_client": "*",
         "drupal/restel_hotel_booking": "*",
