@@ -817,6 +817,7 @@
         "drupal/eclipse_code_validator": "*",
         "drupal/ecommerce": "*",
         "drupal/ecweather": "*",
+        "drupal/ed_classified": "*",
         "drupal/ed_readmore": "*",
         "drupal/edit_form_warn": "*",
         "drupal/edit_metadata_cache": "*",
