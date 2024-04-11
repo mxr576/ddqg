@@ -2112,6 +2112,7 @@
         "drupal/scrollable_content": "*",
         "drupal/scruffy_desk": "*",
         "drupal/sdbo": "*",
+        "drupal/sdc": "*",
         "drupal/sdc_list": "*",
         "drupal/searcch_api_string_sanitization": "*",
         "drupal/search_api_acquia": "*",
