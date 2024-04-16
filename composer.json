@@ -598,6 +598,7 @@
         "drupal/css_rules": "*",
         "drupal/css_template": "*",
         "drupal/css_template_demo": "*",
+        "drupal/cssditor": "*",
         "drupal/csshover": "*",
         "drupal/ctm": "*",
         "drupal/ctools_contexts_user_field_edit": "*",
