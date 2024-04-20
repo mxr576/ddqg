@@ -2458,6 +2458,7 @@
         "drupal/tweets": "*",
         "drupal/twig_debug": "*",
         "drupal/twig_drupal_children_extension": "*",
+        "drupal/twig_temp": "*",
         "drupal/twitch": "*",
         "drupal/twitter_bootstrap": "*",
         "drupal/twitter_entity": "*",
