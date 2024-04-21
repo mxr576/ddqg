@@ -5459,7 +5459,6 @@
         "drupal/help_scout_beacon": "1.0.0|1.0.1|1.0.2|1.0.3",
         "drupal/help_text": "1.0.0|1.1.0|1.11.0|1.13.0|1.14.0|1.x-dev",
         "drupal/help_topics_backlinks": "1.x-dev",
-        "drupal/helpdesk_gitlab": "1.0.x-dev",
         "drupal/helpdesk_integration": "1.0.0|1.0.0-beta1|1.0.x-dev|1.1.0|1.1.1|1.1.2|1.1.3|1.1.4|1.1.5",
         "drupal/helpdesk_zammad": "1.0.0|1.0.0-beta1|1.0.1|1.0.x-dev",
         "drupal/helpdesk_zendesk": "1.0.0|1.0.1|1.0.2|1.0.3|1.0.4|1.0.5|1.0.6|1.0.7|1.0.8|1.0.9|1.0.10|1.0.11|1.0.12|1.0.13|1.0.14",
