@@ -6,6 +6,7 @@
     "conflict": {
         "drupal/acquia_contenthub": ">=1.0.0, <1.4.0",
         "drupal/addtoany": ">=2.0.0, <2.0.4",
+        "drupal/advanced_pwa": ">=1.0.0, <1.5.0",
         "drupal/auto_login_url": ">=1.0.0, <1.2.0",
         "drupal/better_social_sharing_buttons": ">=4.0.0, <4.0.3",
         "drupal/bootstrap": ">=3.0.0, <3.5.0|>=3.0.0, <3.14.0",
@@ -93,6 +94,7 @@
         "drupal/readonlymode": "1.0.0",
         "drupal/recaptcha_v3": ">=1.0.0, <1.2.0",
         "drupal/registration_role": ">=2.0.0, <2.0.1",
+        "drupal/rest_views": ">=3.0.0, <3.0.1",
         "drupal/s3fs": ">=3.0.0, <3.2.0",
         "drupal/safedelete": ">=1.0.0, <1.0.44",
         "drupal/samlauth": ">=3.0.0, <3.1.0",
