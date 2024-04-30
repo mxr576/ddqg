@@ -1107,6 +1107,7 @@
         "drupal/flashmaker": "*",
         "drupal/fle": "*",
         "drupal/flexdatalist": "*",
+        "drupal/flexfield": "*",
         "drupal/flexible_field_wrappers": "*",
         "drupal/flickr_cck": "*",
         "drupal/flickrhood": "*",
