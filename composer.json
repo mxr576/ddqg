@@ -1850,6 +1850,7 @@
         "drupal/paragraphs_in_api": "*",
         "drupal/paragraphs_responsive_bg_image_formatter": "*",
         "drupal/paragraphs_toolbar": "*",
+        "drupal/paragraphs_view_mode": "*",
         "drupal/parallel": "*",
         "drupal/parallel_css": "*",
         "drupal/parent": "*",
