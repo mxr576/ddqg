@@ -11507,7 +11507,7 @@
         "drupal/veracity_vql": "1.0.0",
         "drupal/veracruz_content": "7.0.0|8.0.0|8.0.1",
         "drupal/vercel_deploy": "1.0.0-rc1",
-        "drupal/vercf": "1.0.0|1.0.x-dev",
+        "drupal/vercf": "1.0.0",
         "drupal/vereinonline_auth": "1.0.0|1.0.0-alpha1|1.1.0",
         "drupal/verf": "1.0.0|1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.0.0-beta4|1.0.0-beta5|1.0.0-beta6|1.0.0-beta7",
         "drupal/version_formatter": "1.0.0-alpha1|1.x-dev",
