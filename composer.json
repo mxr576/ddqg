@@ -2217,7 +2217,7 @@
         "drupal/commerce_sheets": "1.x-dev",
         "drupal/commerce_shipengine": "1.x-dev",
         "drupal/commerce_shipping": "2.0.0|2.0.0-beta1|2.0.0-beta2|2.0.0-beta3|2.0.0-beta4|2.0.0-beta5|2.0.0-beta6|2.0.0-beta7|2.0.0-beta8|2.0.0-rc1|2.0.0-rc2|2.1.0|2.2.0",
-        "drupal/commerce_shipping_boxpacker": "1.0.0-beta1|1.0.0-beta2|1.0.x-dev",
+        "drupal/commerce_shipping_boxpacker": "1.0.0-beta1|1.0.0-beta2",
         "drupal/commerce_shipping_by_weight": "1.0.0-alpha1|1.x-dev",
         "drupal/commerce_shipping_carrier": "1.0.0-alpha1",
         "drupal/commerce_shipping_colissimo": "1.0.0|1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.0.0-beta4|1.0.0-beta5|1.0.0-beta6|1.0.0-beta7|1.0.1|1.0.2",
