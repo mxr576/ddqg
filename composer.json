@@ -1896,6 +1896,7 @@
         "drupal/peer": "*",
         "drupal/pegoeditor": "*",
         "drupal/people_data_form": "*",
+        "drupal/peoplepond": "*",
         "drupal/periodically_mail": "*",
         "drupal/permalink": "*",
         "drupal/permission_matrix": "*",
