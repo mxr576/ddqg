@@ -1625,6 +1625,7 @@
         "drupal/microsoft_translator_api": "*",
         "drupal/microtemplating": "*",
         "drupal/migrate_apigee": "*",
+        "drupal/migrate_eck2blocks": "*",
         "drupal/migrate_i18n": "*",
         "drupal/migrate_node_media": "*",
         "drupal/migrate_process_dom": "*",
