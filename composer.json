@@ -1990,6 +1990,7 @@
         "drupal/provision_civicrm": "*",
         "drupal/provision_drulenium": "*",
         "drupal/provision_hosting_injections": "*",
+        "drupal/psi": "*",
         "drupal/pspp": "*",
         "drupal/pubgold": "*",
         "drupal/public_key_credential": "*",
