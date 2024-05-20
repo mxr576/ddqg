@@ -1932,6 +1932,7 @@
         "drupal/pleroma": "*",
         "drupal/plinko": "*",
         "drupal/plugable": "*",
+        "drupal/pluggable": "*",
         "drupal/plup": "*",
         "drupal/plus": "*",
         "drupal/pm_chat": "*",
