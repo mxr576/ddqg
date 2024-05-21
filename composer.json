@@ -2021,6 +2021,7 @@
         "drupal/quickseed2017gci": "*",
         "drupal/quickseedgci": "*",
         "drupal/quiz_evaluation": "*",
+        "drupal/quiz_services": "*",
         "drupal/rabbitmq_logs": "*",
         "drupal/ramda": "*",
         "drupal/ranch": "*",
