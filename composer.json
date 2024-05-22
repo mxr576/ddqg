@@ -383,6 +383,7 @@
         "drupal/ckeditor_less": "*",
         "drupal/ckeditor_markdown": "*",
         "drupal/ckeditor_material_icons": "*",
+        "drupal/ckeditor_no_autoparagraph": "*",
         "drupal/ckeditor_pastefromgdocs": "*",
         "drupal/ckeditor_pastefromword": "*",
         "drupal/ckeditor_pastetools": "*",
