@@ -1067,6 +1067,7 @@
         "drupal/field_content_access": "*",
         "drupal/field_copier": "*",
         "drupal/field_gatekeeper": "*",
+        "drupal/field_group_vertical_tabs": "*",
         "drupal/field_image_label": "*",
         "drupal/field_lock": "*",
         "drupal/field_scheduler": "*",
