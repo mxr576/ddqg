@@ -1431,6 +1431,7 @@
         "drupal/jsonapi_defaults": "*",
         "drupal/jsonapi_embed": "*",
         "drupal/jsonapi_file": "*",
+        "drupal/jsonapi_relationships": "*",
         "drupal/jsonb": "*",
         "drupal/jstool": "*",
         "drupal/jstools": "*",
