@@ -1912,6 +1912,7 @@
         "drupal/pegoeditor": "*",
         "drupal/people_data_form": "*",
         "drupal/peoplepond": "*",
+        "drupal/perfectmind": "*",
         "drupal/periodically_mail": "*",
         "drupal/permalink": "*",
         "drupal/permission_matrix": "*",
