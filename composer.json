@@ -1238,6 +1238,7 @@
         "drupal/google_oauth": "*",
         "drupal/google_optimize_js": "*",
         "drupal/google_picasa": "*",
+        "drupal/google_qr_code": "*",
         "drupal/google_reader_shared_items": "*",
         "drupal/google_wave": "*",
         "drupal/google_website_optimizer": "*",
