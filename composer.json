@@ -2416,6 +2416,7 @@
         "drupal/term_fields": "*",
         "drupal/term_image": "*",
         "drupal/term_index": "*",
+        "drupal/term_merge_flag": "*",
         "drupal/term_queue": "*",
         "drupal/term_statistics": "*",
         "drupal/termblocks": "*",
