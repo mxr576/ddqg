@@ -1249,6 +1249,8 @@
         "drupal/govuk_design_system": "*",
         "drupal/govuk_inline_form_errors": "*",
         "drupal/gr_blogroll": "*",
+        "drupal/graphql_file": "*",
+        "drupal/graphql_link": "*",
         "drupal/grid": "*",
         "drupal/gridbuilder": "*",
         "drupal/gripegenie": "*",
