@@ -1576,7 +1576,7 @@
         "drupal/ckeditor_rm": "6.0.0",
         "drupal/ckeditor_scayt": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-beta1|1.1.0|1.2.0|1.2.0-beta1|1.3.0",
         "drupal/ckeditor_shortcodes": "1.1.0",
-        "drupal/ckeditor_simplebutton": "1.0.0|1.0.x-dev",
+        "drupal/ckeditor_simplebutton": "1.0.0",
         "drupal/ckeditor_sitesearch": "1.x-dev",
         "drupal/ckeditor_smiley": "1.0.0|1.1.0",
         "drupal/ckeditor_specialchars": "1.0.0|1.1.0|1.2.0",
