@@ -261,6 +261,7 @@
         "drupal/bookmadesimple": "*",
         "drupal/bookmaker": "*",
         "drupal/bookmarks2": "*",
+        "drupal/boolean_advanced_formatter": "*",
         "drupal/boolean_single_state_formatter": "*",
         "drupal/boost_expire": "*",
         "drupal/boostrap_layout_classes": "*",
