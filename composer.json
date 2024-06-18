@@ -156,7 +156,7 @@
         "drupal/addtoany": "1.0.0|1.0.0-rc1|1.1.0|1.2.0|1.3.0|1.4.0|1.5.0|1.6.0|1.7.0|1.8.0|1.9.0|1.10.0|1.11.0|1.12.0|1.13.0|1.14.0|1.15.0|1.16.0|1.17.0|1.18.0|1.19.0|1.20.0|1.21.0|1.22.0|1.x-dev",
         "drupal/addtoany_field": "1.0.0|1.0.1|1.0.2",
         "drupal/addtocal": "1.0.0|1.1.0|1.x-dev|2.0.0-beta1|2.0.0-beta2|2.0.0-beta3|2.0.0-beta4|2.x-dev",
-        "drupal/addtocal_augment": "1.0.0|1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-beta1|1.0.0-beta2|1.0.0-rc1|1.0.x-dev",
+        "drupal/addtocal_augment": "1.0.0|1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-beta1|1.0.0-beta2|1.0.0-rc1",
         "drupal/addtocalendar": "1.0.0|1.1.0|1.x-dev|2.0.0|2.1.0|2.x-dev|3.0.0-alpha1|3.1.0|3.2.0|4.x-dev",
         "drupal/addtocopy": "1.x-dev|2.1.0",
         "drupal/addtohomescreen": "1.0.0|1.1.0|1.2.0",
