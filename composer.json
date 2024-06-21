@@ -1434,7 +1434,7 @@
         "drupal/chr": "1.4.0|1.5.0|1.x-dev",
         "drupal/christmas_lights": "1.0.0|1.1.0|1.x-dev",
         "drupal/christmas_snow": "1.0.0|1.1.0|1.2.0",
-        "drupal/chrome_push_notification": "1.x-dev",
+        "drupal/chrome_push_notification": "1.x-dev|2.0.0",
         "drupal/chunker": "1.x-dev|2.0.0-alpha1",
         "drupal/cidr": "1.0.0|1.0.0-alpha1|1.1.0|1.2.0|1.x-dev|2.0.0|2.0.1|2.0.2|2.0.3",
         "drupal/cielo": "1.x-dev",
