@@ -2417,6 +2417,7 @@
         "drupal/teaservice": "*",
         "drupal/teatheme": "*",
         "drupal/teatree": "*",
+        "drupal/tellstick": "*",
         "drupal/templater": "*",
         "drupal/term_blacklist": "*",
         "drupal/term_display": "*",
