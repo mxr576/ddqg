@@ -1468,6 +1468,7 @@
         "drupal/layout_builder_enhancer": "*",
         "drupal/layout_builder_extras": "*",
         "drupal/layout_builder_restrictions_global": "*",
+        "drupal/layout_builder_roles_permission": "*",
         "drupal/layout_builder_section_extras": "*",
         "drupal/layout_cf": "*",
         "drupal/layout_per_node": "*",
