@@ -10758,7 +10758,7 @@
         "drupal/theme_compiler_scss": "1.x-dev|2.0.0-alpha1|2.0.x-dev",
         "drupal/theme_filter": "1.0.0|1.1.0",
         "drupal/theme_inspector": "1.0.0-alpha1|1.0.0-alpha4|1.x-dev",
-        "drupal/theme_per_user": "1.0.0|1.0.x-dev",
+        "drupal/theme_per_user": "1.0.0",
         "drupal/theme_permission": "1.0.0|1.1.0|1.2.0|1.x-dev|2.0.0-beta1",
         "drupal/theme_picker": "1.0.0|1.1.0",
         "drupal/theme_rule": "1.0.0|1.0.0-alpha1|1.0.0-alpha2",
