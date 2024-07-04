@@ -2281,6 +2281,7 @@
         "drupal/sms_telstra": "*",
         "drupal/sms_tiniyogateway": "*",
         "drupal/smskit": "*",
+        "drupal/snyk": "*",
         "drupal/social_auth_extra": "*",
         "drupal/social_auth_instagram": "*",
         "drupal/social_auth_steemconnect": "*",
