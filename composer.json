@@ -603,6 +603,7 @@
         "drupal/createcontentblock": "*",
         "drupal/crm_core_subscriptions": "*",
         "drupal/cron_mt": "*",
+        "drupal/crowd_sourced": "*",
         "drupal/crumbs_plus": "*",
         "drupal/cryptor": "*",
         "drupal/cse_client": "*",
