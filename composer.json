@@ -1280,6 +1280,7 @@
         "drupal/head2head": "*",
         "drupal/headdesk": "*",
         "drupal/headjs": "*",
+        "drupal/healthz": "*",
         "drupal/help_topics_backlinks": "*",
         "drupal/helpinjector": "*",
         "drupal/hexidecimal_color": "*",
