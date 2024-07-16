@@ -1144,6 +1144,7 @@
         "drupal/folder_menu": "*",
         "drupal/folio": "*",
         "drupal/fontello": "*",
+        "drupal/footnotes_all_block": "*",
         "drupal/force_js_and_css_reload": "*",
         "drupal/form_alter_ui": "*",
         "drupal/form_beautifier": "*",
