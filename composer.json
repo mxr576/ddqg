@@ -63,6 +63,7 @@
         "drupal/libraries_ui": ">=1.0.0, <1.1.0",
         "drupal/linkit": ">=6.0.0, <6.0.0-beta3",
         "drupal/loft_data_grids": ">=1.0.0, <1.4.0",
+        "drupal/mail_login": ">=2.0.0, <2.9.0",
         "drupal/mailchimp": ">=2.2.0, <2.2.2",
         "drupal/matomo": ">=1.0.0, <1.22.0",
         "drupal/media_library_block": ">=1.0.0, <1.0.4",
