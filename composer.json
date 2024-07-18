@@ -1668,6 +1668,7 @@
         "drupal/migrate_source_xml": "*",
         "drupal/migrate_source_yml": "*",
         "drupal/migrate_ui": "*",
+        "drupal/migrate_validate_url": "*",
         "drupal/millenium_services": "*",
         "drupal/millwood": "*",
         "drupal/milo": "*",
