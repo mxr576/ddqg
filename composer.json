@@ -194,6 +194,7 @@
         "drupal/admin_toolbar_messages": "1.0.0-beta1",
         "drupal/admin_toolbar_search": "1.0.0|1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-alpha6|1.0.0-alpha7|1.x-dev",
         "drupal/admin_toolbar_tasks": "1.0.0-beta1|1.0.0-beta2|1.0.0-beta3",
+        "drupal/admin_toolbar_toggle": "1.x-dev",
         "drupal/admin_toolbar_version": "1.0.0|1.0.1|1.0.2",
         "drupal/admin_tooltips": "1.0.0-beta1",
         "drupal/admin_ui": "1.x-dev",
