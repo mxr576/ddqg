@@ -383,6 +383,7 @@
         "drupal/ckan_publihser_tree": "*",
         "drupal/ckeditor": "*",
         "drupal/ckeditor5": "*",
+        "drupal/ckeditor5_highlight": "*",
         "drupal/ckeditor_axe": "*",
         "drupal/ckeditor_div": "*",
         "drupal/ckeditor_excel": "*",
