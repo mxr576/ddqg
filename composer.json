@@ -2679,6 +2679,7 @@
         "drupal/view_migration": "*",
         "drupal/view_mode_block": "*",
         "drupal/view_templates": "*",
+        "drupal/views_3d_carousel": "*",
         "drupal/views_ajax_get": "*",
         "drupal/views_alias_filter": "*",
         "drupal/views_alpha_pager": "*",
