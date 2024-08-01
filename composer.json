@@ -125,6 +125,7 @@
         "drupal/unified_twig_ext": ">=1.1.0, <1.1.1",
         "drupal/user_hash": ">=2.0.0, <2.0.1",
         "drupal/vendor_stream_wrapper": ">=2.0.0, <2.0.1",
+        "drupal/view_password": ">=6.0.0, <6.0.4",
         "drupal/viewsreference": ">=2.0.0, <2.0.0-beta2",
         "drupal/webprofiler": ">=10.1.0, <10.1.1",
         "drupal/wingsuit_companion": ">=2.0.0, <2.0.0-beta8",
