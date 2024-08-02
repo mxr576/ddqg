@@ -2058,6 +2058,7 @@
         "drupal/queue_watcher": "*",
         "drupal/quick_admin_menu": "*",
         "drupal/quick_clone": "*",
+        "drupal/quick_import": "*",
         "drupal/quick_v_bootstrap_paragraphs": "*",
         "drupal/quick_v_media": "*",
         "drupal/quickform": "*",
