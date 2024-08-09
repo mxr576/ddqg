@@ -2178,6 +2178,7 @@
         "drupal/sdc_list": "*",
         "drupal/searcch_api_string_sanitization": "*",
         "drupal/search_api_acquia": "*",
+        "drupal/search_api_ai": "*",
         "drupal/search_api_attacchments_php": "*",
         "drupal/search_api_bundle_boost": "*",
         "drupal/search_api_facets_paths": "*",
