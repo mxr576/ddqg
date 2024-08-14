@@ -279,6 +279,7 @@
         "drupal/bornfree": "*",
         "drupal/botdetect": "*",
         "drupal/bouncer": "*",
+        "drupal/box_view": "*",
         "drupal/br_billing_fields": "*",
         "drupal/braintree_cashier": "*",
         "drupal/breakpoint_js_settings": "*",
