@@ -1319,6 +1319,7 @@
         "drupal/hs_subgroups": "*",
         "drupal/hser": "*",
         "drupal/hsts": "*",
+        "drupal/htc": "*",
         "drupal/html5_base": "*",
         "drupal/html5_boilerplate": "*",
         "drupal/html_support": "*",
