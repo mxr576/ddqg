@@ -102,6 +102,7 @@
         "drupal/readonlymode": "1.0.0",
         "drupal/recaptcha_v3": ">=1.0.0, <1.2.0",
         "drupal/registration_role": ">=2.0.0, <2.0.1",
+        "drupal/responsive_menu": ">=4.4.0, <4.4.4|>=5.0.0, <5.0.0-alpha2",
         "drupal/rest_api_authentication": ">=2.0.0, <2.0.13",
         "drupal/rest_views": ">=3.0.0, <3.0.1",
         "drupal/s3fs": ">=3.0.0, <3.2.0",
