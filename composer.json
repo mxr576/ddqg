@@ -7,6 +7,7 @@
         "drupal/acquia_contenthub": ">=1.0.0, <1.4.0",
         "drupal/acquia_dam": ">=1.0.0, <1.0.13|>=1.1.0, <1.1.0-beta3",
         "drupal/addtoany": ">=2.0.0, <2.0.4",
+        "drupal/adv_varnish": ">=4.0.0, <4.0.11",
         "drupal/advanced_pwa": ">=1.0.0, <1.5.0",
         "drupal/auto_login_url": ">=1.0.0, <1.2.0",
         "drupal/better_social_sharing_buttons": ">=4.0.0, <4.0.3",
