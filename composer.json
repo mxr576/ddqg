@@ -2504,6 +2504,7 @@
         "drupal/titon": "*",
         "drupal/tlds": "*",
         "drupal/tlh": "*",
+        "drupal/toc_ng": "*",
         "drupal/todo": "*",
         "drupal/token_language": "*",
         "drupal/tokenize": "*",
