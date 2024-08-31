@@ -1868,6 +1868,7 @@
         "drupal/open_flash_chart_api": "*",
         "drupal/open_graph": "*",
         "drupal/open_summary": "*",
+        "drupal/openai_seo": "*",
         "drupal/opencfp": "*",
         "drupal/openchurch_apps": "*",
         "drupal/openlaszlo": "*",
