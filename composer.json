@@ -3227,6 +3227,7 @@
         "drupal/dl_file": "8.0.0-beta1|8.0.x-dev",
         "drupal/dlike": "1.x-dev",
         "drupal/dmaps": "1.x-dev",
+        "drupal/dmb": "1.0.2|1.0.x-dev",
         "drupal/dmt": "1.x-dev",
         "drupal/dnd_character": "5.x-dev",
         "drupal/dns_check": "1.x-dev",
