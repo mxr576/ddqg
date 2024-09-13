@@ -402,6 +402,7 @@
         "drupal/ckeditor_pastefromgdocs": "*",
         "drupal/ckeditor_pastefromword": "*",
         "drupal/ckeditor_pastetools": "*",
+        "drupal/ckeditor_specialchars": "*",
         "drupal/ckeditor_table_tools_toolbar": "*",
         "drupal/ckeditor_tableresize": "*",
         "drupal/ckeditor_tableselection": "*",
