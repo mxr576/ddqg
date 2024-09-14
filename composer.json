@@ -1773,6 +1773,7 @@
         "drupal/no_term_pages": "*",
         "drupal/nocaptcha_recaptcha": "*",
         "drupal/node_access_control": "*",
+        "drupal/node_add_copy": "*",
         "drupal/node_agreement": "*",
         "drupal/node_block": "*",
         "drupal/node_fee": "*",
