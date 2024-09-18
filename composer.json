@@ -10395,7 +10395,7 @@
         "drupal/subscriptions": "2.0.x-dev",
         "drupal/subseven": "1.1.0|1.1.x-dev",
         "drupal/subsite": "1.x-dev",
-        "drupal/substr_formatter": "1.0.0|1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.0.1|1.0.2|1.0.3|1.x-dev",
+        "drupal/substr_formatter": "1.0.0|1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.0.1|1.0.2|1.0.3",
         "drupal/suggestedterms": "1.x-dev",
         "drupal/suggestion": "1.0.0-alpha1|1.1.0|1.2.0|1.3.0|1.4.0|1.5.0|1.6.0|1.x-dev|2.0.0-alpha1|2.x-dev|3.0.0|3.0.1",
         "drupal/sula_calculator": "1.0.0|1.1.0|1.2.0|1.3.0|1.x-dev",
