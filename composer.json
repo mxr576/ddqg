@@ -2517,6 +2517,7 @@
         "drupal/tokenize": "*",
         "drupal/topspin": "*",
         "drupal/topsy": "*",
+        "drupal/tour_enhancements": "*",
         "drupal/townsec_key": "*",
         "drupal/tracelytics": "*",
         "drupal/track_site_visitor": "*",
