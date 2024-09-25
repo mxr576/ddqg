@@ -1471,6 +1471,7 @@
         "drupal/cjk_tokenizer": "1.0.0",
         "drupal/ckan_connect": "1.0.0-alpha1|1.x-dev|2.0.0|2.x-dev",
         "drupal/ckeditor5": "1.0.x-dev",
+        "drupal/ckeditor5_entity_browser": "1.0.4|1.0.x-dev",
         "drupal/ckeditor5_font": "1.0.0-beta1|1.1.0-beta1|1.1.1-beta1",
         "drupal/ckeditor5_sections": "1.0.0-alpha1|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-alpha6|1.0.0-alpha7|1.0.0-alpha8|1.0.0-alpha9|1.0.0-alpha10|1.0.0-alpha11|1.0.0-alpha12|1.0.0-alpha13|1.0.0-alpha14|1.0.0-alpha15|1.x-dev",
         "drupal/ckeditor_a11ychecker": "1.0.0|1.x-dev|2.0.0-alpha1|2.0.x-dev",
