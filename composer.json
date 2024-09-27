@@ -1408,6 +1408,7 @@
         "drupal/inove": "*",
         "drupal/insert_js": "*",
         "drupal/instagram_hashtag_feed": "*",
+        "drupal/instagram_importer": "*",
         "drupal/instagram_real_time_block": "*",
         "drupal/instagramfeed": "*",
         "drupal/install_profile_api": "*",
