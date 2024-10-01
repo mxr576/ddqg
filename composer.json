@@ -4,7 +4,6 @@
     "type": "metapackage",
     "license": "MIT",
     "conflict": {
-        "drupal/acquia_contenthub": ">=1.0.0, <1.4.0",
         "drupal/acquia_dam": ">=1.0.0, <1.0.13|>=1.1.0, <1.1.0-beta3",
         "drupal/addtoany": ">=2.0.0, <2.0.4",
         "drupal/adv_varnish": ">=4.0.0, <4.0.11",
@@ -86,9 +85,6 @@
         "drupal/office_hours": ">=1.0.0, <1.11.0",
         "drupal/open_readspeaker": ">=1.0.0, <1.5.0",
         "drupal/openid_connect": ">=1.0.0, <1.1.0",
-        "drupal/opigno_group_manager": ">=3.1.0, <3.1.1",
-        "drupal/opigno_learning_path": ">=3.1.0, <3.1.2",
-        "drupal/opigno_module": ">=3.1.0, <3.1.2",
         "drupal/paragraphs": ">=1.0.0, <1.6.0",
         "drupal/paragraphs_admin": ">=1.0.0, <1.5.0",
         "drupal/paragraphs_table": ">=1.0.0, <1.23.0|>=2.0.0, <2.0.2",
