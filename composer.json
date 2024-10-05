@@ -1122,6 +1122,7 @@
         "drupal/filefield_insert": "*",
         "drupal/filefield_meta_refresh": "*",
         "drupal/filefield_secure": "*",
+        "drupal/filefield_source_assetbank": "*",
         "drupal/filefield_sources_noupload": "*",
         "drupal/filefield_sources_reference_opt": "*",
         "drupal/filefield_upload_limit": "*",
