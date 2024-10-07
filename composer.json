@@ -8104,7 +8104,6 @@
         "drupal/paragraphs_cards": "1.x-dev",
         "drupal/paragraphs_class": "1.0.0-alpha1|1.0.0-alpha2",
         "drupal/paragraphs_clean": "1.0.0|1.1.0|1.2.0|1.3.0|1.x-dev",
-        "drupal/paragraphs_clipboard": "1.0.x-dev",
         "drupal/paragraphs_collapsible": "1.0.0|1.0.0-alpha1|1.1.0|1.2.0|1.3.0|1.5.0",
         "drupal/paragraphs_collection": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-alpha6|1.0.0-alpha7|1.0.0-alpha8|1.0.0-alpha9",
         "drupal/paragraphs_collection_bootstrap": "1.x-dev",
