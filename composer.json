@@ -1949,6 +1949,7 @@
         "drupal/pay_realex": "*",
         "drupal/payex": "*",
         "drupal/payment_api": "*",
+        "drupal/payment_mercadopago_v3": "*",
         "drupal/payment_omnikassa": "*",
         "drupal/payment_paypal": "*",
         "drupal/payment_payum": "*",
