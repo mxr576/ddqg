@@ -2836,6 +2836,7 @@
         "drupal/wikiovote": "*",
         "drupal/window_debugger": "*",
         "drupal/winter_wonderland": "*",
+        "drupal/wkhtmltopdf": "*",
         "drupal/wlw_blogapi": "*",
         "drupal/wn_sponsor": "*",
         "drupal/woolwich_ecwid": "*",
