@@ -479,6 +479,7 @@
         "drupal/commerce_cybersource_hop": "*",
         "drupal/commerce_dibs": "*",
         "drupal/commerce_discount_weight": "*",
+        "drupal/commerce_dotpay": "*",
         "drupal/commerce_downloads_feature": "*",
         "drupal/commerce_entity_plus": "*",
         "drupal/commerce_epayco": "*",
