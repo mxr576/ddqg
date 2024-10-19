@@ -8959,7 +8959,7 @@
         "drupal/removebg": "1.0.0|1.x-dev|2.0.0",
         "drupal/rename_admin_paths": "1.0.0|1.1.0|1.x-dev|2.0.0|2.1.0",
         "drupal/render_profiler": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3",
-        "drupal/renderfilter": "1.0.0-rc1|1.x-dev",
+        "drupal/renderfilter": "1.0.0-rc1",
         "drupal/renderviz": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3",
         "drupal/reoako": "1.0.0|1.0.x-dev",
         "drupal/repec": "1.x-dev|2.0.0-beta1",
