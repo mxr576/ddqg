@@ -847,6 +847,7 @@
         "drupal/ec_nodeaccess": "*",
         "drupal/ec_webform": "*",
         "drupal/eca_context": "*",
+        "drupal/eca_remote_request": "*",
         "drupal/ecircleapi": "*",
         "drupal/eclipse_code_validator": "*",
         "drupal/ecommerce": "*",
