@@ -817,6 +817,7 @@
         "drupal/better_statistics": "1.x-dev",
         "drupal/better_status_messages": "1.0.0|1.0.0-beta1|1.0.0-beta2|1.1.0|1.2.0|1.3.0|2.0.0",
         "drupal/better_subthemes": "1.0.0|1.1.0|1.x-dev",
+        "drupal/better_user_accounts": "1.x-dev",
         "drupal/better_wishlist": "1.0.0-beta1|1.0.0-beta2",
         "drupal/betterembed": "1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-alpha7|1.0.0-alpha8|1.x-dev|2.0.0-alpha1",
         "drupal/betterlogin": "1.0.0|1.1.0|1.2.0|1.3.0|1.4.0|1.5.0|1.6.0",
