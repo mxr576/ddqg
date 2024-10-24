@@ -457,6 +457,7 @@
         "drupal/commands_drush_extras": "*",
         "drupal/comment_alter_taxonomy": "*",
         "drupal/comment_info": "*",
+        "drupal/comment_ip": "*",
         "drupal/comment_repair": "*",
         "drupal/comment_subscribe": "*",
         "drupal/commentapi": "*",
