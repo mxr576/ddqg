@@ -2714,6 +2714,7 @@
         "drupal/vase": "*",
         "drupal/vbco": "*",
         "drupal/vbo_csv": "*",
+        "drupal/vbo_file_status_toggler": "*",
         "drupal/velo": "*",
         "drupal/velocity_animate": "*",
         "drupal/vencf": "*",
