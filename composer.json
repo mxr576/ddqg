@@ -349,6 +349,7 @@
         "drupal/cerf": "*",
         "drupal/channel": "*",
         "drupal/char_count_formatter": "*",
+        "drupal/chartjs": "*",
         "drupal/charts_highmaps": "*",
         "drupal/chat_channels": "*",
         "drupal/chatbot_api_alexa": "*",
