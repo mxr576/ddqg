@@ -2153,6 +2153,7 @@
         "drupal/remove_upcase_accents": "*",
         "drupal/replain": "*",
         "drupal/repository": "*",
+        "drupal/research": "*",
         "drupal/resizer": "*",
         "drupal/responsive_images": "*",
         "drupal/resque": "*",
