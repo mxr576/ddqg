@@ -875,6 +875,7 @@
         "drupal/eid": "*",
         "drupal/eight": "*",
         "drupal/elastic_appsearch": "*",
+        "drupal/elastic_cloud": "*",
         "drupal/elearning": "*",
         "drupal/elementary": "*",
         "drupal/elfsight_age_verification": "*",
