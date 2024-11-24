@@ -10911,6 +10911,7 @@
         "drupal/token_tags": "1.0.0|1.0.1",
         "drupal/token_var": "1.0.0|1.x-dev",
         "drupal/token_views_filter": "1.0.0|1.1.0|1.2.0|1.4.0|1.5.0",
+        "drupal/tokendebug": "1.0.0",
         "drupal/tokens_ldap_user": "1.0.x-dev",
         "drupal/tokenuuid": "1.0.0|1.1.0|1.2.0|1.3.0|1.4.0|1.5.0|1.x-dev|2.0.2",
         "drupal/tombstones": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.x-dev",
