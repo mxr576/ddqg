@@ -2572,6 +2572,7 @@
         "drupal/tlds": "*",
         "drupal/tlh": "*",
         "drupal/tmgmt_openai": "*",
+        "drupal/tns_gallup": "*",
         "drupal/toc_ng": "*",
         "drupal/todo": "*",
         "drupal/token_language": "*",
