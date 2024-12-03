@@ -1152,6 +1152,7 @@
         "drupal/filefield_upload_limit": "*",
         "drupal/filefilter": "*",
         "drupal/files_unused": "*",
+        "drupal/filter_configs": "*",
         "drupal/filter_transliteration": "*",
         "drupal/filterable_link": "*",
         "drupal/finder_wizard": "*",
