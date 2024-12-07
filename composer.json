@@ -1384,6 +1384,7 @@
         "drupal/icomoon": "*",
         "drupal/icon": "*",
         "drupal/icon_captcha": "*",
+        "drupal/iconify_menu": "*",
         "drupal/icopyright": "*",
         "drupal/identica_tweet": "*",
         "drupal/identify_ca": "*",
