@@ -707,6 +707,7 @@
         "drupal/dependencyinjection": "*",
         "drupal/dependent": "*",
         "drupal/deploy_individual": "*",
+        "drupal/desk_net": "*",
         "drupal/detector": "*",
         "drupal/devel_clipboard": "*",
         "drupal/devel_enttiy": "*",
