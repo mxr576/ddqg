@@ -6524,7 +6524,7 @@
         "drupal/live_chat_for_drupal": "1.0.0|1.1.0|1.2.0",
         "drupal/live_chat_slack": "1.x-dev",
         "drupal/live_content": "1.0.0|1.2.0|1.x-dev",
-        "drupal/live_css": "1.x-dev|2.x-dev",
+        "drupal/live_css": "1.x-dev",
         "drupal/live_data_gsheet": "1.0.0-beta1",
         "drupal/live_person": "1.0.0|1.1.0|1.2.0|1.x-dev",
         "drupal/live_weather": "1.0.0|1.1.0|1.2.0|1.x-dev|2.0.0|2.1.0|2.3.0|2.4.0|2.5.0",
