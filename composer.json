@@ -1630,6 +1630,7 @@
         "drupal/mailchimp_popup_block": "*",
         "drupal/mailchimp_signup": "*",
         "drupal/maildigest": "*",
+        "drupal/maillog": "*",
         "drupal/mailman_groups": "*",
         "drupal/mailthis": "*",
         "drupal/maintenance_lockout": "*",
