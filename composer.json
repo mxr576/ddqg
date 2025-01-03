@@ -3972,7 +3972,6 @@
         "drupal/entity_reference_number_widget": "1.0.0|1.0.0-rc1|1.0.0-rc2",
         "drupal/entity_reference_overflow": "1.0.0-beta1|1.0.0-beta2",
         "drupal/entity_reference_override": "1.0.0-alpha1|1.x-dev|2.0.0-beta1",
-        "drupal/entity_reference_override_label": "1.0.x-dev",
         "drupal/entity_reference_preview": "0.0.0-alpha1|0.2.0-alpha2|0.2.0-alpha3|0.2.0-alpha4|0.2.0-alpha5|0.2.0-alpha6|0.2.0-beta1|0.2.0-beta2|0.2.0-rc1|0.2.0-rc2|0.x-dev|1.0.0|1.0.0-alpha1|1.0.0-rc3|1.0.0-rc4|1.0.1|1.0.2|1.0.3|1.0.4|1.0.5|1.0.6|1.0.7|1.0.8",
         "drupal/entity_reference_purger": "1.0.0-beta1|1.0.0-beta2",
         "drupal/entity_reference_quantity": "1.x-dev",
