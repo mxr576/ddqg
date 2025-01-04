@@ -1141,7 +1141,6 @@
         "drupal/file_checker": "*",
         "drupal/file_chooser_field": "*",
         "drupal/file_defer": "*",
-        "drupal/file_delete": "*",
         "drupal/file_edit": "*",
         "drupal/file_entity_migration": "*",
         "drupal/file_generic_image_formatter": "*",
