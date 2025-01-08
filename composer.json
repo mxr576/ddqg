@@ -3858,7 +3858,6 @@
         "drupal/entity_delete_log": "1.0.0",
         "drupal/entity_delete_op": "1.0.0|1.1.0|1.2.0|1.3.0|1.4.0|1.5.0|1.6.0|1.7.0|1.x-dev",
         "drupal/entity_delta_formatter": "2.0.0|2.0.0-alpha1",
-        "drupal/entity_dependency_visualizer": "1.x-dev",
         "drupal/entity_dialog_formatter": "1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.0.0-beta4|1.0.0-beta5|1.0.0-beta6",
         "drupal/entity_diff_ui": "1.0.0|1.0.1",
         "drupal/entity_dispatcher": "1.x-dev",
