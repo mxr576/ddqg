@@ -1604,6 +1604,7 @@
         "drupal/locale_import_export": "*",
         "drupal/locale_plural_formula": "*",
         "drupal/location_views": "*",
+        "drupal/lockr_to_kms": "*",
         "drupal/log_deprecated_messages": "*",
         "drupal/log_to_file": "*",
         "drupal/logemout": "*",
