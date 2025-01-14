@@ -403,6 +403,7 @@
         "drupal/ckeditor_excel": "*",
         "drupal/ckeditor_find": "*",
         "drupal/ckeditor_fixed": "*",
+        "drupal/ckeditor_font": "*",
         "drupal/ckeditor_language": "*",
         "drupal/ckeditor_less": "*",
         "drupal/ckeditor_markdown": "*",
