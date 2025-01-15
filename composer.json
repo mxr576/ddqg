@@ -2303,6 +2303,7 @@
         "drupal/sector_embedded_content": "*",
         "drupal/sector_security": "*",
         "drupal/sector_starter": "*",
+        "drupal/sector_text_formats": "*",
         "drupal/sector_workflow": "*",
         "drupal/secure_forms": "*",
         "drupal/security_watcher": "*",
