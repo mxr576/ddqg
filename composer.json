@@ -8,6 +8,7 @@
         "drupal/addtoany": ">=2.0.0, <2.0.4",
         "drupal/adv_varnish": ">=4.0.0, <4.0.11",
         "drupal/advanced_pwa": ">=1.0.0, <1.5.0",
+        "drupal/ai": ">=1.0.0, <1.0.2",
         "drupal/auto_login_url": ">=1.0.0, <1.2.0",
         "drupal/block_permissions": ">=1.0.0, <1.2.0",
         "drupal/bootstrap": ">=3.0.0, <3.5.0|>=3.0.0, <3.14.0",
