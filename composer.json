@@ -5674,7 +5674,7 @@
         "drupal/image_link_attributes": "1.0.0|1.1.0|1.2.0|1.4.0|1.5.0",
         "drupal/image_link_formatter": "2.0.0|2.0.x-dev",
         "drupal/image_max_size_crop": "1.0.0|1.1.0|2.0.0",
-        "drupal/image_media_migrate": "1.0.2|1.0.3",
+        "drupal/image_media_migrate": "1.0.2|1.0.3|1.0.4",
         "drupal/image_moderate": "1.0.0-alpha1",
         "drupal/image_plus": "2.x-dev",
         "drupal/image_pointer": "1.0.0",
