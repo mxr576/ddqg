@@ -9079,7 +9079,6 @@
         "drupal/revision_graph": "1.x-dev|2.0.0",
         "drupal/revision_log": "1.0.0|1.0.0-alpha1",
         "drupal/revision_log_default": "1.0.0|1.0.0-alpha1|1.1.0|1.2.0",
-        "drupal/revision_menu_trail": "1.x-dev",
         "drupal/revision_tree": "1.0.0-alpha1|1.0.0-beta1|1.x-dev",
         "drupal/revision_ui": "1.x-dev",
         "drupal/revisiondiff": "1.0.0|1.x-dev",
