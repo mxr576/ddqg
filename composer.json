@@ -7580,7 +7580,7 @@
         "drupal/node_delete_redirect": "1.0.0-alpha1|1.x-dev|2.1.0|2.2.0|2.3.0|2.4.0|3.1.0|3.2.0",
         "drupal/node_detail_view": "1.x-dev",
         "drupal/node_edit_language_switcher": "1.0.1|1.1.x-dev",
-        "drupal/node_edit_protection": "1.0.0|1.0.0-alpha1|1.x-dev",
+        "drupal/node_edit_protection": "1.0.0|1.0.0-alpha1",
         "drupal/node_edit_redirect": "1.0.0-rc1|1.0.0-rc2|1.0.0-rc3",
         "drupal/node_expire": "1.x-dev",
         "drupal/node_expire_extras": "1.x-dev",
