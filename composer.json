@@ -1587,6 +1587,7 @@
         "drupal/lineage": "*",
         "drupal/link_esi": "*",
         "drupal/link_redirect_formatter": "*",
+        "drupal/linked_entity": "*",
         "drupal/linkimagefields": "*",
         "drupal/linkit_node_advanced": "*",
         "drupal/links_nofollow": "*",
