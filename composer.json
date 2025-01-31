@@ -2666,6 +2666,7 @@
         "drupal/twitter_bootstrap": "*",
         "drupal/twitter_entity": "*",
         "drupal/twitter_input_filter": "*",
+        "drupal/twitter_profile_widget": "*",
         "drupal/twitter_search": "*",
         "drupal/twizo_verification": "*",
         "drupal/twocol_single_layout": "*",
