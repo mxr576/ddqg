@@ -2303,6 +2303,7 @@
         "drupal/search_api_field_token": "*",
         "drupal/search_api_file_usage": "*",
         "drupal/search_api_string_sanitization": "*",
+        "drupal/search_api_yjmas": "*",
         "drupal/search_attachments": "*",
         "drupal/search_block": "*",
         "drupal/search_form_history": "*",
