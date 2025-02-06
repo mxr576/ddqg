@@ -191,6 +191,7 @@
         "drupal/aws_transcoder_lambda": "*",
         "drupal/azure_ai_search_vdb_provider": "*",
         "drupal/azure_blob_fs": "*",
+        "drupal/b2share": "*",
         "drupal/b4d": "*",
         "drupal/backstretch_formatter": "*",
         "drupal/backup": "*",
