@@ -1602,6 +1602,7 @@
         "drupal/live_update": "*",
         "drupal/living_style_guide": "*",
         "drupal/llm_provider": "*",
+        "drupal/llmmanager": "*",
         "drupal/lmstudio": "*",
         "drupal/loading_animation": "*",
         "drupal/local_mail": "*",
