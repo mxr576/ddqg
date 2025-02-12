@@ -1678,6 +1678,7 @@
         "drupal/maskedinput": "*",
         "drupal/mast": "*",
         "drupal/material_admin": "*",
+        "drupal/matomo_onpage_metrics": "*",
         "drupal/maxlength_js": "*",
         "drupal/mbat": "*",
         "drupal/mcs": "*",
