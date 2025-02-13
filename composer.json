@@ -6975,6 +6975,7 @@
         "drupal/medyum": "1.0.0|1.0.1|1.0.x-dev",
         "drupal/mefibs": "1.x-dev",
         "drupal/mellat_gateway": "1.x-dev",
+        "drupal/member": "1.0.x-dev",
         "drupal/member_info": "1.x-dev",
         "drupal/membership": "1.x-dev",
         "drupal/membership_entity": "2.x-dev",
