@@ -2454,6 +2454,7 @@
         "drupal/sql_auth": "*",
         "drupal/squeezedb": "*",
         "drupal/ssdwf": "*",
+        "drupal/sshop_base": "*",
         "drupal/ssi": "*",
         "drupal/sso": "*",
         "drupal/sso_multidb": "*",
