@@ -1145,6 +1145,7 @@
         "drupal/fieldgroup_placeholder": "*",
         "drupal/fields_from_json": "*",
         "drupal/fieldupdater": "*",
+        "drupal/fieldvariables": "*",
         "drupal/fieldx": "*",
         "drupal/file": "*",
         "drupal/file_checker": "*",
