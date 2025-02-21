@@ -1274,6 +1274,7 @@
         "drupal/gherkin_test_scenario": "*",
         "drupal/ghost_inspector": "*",
         "drupal/ghostery": "*",
+        "drupal/gin_dashboard": "*",
         "drupal/gin_permissions": "*",
         "drupal/ginkgo_training": "*",
         "drupal/git_clone": "*",
