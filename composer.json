@@ -1083,6 +1083,7 @@
         "drupal/farm_map": "*",
         "drupal/farm_mapknitter": "*",
         "drupal/farm_mushroom": "*",
+        "drupal/farm_profile": "*",
         "drupal/farm_quantity": "*",
         "drupal/farm_sensor": "*",
         "drupal/farm_soil": "*",
