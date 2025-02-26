@@ -1137,6 +1137,7 @@
         "drupal/field_group_vertical_tabs": "*",
         "drupal/field_image_label": "*",
         "drupal/field_lock": "*",
+        "drupal/field_login_simple_oauth": "*",
         "drupal/field_maxlength_alter": "*",
         "drupal/field_scheduler": "*",
         "drupal/field_sync": "*",
