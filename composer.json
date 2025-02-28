@@ -1720,6 +1720,7 @@
         "drupal/media_revisions_ui": "*",
         "drupal/media_s3": "*",
         "drupal/media_tagtele": "*",
+        "drupal/media_thumbnail_excel": "*",
         "drupal/media_tweaks": "*",
         "drupal/media_ustream": "*",
         "drupal/media_video_plyr": "*",
