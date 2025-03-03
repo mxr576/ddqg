@@ -579,6 +579,7 @@
         "drupal/config_ignore_collection": "*",
         "drupal/config_override_message": "*",
         "drupal/config_packager": "*",
+        "drupal/config_patch_gitlab": "*",
         "drupal/config_readonly_filter": "*",
         "drupal/config_src": "*",
         "drupal/config_translation": "*",
