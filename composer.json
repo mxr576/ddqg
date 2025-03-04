@@ -796,6 +796,7 @@
         "drupal/drupal_ldap_ad": "*",
         "drupal/drupal_override_function": "*",
         "drupal/drupal_recur_conflict": "*",
+        "drupal/drupal_social_hub": "*",
         "drupal/drupal_test_support": "*",
         "drupal/drupalcon_base": "*",
         "drupal/drupalcs": "*",
