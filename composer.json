@@ -7514,7 +7514,7 @@
         "drupal/nettybot": "1.x-dev",
         "drupal/neutral_paths": "1.0.0|1.1.0|1.x-dev",
         "drupal/new_relic_insights": "1.0.0-beta1|1.x-dev",
-        "drupal/new_relic_rpm": "1.0.0|1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-beta1|1.0.0-beta2|1.0.0-rc1|1.0.0-rc2|1.1.0|1.2.0|1.3.0|1.x-dev|2.0.0|2.0.0-rc1|2.0.x-dev|2.1.0|2.x-dev",
+        "drupal/new_relic_rpm": "1.0.0|1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-beta1|1.0.0-beta2|1.0.0-rc1|1.0.0-rc2|1.1.0|1.2.0|1.3.0|1.x-dev|2.0.0|2.0.0-rc1|2.0.x-dev|2.1.0",
         "drupal/new_restrict_node_page_view": "1.0.0|1.0.x-dev",
         "drupal/news_cards": "1.0.0|1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.x-dev",
         "drupal/news_ticker": "1.0.3",
