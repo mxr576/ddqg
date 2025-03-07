@@ -2010,6 +2010,7 @@
         "drupal/panels_teasers": "*",
         "drupal/pantarei_siren_core": "*",
         "drupal/pantheon": "*",
+        "drupal/pantheon_agcdn_management": "*",
         "drupal/pantheon_decoupled_umami_demo": "*",
         "drupal/paragraph_css": "*",
         "drupal/paragraph_force_remove": "*",
