@@ -1869,7 +1869,7 @@
         "drupal/commerce_braintree": "1.0.0|1.0.0-beta1|1.0.0-rc1|1.1.0|1.2.0|1.3.0",
         "drupal/commerce_braintree_marketplace": "1.0.0-beta1|1.x-dev",
         "drupal/commerce_bridgepay": "1.0.x-dev",
-        "drupal/commerce_btcpay": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-alpha6|1.0.0-alpha7|1.x-dev",
+        "drupal/commerce_btcpay": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-alpha6|1.0.0-alpha7",
         "drupal/commerce_bulk": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-alpha6|1.0.0-alpha7|1.0.0-alpha8|1.0.0-alpha9|1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.0.0-beta4|1.x-dev",
         "drupal/commerce_byjuno": "1.0.0|1.0.0-alpha1|1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.0.0-beta4|1.0.0-beta5|1.0.0-beta6|1.0.0-rc1|1.0.1|1.0.2|1.0.3",
         "drupal/commerce_canadapost": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-rc1|1.0.0-rc2|1.0.0-rc3|1.0.0-rc4|1.x-dev",
