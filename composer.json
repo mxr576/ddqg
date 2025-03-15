@@ -1803,6 +1803,7 @@
         "drupal/moneris_checkout": "*",
         "drupal/monitter": "*",
         "drupal/monolog_dblog": "*",
+        "drupal/monsido_tools": "*",
         "drupal/month": "*",
         "drupal/moodle": "*",
         "drupal/moodlesso": "*",
