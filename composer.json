@@ -215,6 +215,7 @@
         "drupal/bcse": "*",
         "drupal/bd": "*",
         "drupal/bd_video": "*",
+        "drupal/be_alert": "*",
         "drupal/beacon": "*",
         "drupal/bean_relevant": "*",
         "drupal/beanfive": "*",
