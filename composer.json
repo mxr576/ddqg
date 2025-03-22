@@ -3540,7 +3540,7 @@
         "drupal/easychart": "3.0.0|3.0.0-alpha1|3.0.0-alpha2|3.0.0-alpha3|3.0.0-alpha4|3.2.0|3.3.0|3.4.0|3.5.0|3.x-dev|4.0.0|4.0.1|4.0.2|4.0.3|4.0.4|4.0.5|4.0.6|4.0.7|4.0.8",
         "drupal/easydb": "1.0.0-rc1|2.0.0",
         "drupal/easymeta": "1.0.0|1.x-dev",
-        "drupal/eat": "1.0.0|1.x-dev|2.0.0|2.1.0|2.2.0|2.3.0|2.x-dev|3.0.0|3.x-dev",
+        "drupal/eat": "1.0.0|1.x-dev|2.0.0|2.1.0|2.2.0|2.3.0|3.0.0",
         "drupal/eatery_ds": "1.0.0",
         "drupal/eau_theme": "1.0.x-dev",
         "drupal/eav_field": "1.x-dev|2.0.0|2.0.1|2.0.2",
