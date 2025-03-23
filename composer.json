@@ -7672,7 +7672,6 @@
         "drupal/notfoundpassthrough": "1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.0.0-beta4",
         "drupal/nothing": "1.0.0|1.x-dev|2.0.0|2.0.1",
         "drupal/notice_killer": "2.0.0-alpha1|2.0.x-dev",
-        "drupal/notificate_insert": "1.x-dev",
         "drupal/notification": "1.0.0|1.1.0",
         "drupal/notification_message": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-rc1|1.0.0-rc2|1.0.0-rc3|1.0.0-rc4",
         "drupal/notification_system": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-alpha6|1.0.0-alpha7",
