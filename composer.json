@@ -2294,6 +2294,7 @@
         "drupal/salespush": "*",
         "drupal/salsa": "*",
         "drupal/salsa_api": "*",
+        "drupal/salsa_supporters": "*",
         "drupal/sample_module": "*",
         "drupal/sample_module_2": "*",
         "drupal/sane": "*",
