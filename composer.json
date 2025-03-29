@@ -1201,6 +1201,7 @@
         "drupal/flir": "*",
         "drupal/flocknote": "*",
         "drupal/flood_exemption": "*",
+        "drupal/flowbite_components": "*",
         "drupal/fluid": "*",
         "drupal/fluidgrid": "*",
         "drupal/flutter": "*",
