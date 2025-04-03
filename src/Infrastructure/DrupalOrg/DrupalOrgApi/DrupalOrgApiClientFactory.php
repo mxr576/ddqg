@@ -25,6 +25,9 @@ final class DrupalOrgApiClientFactory implements Guzzle7ClientFactory
         if (null === $this->client) {
             $stack = HandlerStack::create();
             $stack->push(GuzzleRetryMiddleware::factory());
+            // We need untruncated error messages.
+            $stack->push(new CustomErrorHandler());
+            $stack->remove('http_errors');
             $stack->push(new CacheMiddleware(new PublicCacheStrategy(new CacheStorage())), 'cache');
             $this->client = new Client([
               'base_uri' => 'https://www.drupal.org/api-d7/',
