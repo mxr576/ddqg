@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc9e24dfcaac0f67f1b1f742455ea931",
+    "content-hash": "b31bbf9d0667adca927e6ee8d6910a7d",
     "packages": [
         {
             "name": "caseyamcl/guzzle_retry_middleware",
-            "version": "v2.9.0",
+            "version": "v2.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/caseyamcl/guzzle_retry_middleware.git",
-                "reference": "cbec4ce59c2dbd200a11aed19e7c26c37e50e535"
+                "reference": "362bdd5e6d19e54e1f4c8c27757e7598201efa3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caseyamcl/guzzle_retry_middleware/zipball/cbec4ce59c2dbd200a11aed19e7c26c37e50e535",
-                "reference": "cbec4ce59c2dbd200a11aed19e7c26c37e50e535",
+                "url": "https://api.github.com/repos/caseyamcl/guzzle_retry_middleware/zipball/362bdd5e6d19e54e1f4c8c27757e7598201efa3c",
+                "reference": "362bdd5e6d19e54e1f4c8c27757e7598201efa3c",
                 "shasum": ""
             },
             "require": {
@@ -26,11 +26,12 @@
             },
             "require-dev": {
                 "jaschilz/php-coverage-badger": "^2.0",
-                "nesbot/carbon": "^2.0",
+                "nesbot/carbon": "^2.0|^3.0",
                 "phpstan/extension-installer": "^1.0",
                 "phpstan/phpstan": "^1.0",
                 "phpunit/phpunit": "^7.5|^8.0|^9.0",
-                "squizlabs/php_codesniffer": "^3.5"
+                "squizlabs/php_codesniffer": "^3.5",
+                "symfony/var-dumper": "^5.0|^6.0|^7.0"
             },
             "type": "library",
             "extra": {
@@ -68,7 +69,7 @@
             ],
             "support": {
                 "issues": "https://github.com/caseyamcl/guzzle_retry_middleware/issues",
-                "source": "https://github.com/caseyamcl/guzzle_retry_middleware/tree/v2.9.0"
+                "source": "https://github.com/caseyamcl/guzzle_retry_middleware/tree/v2.12.1"
             },
             "funding": [
                 {
@@ -76,7 +77,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-30T18:02:31+00:00"
+            "time": "2024-12-05T15:02:37+00:00"
         },
         {
             "name": "composer/semver",
@@ -3669,13 +3670,13 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "~8.1.0 || ~8.2.0",
         "composer-runtime-api": "^2.2"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
