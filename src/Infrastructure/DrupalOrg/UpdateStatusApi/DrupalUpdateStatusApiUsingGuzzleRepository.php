@@ -8,7 +8,7 @@ use Composer\Semver\Comparator;
 use Composer\Semver\Constraint\Constraint;
 use Composer\Semver\VersionParser;
 use GuzzleHttp\ClientInterface;
-use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Pool;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
@@ -162,7 +162,7 @@ final class DrupalUpdateStatusApiUsingGuzzleRepository implements
                   $conflicts[$composer_namespace] = $all_unsupported_version_constraints;
               }
           },
-          'rejected' => static function (RequestException $reason, $index): void {
+          'rejected' => static function (GuzzleException $reason, $index): void {
               throw new \RuntimeException(sprintf('Failed to fetch project information for "%s". Reason: "%s".', $index, $reason->getMessage()), $reason->getCode(), $reason);
           },
         ]);
@@ -293,7 +293,7 @@ final class DrupalUpdateStatusApiUsingGuzzleRepository implements
                   $conflicts[$composer_namespace] = array_unique(array_values($constraints));
               }
           },
-          'rejected' => static function (RequestException $reason, $index): void {
+          'rejected' => static function (GuzzleException $reason, $index): void {
               throw new \RuntimeException(sprintf('Failed to fetch project information for "%s". Reason: "%s".', $index, $reason->getMessage()), $reason->getCode(), $reason);
           },
         ]);
@@ -426,7 +426,7 @@ final class DrupalUpdateStatusApiUsingGuzzleRepository implements
                   $conflicts[$composer_namespace] = $all_unsupported_version_constraints;
               }
           },
-          'rejected' => static function (RequestException $reason, $index): void {
+          'rejected' => static function (GuzzleException $reason, $index): void {
               throw new \RuntimeException(sprintf('Failed to fetch project information for "%s". Reason: "%s".', $index, $reason->getMessage()), $reason->getCode(), $reason);
           },
         ]);

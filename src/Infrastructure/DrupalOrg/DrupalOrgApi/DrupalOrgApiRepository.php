@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace mxr576\ddqg\Infrastructure\DrupalOrg\DrupalOrgApi;
 
 use GuzzleHttp\ClientInterface;
-use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Pool;
 use GuzzleHttp\Psr7\Query;
 use GuzzleHttp\Psr7\Request;
@@ -76,7 +76,7 @@ final class DrupalOrgApiRepository implements AbandonedProjectsRepository, Depre
     /**
      * @phpstan-param array{types?: array<value-of<ProjectTypesExposedViaDrupalPackagist>>,filter_by_term?: object{"vocab_id":int,"term_id": int}, "page": 0|positive-int} $filter
      *
-     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws GuzzleException
      * @throws \JsonMachine\Exception\InvalidArgumentException
      *
      * @return string[]
@@ -183,7 +183,7 @@ final class DrupalOrgApiRepository implements AbandonedProjectsRepository, Depre
                     );
                   $project_names_from_other_pages[] = $collection->limit(1)->current(0, []);
               },
-              'rejected' => static function (RequestException $reason, int $index): void {
+              'rejected' => static function (GuzzleException $reason, int $index): void {
                   throw new \RuntimeException(sprintf('Failed to fetch page %d. Reason: "%s".', $index, $reason->getMessage()), $reason->getCode(), $reason);
               },
             ]);
