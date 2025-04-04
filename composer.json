@@ -1366,6 +1366,7 @@
         "drupal/helpinjector": "*",
         "drupal/hexidecimal_color": "*",
         "drupal/hi5": "*",
+        "drupal/hide_login": "*",
         "drupal/hide_non_editable_content": "*",
         "drupal/hierarchical_taxonomy": "*",
         "drupal/higcharts_plugin": "*",
