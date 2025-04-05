@@ -1646,6 +1646,7 @@
         "drupal/cleverreach": "1.x-dev",
         "drupal/cli_language": "1.0.0-alpha1|1.x-dev|2.0.0-alpha1",
         "drupal/click_a_role": "1.0.0|1.1.0|1.2.0",
+        "drupal/click_counter": "1.0.x-dev",
         "drupal/click_pledge_connect": "1.0.0",
         "drupal/clickandpledge_connect": "1.0.0-rc1|1.22060000.0|1.22060001.0|1.22060002.0|1.1912000001.0|1.1912000003.0|1.2001000204.0|1.2002000101.0|1.2003000101.0|1.2005000010.0|2.220700100.0",
         "drupal/clickandpledge_drupalcommerce": "3.2008000000.0|3.2008000001.0|3.2008000100.0|3.2008010000.0|3.2008010100.0|3.2008100000.0",
