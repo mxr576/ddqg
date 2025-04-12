@@ -10964,7 +10964,7 @@
         "drupal/trakr": "1.0.0-beta1|1.0.0-beta2",
         "drupal/tranc": "1.0.0|1.0.1|1.0.2",
         "drupal/trance": "1.0.0|1.1.0|1.x-dev",
-        "drupal/transaction": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-beta1|1.x-dev",
+        "drupal/transaction": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-beta1",
         "drupal/transaction_workflow": "1.0.0-alpha1|1.0.0-beta1|1.x-dev",
         "drupal/transactionalphp": "1.x-dev",
         "drupal/transbank": "2.0.0-beta1",
