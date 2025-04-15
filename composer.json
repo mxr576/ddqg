@@ -8033,6 +8033,7 @@
         "drupal/pagination_page_titles": "1.0.0",
         "drupal/paging8": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|3.x-dev",
         "drupal/paid_ads": "1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.0.0-beta4|1.0.0-rc1|1.x-dev",
+        "drupal/pair_store": "1.0.0",
         "drupal/paldesk": "1.0.0|1.1.0|1.2.0|1.x-dev",
         "drupal/panache": "1.0.0|1.1.0|1.x-dev",
         "drupal/panel": "1.0.0|1.1.0|1.2.0",
