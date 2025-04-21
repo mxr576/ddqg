@@ -21,7 +21,7 @@
         "caseyamcl/guzzle_retry_middleware": "^2.12",
         "composer/semver": "^3.3",
         "guzzlehttp/guzzle": "^7.9.3",
-        "halaxa/json-machine": "^1.1",
+        "halaxa/json-machine": "^1.2",
         "kevinrob/guzzle-cache-middleware": "^6.0.0",
         "league/flysystem": "^3.29.1",
         "loophp/collection": "^7.6.1",
