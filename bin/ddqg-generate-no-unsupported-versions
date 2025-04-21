@@ -3,21 +3,25 @@
 
 declare(strict_types=1);
 
+use Monolog\Logger;
 use mxr576\ddqg\Infrastructure\ComposerJsonWriter;
 use mxr576\ddqg\Infrastructure\DrupalOrg\DrupalOrgApi\DrupalOrgApiClientFactory;
 use mxr576\ddqg\Infrastructure\DrupalOrg\DrupalOrgApi\DrupalOrgApiRepository;
 use mxr576\ddqg\Infrastructure\DrupalOrg\UpdateStatusApi\DrupalUpdateStatusApiClientFactory;
 use mxr576\ddqg\Infrastructure\DrupalOrg\UpdateStatusApi\DrupalUpdateStatusApiUsingGuzzleRepository;
+use Symfony\Component\Stopwatch\Stopwatch;
 
 require_once $_composer_autoload_path ?? __DIR__ . '/../vendor/autoload.php';
 
-if (class_exists('\Symfony\Component\Stopwatch\Stopwatch')) {
-    $stopwatch = new Symfony\Component\Stopwatch\Stopwatch();
+$stopwatch = null;
+/* @phpstan-assert-if-true \Symfony\Component\Stopwatch\Stopwatch $stopwatch */
+if (class_exists(Stopwatch::class)) {
+    $stopwatch = new Stopwatch();
     $stopwatch->start('process');
 }
 $logger = new Psr\Log\NullLogger();
-if (class_exists('\Monolog\Logger')) {
-    $logger = new Monolog\Logger('mxr576/ddqg', [new Monolog\Handler\StreamHandler(STDERR)], [new Monolog\Processor\PsrLogMessageProcessor()]);
+if (class_exists(Logger::class)) {
+    $logger = new Logger('mxr576/ddqg', [new Monolog\Handler\StreamHandler(STDERR)], [new Monolog\Processor\PsrLogMessageProcessor()]);
 }
 
 $dapi_repo = new DrupalOrgApiRepository(new DrupalOrgApiClientFactory());

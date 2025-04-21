@@ -13,6 +13,8 @@ use Symfony\Component\Stopwatch\Stopwatch;
 
 require_once $_composer_autoload_path ?? __DIR__ . '/../vendor/autoload.php';
 
+$stopwatch = null;
+/* @phpstan-assert-if-true \Symfony\Component\Stopwatch\Stopwatch $stopwatch */
 if (class_exists(Stopwatch::class)) {
     $stopwatch = new Stopwatch();
     $stopwatch->start('process');

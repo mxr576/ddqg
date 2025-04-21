@@ -1,26 +1,127 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Method mxr576\\\\ddqg\\\\Domain\\\\DrupalCoreIncompatibleReleasesRepository\\:\\:findDrupalCoreIncompatibleVersions\\(\\) return type has no value type specified in iterable type array\\.$#"
+			message: '#^Method mxr576\\ddqg\\Domain\\DrupalCoreIncompatibleReleasesRepository\:\:findDrupalCoreIncompatibleVersions\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
 			count: 1
 			path: src/Domain/DrupalCoreIncompatibleReleasesRepository.php
 
 		-
-			message: "#^Method mxr576\\\\ddqg\\\\Infrastructure\\\\ComposerJsonWriter\\:\\:__invoke\\(\\) has parameter \\$composer_data with no value type specified in iterable type array\\.$#"
+			message: '#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\.$#'
+			identifier: foreach.nonIterable
 			count: 1
 			path: src/Infrastructure/ComposerJsonWriter.php
 
 		-
-			message: "#^Cannot access offset 0 on non\\-empty\\-array\\<SimpleXMLElement\\>\\|false\\|null\\.$#"
+			message: '#^Cannot access offset ''drupal/core'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: src/Infrastructure/ComposerJsonWriter.php
+
+		-
+			message: '#^Cannot access offset ''drupal/drupal'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: src/Infrastructure/ComposerJsonWriter.php
+
+		-
+			message: '#^Cannot access offset mixed on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: src/Infrastructure/ComposerJsonWriter.php
+
+		-
+			message: '#^Method mxr576\\ddqg\\Infrastructure\\ComposerJsonWriter\:\:__invoke\(\) has parameter \$composer_data with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Infrastructure/ComposerJsonWriter.php
+
+		-
+			message: '#^Parameter \#1 \$array of function ksort expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Infrastructure/ComposerJsonWriter.php
+
+		-
+			message: '#^Parameter \#1 \$array of function natsort expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Infrastructure/ComposerJsonWriter.php
+
+		-
+			message: '#^Cannot call method then\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: src/Infrastructure/DrupalOrg/DrupalOrgApi/CustomErrorHandler.php
+
+		-
+			message: '#^Method GuzzleHttp\\BodySummarizerInterface@anonymous/src/Infrastructure/DrupalOrg/DrupalOrgApi/CustomErrorHandler\.php\:40\:\:summarize\(\) never returns null so it can be removed from the return type\.$#'
+			identifier: return.unusedType
+			count: 1
+			path: src/Infrastructure/DrupalOrg/DrupalOrgApi/CustomErrorHandler.php
+
+		-
+			message: '#^Parameter \#1 \$request of static method GuzzleHttp\\Exception\\RequestException\:\:create\(\) expects Psr\\Http\\Message\\RequestInterface, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Infrastructure/DrupalOrg/DrupalOrgApi/CustomErrorHandler.php
+
+		-
+			message: '#^Anonymous function should return string but returns mixed\.$#'
+			identifier: return.type
+			count: 2
+			path: src/Infrastructure/DrupalOrg/DrupalOrgApi/DrupalOrgApiRepository.php
+
+		-
+			message: '#^Binary operation "\." between ''taxonomy_vocabulary_'' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: src/Infrastructure/DrupalOrg/DrupalOrgApi/DrupalOrgApiRepository.php
+
+		-
+			message: '#^Cannot access property \$term_id on mixed\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: src/Infrastructure/DrupalOrg/DrupalOrgApi/DrupalOrgApiRepository.php
+
+		-
+			message: '#^Cannot access property \$vocab_id on mixed\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: src/Infrastructure/DrupalOrg/DrupalOrgApi/DrupalOrgApiRepository.php
+
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 1
+			path: src/Infrastructure/DrupalOrg/DrupalOrgApi/DrupalOrgApiRepository.php
+
+		-
+			message: '#^Cannot call method then\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: src/Infrastructure/DrupalOrg/DrupalOrgApi/ZeroRetryAfterHeaderFixHandler.php
+
+		-
+			message: '#^Cannot access offset 0 on non\-empty\-array\<SimpleXMLElement\>\|false\|null\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
 			count: 1
 			path: src/Infrastructure/DrupalOrg/UpdateStatusApi/DrupalUpdateStatusApiUsingGuzzleRepository.php
 
 		-
-			message: "#^Method mxr576\\\\ddqg\\\\Infrastructure\\\\DrupalOrg\\\\UpdateStatusApi\\\\DrupalUpdateStatusApiUsingGuzzleRepository\\:\\:findDrupalCoreIncompatibleVersions\\(\\) return type has no value type specified in iterable type array\\.$#"
+			message: '#^Method mxr576\\ddqg\\Infrastructure\\DrupalOrg\\UpdateStatusApi\\DrupalUpdateStatusApiUsingGuzzleRepository\:\:findDrupalCoreIncompatibleVersions\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
 			count: 1
 			path: src/Infrastructure/DrupalOrg/UpdateStatusApi/DrupalUpdateStatusApiUsingGuzzleRepository.php
 
 		-
-			message: "#^Method mxr576\\\\ddqg\\\\Infrastructure\\\\DrupalOrg\\\\UpdateStatusApi\\\\XmlStreamBridgeForPsrStream\\:\\:getChunk\\(\\) throws checked exception RuntimeException but it's missing from the PHPDoc @throws tag\\.$#"
+			message: '#^Parameter \#2 \.\.\.\$values of function sprintf expects bool\|float\|int\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 8
+			path: src/Infrastructure/DrupalOrg/UpdateStatusApi/DrupalUpdateStatusApiUsingGuzzleRepository.php
+
+		-
+			message: '#^Method mxr576\\ddqg\\Infrastructure\\DrupalOrg\\UpdateStatusApi\\XmlStreamBridgeForPsrStream\:\:getChunk\(\) throws checked exception RuntimeException but it''s missing from the PHPDoc @throws tag\.$#'
+			identifier: missingType.checkedException
 			count: 1
 			path: src/Infrastructure/DrupalOrg/UpdateStatusApi/XmlStreamBridgeForPsrStream.php
