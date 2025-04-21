@@ -12,8 +12,8 @@ use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Pool;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
+use mxr576\ddqg\Domain\DrupalCoreIncompatibleReleasesRepository;
 use mxr576\ddqg\Domain\InsecureVersionRangesRepository;
-use mxr576\ddqg\Domain\NonDrupal10CompatibleReleasesRepository;
 use mxr576\ddqg\Domain\ProjectIdRepository;
 use mxr576\ddqg\Domain\UnsupportedReleasesRepository;
 use mxr576\ddqg\Infrastructure\DrupalOrg\Enum\ProjectTypesExposedViaDrupalPackagist;
@@ -30,7 +30,7 @@ final class DrupalUpdateStatusApiUsingGuzzleRepository implements
     ProjectIdRepository,
     UnsupportedReleasesRepository,
     InsecureVersionRangesRepository,
-    NonDrupal10CompatibleReleasesRepository
+    DrupalCoreIncompatibleReleasesRepository
 {
     private ClientInterface $client;
 
@@ -304,11 +304,11 @@ final class DrupalUpdateStatusApiUsingGuzzleRepository implements
         return $conflicts;
     }
 
-    public function fetchNonDrupal10CompatibleVersions(string ...$project_ids): array
+    public function findDrupalCoreIncompatibleVersions(string $drupalCoreVersionString, string ...$project_ids): array
     {
         $client = $this->client;
         $version_parser = new VersionParser();
-        $provider = new Constraint('>=', $version_parser->normalize('10.0.0'));
+        $provider = new Constraint('>=', $version_parser->normalize($drupalCoreVersionString));
 
         // Drupal (core) should not be on the list.
         $drupal_array_index = array_search('drupal', $project_ids, true);

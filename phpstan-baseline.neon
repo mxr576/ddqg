@@ -1,12 +1,22 @@
 parameters:
 	ignoreErrors:
 		-
+			message: "#^Method mxr576\\\\ddqg\\\\Domain\\\\DrupalCoreIncompatibleReleasesRepository\\:\\:findDrupalCoreIncompatibleVersions\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Domain/DrupalCoreIncompatibleReleasesRepository.php
+
+		-
 			message: "#^Method mxr576\\\\ddqg\\\\Infrastructure\\\\ComposerJsonWriter\\:\\:__invoke\\(\\) has parameter \\$composer_data with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/Infrastructure/ComposerJsonWriter.php
 
 		-
 			message: "#^Cannot access offset 0 on non\\-empty\\-array\\<SimpleXMLElement\\>\\|false\\|null\\.$#"
+			count: 1
+			path: src/Infrastructure/DrupalOrg/UpdateStatusApi/DrupalUpdateStatusApiUsingGuzzleRepository.php
+
+		-
+			message: "#^Method mxr576\\\\ddqg\\\\Infrastructure\\\\DrupalOrg\\\\UpdateStatusApi\\\\DrupalUpdateStatusApiUsingGuzzleRepository\\:\\:findDrupalCoreIncompatibleVersions\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/Infrastructure/DrupalOrg/UpdateStatusApi/DrupalUpdateStatusApiUsingGuzzleRepository.php
 

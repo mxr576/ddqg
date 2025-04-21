@@ -3,27 +3,35 @@
 
 declare(strict_types=1);
 
+use Monolog\Logger;
 use mxr576\ddqg\Infrastructure\ComposerJsonWriter;
 use mxr576\ddqg\Infrastructure\DrupalOrg\DrupalOrgApi\DrupalOrgApiClientFactory;
 use mxr576\ddqg\Infrastructure\DrupalOrg\DrupalOrgApi\DrupalOrgApiRepository;
 use mxr576\ddqg\Infrastructure\DrupalOrg\UpdateStatusApi\DrupalUpdateStatusApiClientFactory;
 use mxr576\ddqg\Infrastructure\DrupalOrg\UpdateStatusApi\DrupalUpdateStatusApiUsingGuzzleRepository;
+use Symfony\Component\Stopwatch\Stopwatch;
 
 require_once $_composer_autoload_path ?? __DIR__ . '/../vendor/autoload.php';
 
-if (class_exists('\Symfony\Component\Stopwatch\Stopwatch')) {
-    $stopwatch = new Symfony\Component\Stopwatch\Stopwatch();
+if (class_exists(Stopwatch::class)) {
+    $stopwatch = new Stopwatch();
     $stopwatch->start('process');
 }
 $logger = new Psr\Log\NullLogger();
-if (class_exists('\Monolog\Logger')) {
-    $logger = new Monolog\Logger('mxr576/ddqg', [new Monolog\Handler\StreamHandler(STDERR)], [new Monolog\Processor\PsrLogMessageProcessor()]);
+if (class_exists(Logger::class)) {
+    $logger = new Logger('mxr576/ddqg', [new Monolog\Handler\StreamHandler(STDERR)], [new Monolog\Processor\PsrLogMessageProcessor()]);
+}
+
+$drupalCoreVersionString = $argv[1] ?? null;
+if (null === $drupalCoreVersionString) {
+    printf("Missing required parameter: Drupal core version, e.g., 11.0.0\n");
+    exit(1);
 }
 
 $update_status_repo = new DrupalUpdateStatusApiUsingGuzzleRepository(new DrupalUpdateStatusApiClientFactory(), $logger);
 $dapi_repo = new DrupalOrgApiRepository(new DrupalOrgApiClientFactory());
 
-$conflicts = $update_status_repo->fetchNonDrupal10CompatibleVersions(...$dapi_repo->fetchProjectIds());
+$conflicts = $update_status_repo->findDrupalCoreIncompatibleVersions($drupalCoreVersionString, ...$dapi_repo->fetchProjectIds());
 
 (new ComposerJsonWriter())(__DIR__ . '/composer.json', [
   'description' => 'Ensures that new dependencies without an available Drupal 10 compatible version cannot be installed on a project that still running on < Drupal 10.',

@@ -70,17 +70,17 @@ jobs:
             git push -f -u origin no-deprecated-versions
           fi
 
-      - name: Generate non-Drupal 10 compatible versions release
+      - name: Generate non-Drupal 11 compatible versions release
         run: |
           cd bin
-          git checkout non-d10-compatible-versions -f || git checkout -b non-d10-compatible-versions 7c16065
-          ./ddqg-generate-non-d10-compatible-versions
+          git checkout non-d11-compatible-versions -f || git checkout -b non-d11-compatible-versions 7c16065
+          ./ddqg-generate-drupal-core-incompatible-versions 11.0.0
           composer validate
           # If this is a newly created branch then composer.json is not being tracked.
           git add composer.json
           if [[ `git status --porcelain --untracked-files=no` ]]; then
             git commit -a -m "Updated composer.json"
-            git push -f -u origin non-d10-compatible-versions
+            git push -f -u origin non-d11-compatible-versions
           fi
 
       - name: Generate no insecure versions release
@@ -94,4 +94,17 @@ jobs:
           if [[ `git status --porcelain --untracked-files=no` ]]; then
             git commit -a -m "Updated composer.json"
             git push -f -u origin no-insecure-versions
+          fi
+
+      - name: Generate non-Drupal 10 compatible versions release
+        run: |
+          cd bin
+          git checkout non-d10-compatible-versions -f || git checkout -b non-d10-compatible-versions 7c16065
+          ./ddqg-generate-drupal-core-incompatible-versions 10.0.0
+          composer validate
+          # If this is a newly created branch then composer.json is not being tracked.
+          git add composer.json
+          if [[ `git status --porcelain --untracked-files=no` ]]; then
+            git commit -a -m "Updated composer.json"
+            git push -f -u origin non-d10-compatible-versions
           fi

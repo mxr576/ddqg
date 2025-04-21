@@ -21,7 +21,7 @@ parameters:
   paths:
     - bin/ddqg-generate-no-insecure-versions
     - bin/ddqg-generate-no-unsupported-versions
-    - bin/ddqg-generate-non-d10-compatible-versions
+    - bin/ddqg-generate-drupal-core-incompatible-versions
     - src
   excludePaths:
     - */vendor/*
