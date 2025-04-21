@@ -39,9 +39,9 @@ final class SemVer
 
     public readonly int $patch;
 
-    public readonly string|null $preRelease;
+    public readonly ?string $preRelease;
 
-    public readonly string|null $buildMetadata;
+    public readonly ?string $buildMetadata;
 
     public readonly string $asString;
 

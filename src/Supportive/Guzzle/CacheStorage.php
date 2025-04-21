@@ -38,7 +38,7 @@ final class CacheStorage implements CacheStorageInterface
         );
     }
 
-    public function fetch($key): CacheEntry|null
+    public function fetch($key): ?CacheEntry
     {
         return $this->inner->fetch($key);
     }

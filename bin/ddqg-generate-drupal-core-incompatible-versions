@@ -36,8 +36,8 @@ $dapi_repo = new DrupalOrgApiRepository(new DrupalOrgApiClientFactory());
 $conflicts = $update_status_repo->findDrupalCoreIncompatibleVersions($drupalCoreVersionString, ...$dapi_repo->fetchProjectIds());
 
 (new ComposerJsonWriter())(__DIR__ . '/composer.json', [
-  'description' => 'Ensures that new dependencies without an available Drupal 10 compatible version cannot be installed on a project that still running on < Drupal 10.',
-  'conflict' => $conflicts,
+    'description' => 'Ensures that new dependencies without an available Drupal 10 compatible version cannot be installed on a project that still running on < Drupal 10.',
+    'conflict' => $conflicts,
 ]);
 
 if (isset($stopwatch)) {

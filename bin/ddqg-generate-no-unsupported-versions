@@ -42,8 +42,8 @@ $abandoned_project_constraints = array_reduce($dapi_repo->fetchAllAbandonedProje
 $abandoned_project_constraints_for_projects_with_releases = array_intersect_key($abandoned_project_constraints, $unsupported_project_releases);
 
 (new ComposerJsonWriter())(__DIR__ . '/composer.json', [
-  'description' => 'Ensures that your project does not have installed dependencies with unsupported versions by maintainer or the Drupal Security team.',
-  'conflict' => array_merge($unsupported_project_releases, $abandoned_project_constraints_for_projects_with_releases),
+    'description' => 'Ensures that your project does not have installed dependencies with unsupported versions by maintainer or the Drupal Security team.',
+    'conflict' => array_merge($unsupported_project_releases, $abandoned_project_constraints_for_projects_with_releases),
 ]);
 
 if (isset($stopwatch)) {

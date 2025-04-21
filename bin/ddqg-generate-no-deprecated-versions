@@ -44,8 +44,8 @@ $deprecated_project_constraints = array_reduce($dapi_repo->fetchAllDeprecatedPro
 }, []);
 
 (new ComposerJsonWriter())(__DIR__ . '/composer.json', [
-  'description' => 'Ensures that your project does not have deprecated dependency versions installed.',
-  'conflict' => array_merge($deprecated_project_constraints),
+    'description' => 'Ensures that your project does not have deprecated dependency versions installed.',
+    'conflict' => array_merge($deprecated_project_constraints),
 ]);
 
 if (isset($stopwatch)) {

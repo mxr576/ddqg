@@ -44,11 +44,11 @@ final class DrupalOrgApiRepository implements AbandonedProjectsRepository, Depre
     {
         return array_merge(
             $this->fetchProjectNames([
-              'filter_by_term' => (object) [
-                'vocab_id' => self::VOCAB_ID_MAINTENANCE_STATUS,
-                'term_id' => self::TERM_ID_MAINTENANCE_STATUS_UNSUPPORTED,
-              ],
-              'page' => 0,
+                'filter_by_term' => (object) [
+                    'vocab_id' => self::VOCAB_ID_MAINTENANCE_STATUS,
+                    'term_id' => self::TERM_ID_MAINTENANCE_STATUS_UNSUPPORTED,
+                ],
+                'page' => 0,
             ]),
         );
     }
@@ -57,11 +57,11 @@ final class DrupalOrgApiRepository implements AbandonedProjectsRepository, Depre
     {
         return array_merge(
             $this->fetchProjectNames([
-              'filter_by_term' => (object) [
-                'vocab_id' => self::VOCAB_ID_DEVELOPMENT_STATUS,
-                'term_id' => self::TERM_ID_DEVELOPMENT_STATUS_OBSOLETE,
-              ],
-              'page' => 0,
+                'filter_by_term' => (object) [
+                    'vocab_id' => self::VOCAB_ID_DEVELOPMENT_STATUS,
+                    'term_id' => self::TERM_ID_DEVELOPMENT_STATUS_OBSOLETE,
+                ],
+                'page' => 0,
             ]),
         );
     }
@@ -69,7 +69,7 @@ final class DrupalOrgApiRepository implements AbandonedProjectsRepository, Depre
     public function fetchProjectIds(): array
     {
         return $this->fetchProjectNames([
-          'page' => 0,
+            'page' => 0,
         ]);
     }
 
@@ -89,11 +89,11 @@ final class DrupalOrgApiRepository implements AbandonedProjectsRepository, Depre
             // Hot take... maybe sorting result by last change date (changed) leads to data loss? Some project names
             // were missing from previous results when we compared the output by this API and the Update Status API.
             $query = [
-              'type' => $filter['type'] ?? array_column(ProjectTypesExposedViaDrupalPackagist::cases(), 'value'),
-              'field_project_has_releases' => 1,
-              'field_project_type' => 'full',
-              'sort' => 'field_project_machine_name',
-              'page' => $filter['page'],
+                'type' => $filter['type'] ?? array_column(ProjectTypesExposedViaDrupalPackagist::cases(), 'value'),
+                'field_project_has_releases' => 1,
+                'field_project_type' => 'full',
+                'sort' => 'field_project_machine_name',
+                'page' => $filter['page'],
             ];
             if (array_key_exists('filter_by_term', $filter)) {
                 $query['taxonomy_vocabulary_' . $filter['filter_by_term']->vocab_id] = $filter['filter_by_term']->term_id;
@@ -160,32 +160,32 @@ final class DrupalOrgApiRepository implements AbandonedProjectsRepository, Depre
             };
 
             $pool = new Pool($client, $requests($page_count), [
-              'concurrency' => 10,
-              'fulfilled' => function (Response $response, $index) use (&$project_names_from_other_pages): void {
-                  $phpStream = StreamWrapper::getResource($response->getBody());
-                  $collection = Collection::fromIterable(Items::fromStream($phpStream, ['decoder' => new ExtJsonDecoder(true)]))
-                    ->filter(static function (mixed $v, mixed $k): bool {
-                        assert(is_string($k));
+                'concurrency' => 10,
+                'fulfilled' => function (Response $response, $index) use (&$project_names_from_other_pages): void {
+                    $phpStream = StreamWrapper::getResource($response->getBody());
+                    $collection = Collection::fromIterable(Items::fromStream($phpStream, ['decoder' => new ExtJsonDecoder(true)]))
+                      ->filter(static function (mixed $v, mixed $k): bool {
+                          assert(is_string($k));
 
-                        return 'list' === $k;
-                    })
-                    ->map(
-                        static function ($value): array {
-                            assert(is_array($value));
+                          return 'list' === $k;
+                      })
+                      ->map(
+                          static function ($value): array {
+                              assert(is_array($value));
 
-                            return Collection::fromIterable($value)
-                              ->map(static function ($value): string {
-                                  assert(is_array($value));
+                              return Collection::fromIterable($value)
+                                ->map(static function ($value): string {
+                                    assert(is_array($value));
 
-                                  return $value['field_project_machine_name'];
-                              })->all(false);
-                        }
-                    );
-                  $project_names_from_other_pages[] = $collection->limit(1)->current(0, []);
-              },
-              'rejected' => static function (GuzzleException $reason, int $index): void {
-                  throw new \RuntimeException(sprintf('Failed to fetch page %d. Reason: "%s".', $index, $reason->getMessage()), $reason->getCode(), $reason);
-              },
+                                    return $value['field_project_machine_name'];
+                                })->all(false);
+                          }
+                      );
+                    $project_names_from_other_pages[] = $collection->limit(1)->current(0, []);
+                },
+                'rejected' => static function (GuzzleException $reason, int $index): void {
+                    throw new \RuntimeException(sprintf('Failed to fetch page %d. Reason: "%s".', $index, $reason->getMessage()), $reason->getCode(), $reason);
+                },
             ]);
 
             $promise = $pool->promise();

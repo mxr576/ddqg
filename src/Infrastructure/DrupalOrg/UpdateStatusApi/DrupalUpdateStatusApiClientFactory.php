@@ -18,7 +18,7 @@ use mxr576\ddqg\Supportive\Guzzle\Guzzle7ClientFactory;
  */
 final class DrupalUpdateStatusApiClientFactory implements Guzzle7ClientFactory
 {
-    private ClientInterface|null $client = null;
+    private ?ClientInterface $client = null;
 
     public function getClient(): ClientInterface
     {
@@ -38,12 +38,12 @@ final class DrupalUpdateStatusApiClientFactory implements Guzzle7ClientFactory
                 'cache'
             );
             $this->client = new Client([
-              'base_uri' => 'https://updates.drupal.org/release-history/',
-              'headers' => [
-                'User-Agent' => 'mxr576/ddqg',
-                'Accept' => 'application/xml',
-              ],
-              'handler' => $stack,
+                'base_uri' => 'https://updates.drupal.org/release-history/',
+                'headers' => [
+                    'User-Agent' => 'mxr576/ddqg',
+                    'Accept' => 'application/xml',
+                ],
+                'handler' => $stack,
             ]);
         }
 

@@ -18,7 +18,7 @@ use mxr576\ddqg\Supportive\Guzzle\Guzzle7ClientFactory;
  */
 final class DrupalOrgApiClientFactory implements Guzzle7ClientFactory
 {
-    private ClientInterface|null $client = null;
+    private ?ClientInterface $client = null;
 
     public function getClient(): ClientInterface
     {
@@ -32,11 +32,11 @@ final class DrupalOrgApiClientFactory implements Guzzle7ClientFactory
             $this->client = new Client([
                 'base_uri' => 'https://www.drupal.org/api-d7/',
                 'headers' => [
-                  'User-Agent' => 'mxr576/ddqg',
-                  'Accept' => 'application/json',
+                    'User-Agent' => 'mxr576/ddqg',
+                    'Accept' => 'application/json',
                 ],
                 'handler' => $stack,
-              ]);
+            ]);
         }
 
         return $this->client;

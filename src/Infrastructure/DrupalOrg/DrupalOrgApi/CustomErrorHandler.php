@@ -37,7 +37,7 @@ final class CustomErrorHandler
                         return $response;
                     }
 
-                    throw RequestException::create($request, $response, null, [], new class() implements BodySummarizerInterface {
+                    throw RequestException::create($request, $response, null, [], new class implements BodySummarizerInterface {
                         public function summarize(MessageInterface $message): ?string
                         {
                             $parts = [];

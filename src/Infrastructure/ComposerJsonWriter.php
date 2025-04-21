@@ -16,11 +16,11 @@ final class ComposerJsonWriter
     public function __invoke(string $file_path, array $composer_data): void
     {
         $composer = [
-          'name' => 'mxr576/ddqg',
-          'description' => 'Ensures that your project does not have installed dependencies with known quality problems.',
-          'type' => 'metapackage',
-          'license' => 'MIT',
-          'conflict' => [],
+            'name' => 'mxr576/ddqg',
+            'description' => 'Ensures that your project does not have installed dependencies with known quality problems.',
+            'type' => 'metapackage',
+            'license' => 'MIT',
+            'conflict' => [],
         ];
         $composer = array_merge($composer, $composer_data);
 
