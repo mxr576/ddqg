@@ -26,8 +26,8 @@ $ composer require --dev mxr576/ddqg:[dev-no-insecure-versions|dev-no-unsupporte
   * Projects flagged with [Unsupported](https://www.drupal.org/node/1066982) maintenance status by maintainers
   * Project releases (versions) from [unsupported branches](https://www.drupal.org/node/2212549)
   * Project releases that are not [covered by the Drupal Security Team](https://www.drupal.org/node/475848)
-* `dev-non-d10-compatible-versions`: For Drupal 9 projects only, prevents installation of package versions that are not
-  Drupal 10 compatible. It can make the Drupal 10 upgrade more painless.
+* `dev-non-d10-compatible-versions` and `dev-non-d11-compatible-versions`: For Drupal 9/10 projects respectively, prevents installation of package versions that are not
+  Drupal 10/11 compatible. It can make the Drupal 10/11 upgrade more painless.
   * **Warning**: This is only ~99% accurate because core compatibility information sometimes cannot be identified
     from the information available on [Update Status API](https://www.drupal.org/drupalorg/docs/apis/update-status-xml).
 compatible. See Github Actions logs for skipped projects/versions.
