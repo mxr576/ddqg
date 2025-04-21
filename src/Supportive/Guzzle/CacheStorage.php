@@ -7,7 +7,7 @@ namespace mxr576\ddqg\Supportive\Guzzle;
 use Kevinrob\GuzzleCache\CacheEntry;
 use Kevinrob\GuzzleCache\Storage\CacheStorageInterface;
 use Kevinrob\GuzzleCache\Storage\FlysystemStorage;
-use League\Flysystem\Adapter\Local;
+use League\Flysystem\Local\LocalFilesystemAdapter;
 
 /**
  * symfony/cache:6.3.1 was tried out as an alternative, but it caused and endless loop
@@ -34,7 +34,7 @@ final class CacheStorage implements CacheStorageInterface
     {
         $this->inner = new FlysystemStorage(
             // Consider making location configurable.
-            new Local(dirname(__DIR__, 3) . '/.cache')
+            new LocalFilesystemAdapter(dirname(__DIR__, 3) . '/.cache')
         );
     }
 
