@@ -5903,7 +5903,7 @@
         "drupal/fe_editing_nextjs": "1.0.0-beta1|1.0.x-dev",
         "drupal/feadmin": "*",
         "drupal/feature_boost": "10.0.0|10.0.1",
-        "drupal/feature_toggle": "1.0.0|1.0.0-beta1|1.1.0|1.2.0|1.x-dev|2.0.1-beta1|2.0.2|2.0.3|2.0.x-dev|3.x-dev",
+        "drupal/feature_toggle": "1.0.0|1.0.0-beta1|1.1.0|1.2.0|1.x-dev|2.0.1-beta1|2.0.2|2.0.3|2.0.x-dev|3.0.0-alpha1|3.x-dev",
         "drupal/feature_toggle_twig": "1.0.x-dev",
         "drupal/featureflags": "2.x-dev",
         "drupal/featureflags_extensions": "1.0.x-dev",
