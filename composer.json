@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "php": "~8.1.0 || ~8.2.0",
+        "php": "~8.2.0 || ~8.3.0 || ~8.4.0",
         "composer-runtime-api": "^2.2",
         "caseyamcl/guzzle_retry_middleware": "^2.12",
         "composer/semver": "^3.4.3",

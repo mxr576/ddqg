@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4ae680bca350b070a51305c5ad785e05",
+    "content-hash": "098dfc0c34cd1530c0c5bcb3b2b85ab5",
     "packages": [
         {
             "name": "caseyamcl/guzzle_retry_middleware",
@@ -4522,7 +4522,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "~8.1.0 || ~8.2.0",
+        "php": "~8.2.0 || ~8.3.0 || ~8.4.0",
         "composer-runtime-api": "^2.2"
     },
     "platform-dev": {},
