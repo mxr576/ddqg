@@ -24,8 +24,7 @@
         "halaxa/json-machine": "^1.1",
         "kevinrob/guzzle-cache-middleware": "^6.0.0",
         "league/flysystem": "^3.29.1",
-        "loophp/collection": "^7.1",
-        "loophp/iterators": "^2.3",
+        "loophp/collection": "^7.6.1",
         "prewk/xml-string-streamer": "^1.2",
         "psr/log": "^3.0"
     },
