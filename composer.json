@@ -2011,6 +2011,7 @@
         "drupal/owl": "*",
         "drupal/package_builder": "*",
         "drupal/packager": "*",
+        "drupal/page_sections": "*",
         "drupal/page_title": "*",
         "drupal/pagecomposer": "*",
         "drupal/pageear": "*",
