@@ -151,7 +151,6 @@
         "drupal/svg_embed": ">=2.1.0, <2.1.2",
         "drupal/svg_formatter": ">=1.0.0, <1.17.0|>=2.0.0, <2.0.1",
         "drupal/symfony_mailer_lite": ">=1.0.0, <1.0.6",
-        "drupal/tablefield": ">=2.0.0, <2.1.0",
         "drupal/tac_lite": ">=1.0.0, <1.6.0",
         "drupal/tacjs": ">=6.0.0, <6.7.0",
         "drupal/tarte_au_citron": ">=2.0.0, <2.0.5",
