@@ -322,6 +322,7 @@
         "drupal/cache_redis": "*",
         "drupal/cacheability_metadata_inspector": "*",
         "drupal/cached_poll": "*",
+        "drupal/cachestatic": "*",
         "drupal/cachetags": "*",
         "drupal/cachetags_table_bypass": "*",
         "drupal/cahoot": "*",
