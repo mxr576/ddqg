@@ -87,6 +87,7 @@
         "drupal/ai_eca": "*",
         "drupal/ai_ecosystem_recipe": "*",
         "drupal/ai_interpolator_ollama": "*",
+        "drupal/ai_vdb_provider_opensearch": "*",
         "drupal/aimodels": "*",
         "drupal/airplane_reservation": "*",
         "drupal/ajax_content": "*",
