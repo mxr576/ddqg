@@ -2721,6 +2721,7 @@
         "drupal/titon": "*",
         "drupal/tlds": "*",
         "drupal/tlh": "*",
+        "drupal/tmgmt_livewords": "*",
         "drupal/tmgmt_openai": "*",
         "drupal/tns_gallup": "*",
         "drupal/toc_ng": "*",
