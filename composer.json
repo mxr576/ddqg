@@ -3078,6 +3078,7 @@
         "drupal/workbench_moderation_notes": "*",
         "drupal/workbench_moderation_types": "*",
         "drupal/workbench_panels": "*",
+        "drupal/workers_ai": "*",
         "drupal/workflow_fields": "*",
         "drupal/workflow_graph": "*",
         "drupal/workflow_named_transitions": "*",
