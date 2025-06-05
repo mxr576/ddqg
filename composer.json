@@ -1945,7 +1945,6 @@
         "drupal/commerce_donate": "1.0.0-alpha1|1.1.0-alpha1",
         "drupal/commerce_donation_flow": "1.0.0-beta1",
         "drupal/commerce_dotpay": "1.x-dev",
-        "drupal/commerce_dpd_fr": "1.x-dev",
         "drupal/commerce_dps": "1.0.0-beta1|1.x-dev|2.0.0|2.0.0-beta1",
         "drupal/commerce_dps_pxpay": "1.x-dev",
         "drupal/commerce_easy": "1.0.0-rc1|1.0.0-rc2|1.0.0-rc3|1.0.0-rc4|1.0.0-rc5|1.0.0-rc6",
