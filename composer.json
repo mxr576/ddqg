@@ -2753,6 +2753,7 @@
         "drupal/translatablecomments": "*",
         "drupal/translate_this": "*",
         "drupal/translated_parent": "*",
+        "drupal/translateterms": "*",
         "drupal/translation": "*",
         "drupal/translation_field_diffuser": "*",
         "drupal/translation_status": "*",
