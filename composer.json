@@ -3046,6 +3046,7 @@
         "drupal/debugme": "1.0.0-alpha1|1.0.0-alpha2|1.x-dev",
         "drupal/debugpause": "1.0.0-beta1|1.0.0-beta2|1.0.0-beta3",
         "drupal/deconfig": "1.0.0",
+        "drupal/decor": "1.0.x-dev",
         "drupal/decor_zymphonies_theme": "1.0.1|2.0.1",
         "drupal/decorative_image_widget": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4",
         "drupal/decouple_recipe": "1.0.x-dev",
