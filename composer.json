@@ -924,7 +924,7 @@
         "drupal/baidu_share_d8": "1.0.0|1.1.0",
         "drupal/baidu_tongji": "1.x-dev|2.0.x-dev",
         "drupal/baidumap_fieldtype": "1.0.0|1.1.0|1.x-dev",
-        "drupal/bakery": "2.0.0-alpha1|2.x-dev|3.0.0-alpha1|3.x-dev",
+        "drupal/bakery": "2.0.0-alpha1|2.x-dev|3.0.0-alpha1",
         "drupal/balance_tracker": "1.x-dev",
         "drupal/bamboo_twig": "1.0.0|1.x-dev|2.0.0|2.1.0|2.x-dev|3.0.0|3.1.0|3.2.0|3.3.0|3.x-dev|4.0.0|4.1.0|4.x-dev|5.0.0|5.0.0-alpha1|5.1.0|5.x-dev|6.0.0",
         "drupal/bambora": "1.0.2|1.0.x-dev",
