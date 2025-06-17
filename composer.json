@@ -84,6 +84,7 @@
         "drupal/agregado": "*",
         "drupal/ahah_forms": "*",
         "drupal/ahah_helper": "*",
+        "drupal/ai_chatbot": "*",
         "drupal/ai_eca": "*",
         "drupal/ai_ecosystem_recipe": "*",
         "drupal/ai_interpolator_ollama": "*",
