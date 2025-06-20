@@ -38,7 +38,7 @@
         "drupal/content_moderation_notifications": ">=3.0.0, <3.6.0",
         "drupal/cookiebot_gtm": ">=1.0.0, <1.0.18",
         "drupal/cookies": ">=1.2.0, <1.2.15|>=2.0.0, <2.0.0-alpha2",
-        "drupal/core": ">=10.3.0, <10.3.14|>=10.4.0, <10.4.5|>=11.0.0, <11.0.13|>=11.1.0, <11.1.5",
+        "drupal/core": ">=10.4.0, <10.4.5|>=11.1.0, <11.1.5",
         "drupal/ctools": ">=3.0.0, <3.7.0",
         "drupal/datafield": ">=1.0.0, <1.0.16",
         "drupal/diff": ">=1.0.0, <1.8.0|>=2.0.0, <2.0.0-beta3",
