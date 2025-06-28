@@ -2626,6 +2626,7 @@
         "drupal/smf2p": "*",
         "drupal/smoothblue": "*",
         "drupal/sms_clickatell": "*",
+        "drupal/sms_field": "*",
         "drupal/sms_netcore": "*",
         "drupal/sms_telstra": "*",
         "drupal/sms_tiniyogateway": "*",
