@@ -35,6 +35,7 @@
         "drupal/activitystream_netflix": "*",
         "drupal/adaptive_payments": "*",
         "drupal/adbard": "*",
+        "drupal/add_more": "*",
         "drupal/add_n_reference": "*",
         "drupal/addfavorites": "*",
         "drupal/addressfield_feeds": "*",
