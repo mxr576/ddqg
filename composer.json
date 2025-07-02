@@ -48,7 +48,6 @@
         "drupal/dynamic_banner": ">=1.0.0, <1.0.0-beta2",
         "drupal/eca": ">=1.1.0, <1.1.12|>=2.1.0, <2.1.7",
         "drupal/echo": ">=1.0.0, <1.7.0",
-        "drupal/editor_file": ">=1.0.0, <1.2.0",
         "drupal/elf": ">=1.0.0, <1.2.0",
         "drupal/email_contact": ">=2.0.0, <2.0.4",
         "drupal/email_tfa": ">=2.0.0, <2.0.3",
