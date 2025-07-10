@@ -1762,6 +1762,7 @@
         "drupal/log_deprecated_messages": "*",
         "drupal/log_to_file": "*",
         "drupal/logemout": "*",
+        "drupal/login_by_ip": "*",
         "drupal/login_redirect_to_front": "*",
         "drupal/loginmenu": "*",
         "drupal/logo_watermark": "*",
