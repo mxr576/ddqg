@@ -445,10 +445,21 @@ final class DrupalUpdateStatusApiUsingGuzzleRepository implements
             $constraint_lowest_boundary = $lowest_boundary->asString;
         }
 
+        // The mail_login case:
+        // <supported_branches>3.2.,4.2.,8.x-2.</supported_branches>
+        // and 4.2.0 was the latest security release.
+        // This means both the lowest- and the highest boundary was 4.2.0
+        // at a time.
+        if ($highest_boundary->asString === $constraint_lowest_boundary) {
+            $constraint_lowest_boundary = "$highest_boundary->major.0.0";
+        }
+
+        // Avoid validation error:
+        // "this version constraint cannot possibly match anything (>=1.0.0,<1.0.0)".
         if ($highest_boundary->asString === $constraint_lowest_boundary) {
             return $highest_boundary->asString;
         }
 
-        return ">=$constraint_lowest_boundary, <$highest_boundary->asString";
+        return ">=$constraint_lowest_boundary,<$highest_boundary->asString";
     }
 }
