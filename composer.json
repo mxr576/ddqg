@@ -1571,6 +1571,7 @@
         "drupal/imapauth": "*",
         "drupal/imbug": "*",
         "drupal/imce_jupload": "*",
+        "drupal/imce_plupload": "*",
         "drupal/img_host": "*",
         "drupal/imgtax": "*",
         "drupal/iminds_academy_oauth": "*",
