@@ -5746,7 +5746,7 @@
         "drupal/event": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-beta1|1.x-dev",
         "drupal/event_calendar_view": "1.0.0",
         "drupal/event_dispatchers": "1.0.x-dev",
-        "drupal/event_horizon": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.0.0-rc1|1.0.x-dev",
+        "drupal/event_horizon": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.0.0-rc1|1.0.0-rc2|1.0.x-dev",
         "drupal/event_log_track_encrypt": "1.0.0-beta1|1.0.0-beta2|1.0.x-dev",
         "drupal/event_platform": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-alpha6|1.0.0-alpha7|1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.0.0-beta4|1.0.0-beta5|1.0.0-beta6|1.0.0-rc1|1.0.x-dev|1.1.0-beta1|1.1.0-beta2|1.1.x-dev|2.0.0-alpha1|2.0.0-alpha2|2.0.0-alpha3|2.0.0-beta1|2.0.0-beta2|2.0.0-beta3|2.0.0-beta4|2.0.0-rc1|2.0.0-rc2|2.0.x-dev",
         "drupal/event_records": "*",
