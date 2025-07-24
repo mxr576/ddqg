@@ -39,7 +39,7 @@
         "drupal/content_entity_clone": ">=1.0.0,<1.0.4",
         "drupal/content_moderation_notifications": ">=3.0.0,<3.6.0",
         "drupal/cookiebot_gtm": ">=1.0.0,<1.0.18",
-        "drupal/cookies": ">=1.2.0,<1.2.15|>=2.0.0,<2.0.0-alpha2",
+        "drupal/cookies": ">=1.2.0,<1.2.16|>=2.0.0,<2.0.0-alpha5",
         "drupal/cookies_addons": ">=1.2.0,<1.2.4",
         "drupal/core": ">=10.4.0,<10.4.5|>=11.1.0,<11.1.5",
         "drupal/ctools": ">=3.0.0,<3.7.0",
