@@ -2257,6 +2257,7 @@
         "drupal/phpgedview": "*",
         "drupal/phpseclib": "*",
         "drupal/phpstorm_metadata": "*",
+        "drupal/phpsyntaxtree": "*",
         "drupal/phptraffica": "*",
         "drupal/phpwebstat": "*",
         "drupal/pianoanalytics_domain": "*",
