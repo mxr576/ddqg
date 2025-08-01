@@ -1083,6 +1083,7 @@
         "drupal/entity_save": "*",
         "drupal/entity_taxonomy": "*",
         "drupal/entity_timeline": "*",
+        "drupal/entity_track": "*",
         "drupal/entity_type_behaviors_pack": "*",
         "drupal/entity_usage_target_list": "*",
         "drupal/entity_vistiors": "*",
