@@ -6545,7 +6545,7 @@
         "drupal/local_mail": "1.0.0|1.0.1|1.0.2",
         "drupal/local_translation": "1.0.0-alpha1|1.x-dev",
         "drupal/local_video_thumbnail": "1.0.0-alpha1|1.x-dev|2.0.0-alpha2",
-        "drupal/locale_delete": "1.0.0|1.0.x-dev",
+        "drupal/locale_delete": "1.0.0",
         "drupal/locale_migrate": "1.0.0-alpha1|1.x-dev",
         "drupal/locale_override": "1.0.0|1.0.0-alpha1|1.1.0",
         "drupal/locale_tamper": "1.x-dev",
