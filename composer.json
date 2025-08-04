@@ -12,7 +12,7 @@
         "drupal/advanced_pwa": ">=1.0.0,<1.5.0",
         "drupal/ai": ">=1.0.0,<1.0.5",
         "drupal/auto_login_url": ">=1.0.0,<1.2.0",
-        "drupal/baguettebox": ">=2.0.0,<2.0.4|>=3.0.0,<3.0.1",
+        "drupal/baguettebox": ">=3.0.0,<3.0.1",
         "drupal/block_attributes": ">=2.0.0,<2.0.1",
         "drupal/block_class": ">=4.0.0,<4.0.1",
         "drupal/block_permissions": ">=1.0.0,<1.2.0",
