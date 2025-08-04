@@ -5263,7 +5263,7 @@
         "drupal/examples_d8": "1.1.0|1.2.0|1.3.0|1.4.0|1.5.0|1.x-dev",
         "drupal/examquiz": "1.x-dev",
         "drupal/excel2webpage": "1.0.0-alpha1|1.0.x-dev",
-        "drupal/excel_importer": "1.0.1|1.0.2|1.0.3|1.0.4|1.0.5|1.1.1|1.1.2|1.1.3|1.1.4|1.1.5|1.1.6|1.1.7|1.1.8|1.1.10|1.1.11|1.1.x-dev",
+        "drupal/excel_importer": "1.0.1|1.0.2|1.0.3|1.0.4|1.0.5|1.1.1|1.1.2|1.1.3|1.1.4|1.1.5|1.1.6|1.1.7|1.1.8|1.1.10|1.1.11",
         "drupal/excel_libxl": "1.0.0|1.1.0|1.2.0|1.3.0|1.4.0|1.x-dev|2.0.0",
         "drupal/excellence_simple": "1.0.0",
         "drupal/exception_mailer": "1.x-dev|2.x-dev|3.0.0-beta1|3.0.0-beta2|3.1.0|3.x-dev|4.0.0|4.0.1|4.0.2|4.0.3|4.0.4|4.0.5|4.0.6|4.1.x-dev",
