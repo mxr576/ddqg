@@ -2651,6 +2651,7 @@
         "drupal/social_auth_steemconnect": "*",
         "drupal/social_base": "*",
         "drupal/social_json_api": "*",
+        "drupal/social_post_controller": "*",
         "drupal/socialhub": "*",
         "drupal/sociallogin": "*",
         "drupal/solarium": "*",
