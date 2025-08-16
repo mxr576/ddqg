@@ -2015,6 +2015,7 @@
         "drupal/commerce_inventory": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-alpha6|1.x-dev",
         "drupal/commerce_inventory_square": "1.0.0-alpha1|1.x-dev",
         "drupal/commerce_invoice": "1.0.0-beta1|2.0.0-beta1|2.0.0-beta2|2.0.0-beta3|2.0.0-beta4|2.0.0-rc1",
+        "drupal/commerce_invoice_receipt": "1.0.x-dev",
         "drupal/commerce_invoicexpress": "1.x-dev",
         "drupal/commerce_item_discount_ui": "1.x-dev|2.0.0-beta1",
         "drupal/commerce_itransact": "1.0.0|1.1.0|1.x-dev|2.0.0|2.0.x-dev",
