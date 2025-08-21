@@ -2488,7 +2488,7 @@
         "drupal/conflict": "1.0.0|1.0.0-alpha1|1.0.0-beta1|1.x-dev|2.0.0-alpha1|2.0.0-alpha2",
         "drupal/confq_cfp": "1.0.0-alpha1|1.x-dev|2.0.0|2.0.x-dev",
         "drupal/congruency": "1.0.0-alpha1|1.0.x-dev",
-        "drupal/connectid": "1.0.0|1.x-dev|2.0.0-alpha1|2.0.0-alpha2|2.0.x-dev|3.0.0-alpha2|3.0.0-alpha3|3.0.x-dev",
+        "drupal/connectid": "1.0.0|1.x-dev|2.0.0-alpha1|2.0.0-alpha2|2.0.x-dev|3.0.0-alpha2|3.0.0-alpha3",
         "drupal/connectid_login": "1.0.0|1.0.x-dev|2.0.0-alpha2|2.0.x-dev|3.0.0-alpha1|3.0.0-alpha2|3.0.0-alpha3|3.0.x-dev",
         "drupal/connection": "1.x-dev",
         "drupal/consent": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.x-dev",
