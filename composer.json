@@ -118,7 +118,6 @@
         "drupal/miniorange_2fa": ">=4.0.0,<4.8.0|>=5.2.0,<5.2.1",
         "drupal/miniorange_oauth_client": ">=3.0.0,<3.44.0|>=4.0.0,<4.0.19",
         "drupal/mollie": ">=2.2.0,<2.2.1",
-        "drupal/monster_menus": ">=9.3.0,<9.3.4|>=9.4.0,<9.4.2",
         "drupal/node_access_rebuild_progressive": ">=2.0.0,<2.0.2",
         "drupal/node_view_permissions": ">=1.0.0,<1.1.0",
         "drupal/nodejs": "1.0.0",
