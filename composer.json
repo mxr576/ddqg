@@ -6,6 +6,7 @@
     "conflict": {
         "drupal/a11y_keyboard": "*",
         "drupal/a_blueprint": "*",
+        "drupal/ab_paragraphs": "*",
         "drupal/ablock": "*",
         "drupal/ablogtheme": "*",
         "drupal/aboutpeople": "*",
@@ -17,6 +18,7 @@
         "drupal/accessibe": "*",
         "drupal/accessible_content": "*",
         "drupal/accordians": "*",
+        "drupal/account_expiry": "*",
         "drupal/account_mail": "*",
         "drupal/accounting_content_types": "*",
         "drupal/acm": "*",
