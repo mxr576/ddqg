@@ -2992,6 +2992,7 @@
         "drupal/uc_webpay": "*",
         "drupal/udashboard": "*",
         "drupal/ui": "*",
+        "drupal/ui_auto_translate": "*",
         "drupal/ui_patterns_blocks": "*",
         "drupal/ui_patterns_miyagi": "*",
         "drupal/uicarousel": "*",
