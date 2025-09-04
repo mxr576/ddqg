@@ -5,7 +5,7 @@
     "license": "MIT",
     "conflict": {
         "drupal/access_code": ">=2.0.0,<2.0.4",
-        "drupal/acquia_dam": ">=1.1.0,<1.1.0-beta3",
+        "drupal/acquia_dam": ">=1.1.0,<1.1.5",
         "drupal/addtoany": ">=2.0.0,<2.0.4",
         "drupal/admin_audit_trail": ">=1.0.0,<1.0.5",
         "drupal/adv_varnish": ">=4.0.0,<4.0.11",
