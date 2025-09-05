@@ -5251,7 +5251,6 @@
         "drupal/graphql_entity_by_object": "1.0.0-alpha1",
         "drupal/graphql_entity_definitions": "1.0.0|1.1.0|1.2.0|1.3.0|1.x-dev|6.x-dev",
         "drupal/graphql_export": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3",
-        "drupal/graphql_extras": "1.0.x-dev",
         "drupal/graphql_flag": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.x-dev",
         "drupal/graphql_formatters": "1.0.1|1.0.x-dev|1.x-dev",
         "drupal/graphql_fragment_include": "1.0.0|1.0.0-rc1|1.0.0-rc2|1.0.0-rc3|1.0.0-rc4|1.0.0-rc5|1.0.0-rc6|1.0.0-rc7|1.1.0|1.2.0|1.3.0|1.4.0|1.5.0",
