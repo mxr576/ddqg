@@ -1217,6 +1217,7 @@
         "drupal/feeds_array_parser": "*",
         "drupal/feeds_cablecast": "*",
         "drupal/feeds_enhancements": "*",
+        "drupal/feeds_extra_logging": "*",
         "drupal/feeds_hacks": "*",
         "drupal/feeds_log": "*",
         "drupal/feeds_media_internet_files": "*",
