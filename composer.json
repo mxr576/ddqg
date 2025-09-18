@@ -2419,6 +2419,7 @@
         "drupal/region_conf": "*",
         "drupal/registration_events": "*",
         "drupal/reinvigorate": "*",
+        "drupal/relatedcontentblock": "*",
         "drupal/relation": "*",
         "drupal/release": "*",
         "drupal/releasemonitor": "*",
