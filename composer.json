@@ -198,6 +198,7 @@
         "drupal/audioprompter": "*",
         "drupal/auhor_profile": "*",
         "drupal/auth_user_cache": "*",
+        "drupal/authcache_recacher": "*",
         "drupal/author_access": "*",
         "drupal/auto_opengraph": "*",
         "drupal/autocomplete_node_finder": "*",
