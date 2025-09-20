@@ -1760,6 +1760,7 @@
         "drupal/living_style_guide": "*",
         "drupal/llm_provider": "*",
         "drupal/llmmanager": "*",
+        "drupal/lms_classes": "*",
         "drupal/lmstudio": "*",
         "drupal/loading_animation": "*",
         "drupal/lobby": "*",
