@@ -2232,6 +2232,7 @@
         "drupal/payflow": "*",
         "drupal/payjunction": "*",
         "drupal/payment_api": "*",
+        "drupal/payment_import": "*",
         "drupal/payment_mercadopago_v3": "*",
         "drupal/payment_omnikassa": "*",
         "drupal/payment_paypal": "*",
