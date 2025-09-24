@@ -1463,6 +1463,7 @@
         "drupal/groups": "*",
         "drupal/gsa_search": "*",
         "drupal/gsitemap": "*",
+        "drupal/gtm_datalayer": "*",
         "drupal/gtrans": "*",
         "drupal/guestnode": "*",
         "drupal/guide": "*",
