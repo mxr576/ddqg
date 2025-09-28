@@ -12009,6 +12009,7 @@
         "drupal/webform_encryption": "1.x-dev",
         "drupal/webform_entity_builder": "1.0.0-rc1|1.0.0-rc2|1.0.0-rc3|1.0.0-rc4|1.0.0-rc5|1.0.0-rc6|1.0.0-rc7|1.0.0-rc8|2.0.0-rc1|2.0.0-rc2",
         "drupal/webform_entity_email": "1.0.0|1.0.0-beta1|1.0.0-rc1",
+        "drupal/webform_entity_embed": "1.0.0",
         "drupal/webform_entity_handler": "1.x-dev|2.0.0-beta1",
         "drupal/webform_entity_view": "1.0.0|1.0.1",
         "drupal/webform_extra_field": "1.0.0-alpha1|1.x-dev|2.0.0-alpha2|2.0.0-rc1",
