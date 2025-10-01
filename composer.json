@@ -3587,7 +3587,7 @@
         "drupal/edit_media_modal": "1.0.0|1.0.1",
         "drupal/edit_metadata_cache": "1.x-dev",
         "drupal/edit_own_unpublished": "1.x-dev",
-        "drupal/edit_own_user_account_permission": "1.0.0|1.x-dev",
+        "drupal/edit_own_user_account_permission": "1.0.0",
         "drupal/edit_poc": "1.0.0-alpha1|1.0.0-alpha2|1.x-dev",
         "drupal/edit_profiles_perms": "1.0.0",
         "drupal/edit_role_permissions": "1.0.0",
