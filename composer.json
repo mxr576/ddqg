@@ -2299,6 +2299,7 @@
         "drupal/pluggable": "*",
         "drupal/plugin_config_form_builder": "*",
         "drupal/plugindecorator": "*",
+        "drupal/pluginformalter": "*",
         "drupal/plup": "*",
         "drupal/plus": "*",
         "drupal/pm_chat": "*",
