@@ -2787,6 +2787,7 @@
         "drupal/crowdriff": "1.x-dev",
         "drupal/crowdsourcing": "1.x-dev",
         "drupal/crownpeak_autofix": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4",
+        "drupal/crux": "1.x-dev|2.0.x-dev",
         "drupal/crypto_exchange": "1.0.0|1.1.0|1.2.0|1.x-dev",
         "drupal/crypto_miner": "1.x-dev",
         "drupal/crypto_widget": "1.0.0",
