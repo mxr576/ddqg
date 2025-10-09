@@ -803,6 +803,7 @@
         "drupal/detector": "*",
         "drupal/devel_clipboard": "*",
         "drupal/devel_enttiy": "*",
+        "drupal/devel_kint_extras": "*",
         "drupal/devel_ladybug": "*",
         "drupal/developer_mode": "*",
         "drupal/developergarden": "*",
