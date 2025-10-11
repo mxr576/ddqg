@@ -130,7 +130,6 @@
         "drupal/obfuscate_email": ">=2.0.0,<2.0.1",
         "drupal/oembed_providers": ">=2.2.0,<2.2.2",
         "drupal/office_hours": ">=1.0.0,<1.11.0",
-        "drupal/ohdear_integration": ">=2.0.0,<2.0.4",
         "drupal/one_time_password": ">=1.0.0,<1.3.0",
         "drupal/open_readspeaker": ">=1.0.0,<1.5.0",
         "drupal/openid_connect": ">=1.0.0,<1.1.0",
