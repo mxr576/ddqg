@@ -1507,7 +1507,6 @@
         "drupal/hose_xml": "*",
         "drupal/hosting_composer": "*",
         "drupal/hosting_drush_aliases": "*",
-        "drupal/hosting_le": "*",
         "drupal/hosting_platform_pathauto": "*",
         "drupal/hosting_saas": "*",
         "drupal/hostmaster_plus": "*",
