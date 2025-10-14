@@ -4,6 +4,8 @@ on:
   workflow_dispatch:
   push:
     branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
   schedule:
     - cron: '0 0 * * *'
 
@@ -35,7 +37,8 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
 
-      - name: Set up GIT in bin
+      - name: Set up GIT in bin (only for non-PR events)
+        if: github.event_name != 'pull_request'
         run: |
           cd bin
           git init
@@ -44,67 +47,109 @@ jobs:
           git remote add origin https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}
           git fetch origin
 
+      - name: Create artifacts directory
+        if: github.event_name == 'pull_request'
+        run: mkdir -p artifacts
+
       - name: Generate no unsupported versions release
         run: |
           cd bin
-          git checkout no-unsupported-versions -f || git checkout -b no-unsupported-versions 7c16065
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            git checkout no-unsupported-versions -f || git checkout -b no-unsupported-versions 7c16065
+          fi
           ./ddqg-generate-no-unsupported-versions
           composer validate
-          # If this is a newly created branch then composer.json is not being tracked.
-          git add composer.json
-          if [[ `git status --porcelain --untracked-files=no` ]]; then
-            git commit -a -m "Updated composer.json"
-            git push -f -u origin no-unsupported-versions
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            cp composer.json ../artifacts/no-unsupported-versions-composer.json
+          else
+            # Original commit and push logic
+            git add composer.json
+            if [[ `git status --porcelain --untracked-files=no` ]]; then
+              git commit -a -m "Updated composer.json"
+              git push -f -u origin no-unsupported-versions
+            fi
           fi
 
       - name: Generate no deprecated versions release
         run: |
           cd bin
-          git checkout no-deprecated-versions -f || git checkout -b no-deprecated-versions 7c16065
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            git checkout no-deprecated-versions -f || git checkout -b no-deprecated-versions 7c16065
+          fi
           ./ddqg-generate-no-deprecated-versions
           composer validate
-          # If this is a newly created branch then composer.json is not being tracked.
-          git add composer.json
-          if [[ `git status --porcelain --untracked-files=no` ]]; then
-            git commit -a -m "Updated composer.json"
-            git push -f -u origin no-deprecated-versions
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            cp composer.json ../artifacts/no-deprecated-versions-composer.json
+          else
+            # Original commit and push logic
+            git add composer.json
+            if [[ `git status --porcelain --untracked-files=no` ]]; then
+              git commit -a -m "Updated composer.json"
+              git push -f -u origin no-deprecated-versions
+            fi
           fi
 
       - name: Generate non-Drupal 11 compatible versions release
         run: |
           cd bin
-          git checkout non-d11-compatible-versions -f || git checkout -b non-d11-compatible-versions 7c16065
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            git checkout non-d11-compatible-versions -f || git checkout -b non-d11-compatible-versions 7c16065
+          fi
           ./ddqg-generate-drupal-core-incompatible-versions 11.0.0
           composer validate
-          # If this is a newly created branch then composer.json is not being tracked.
-          git add composer.json
-          if [[ `git status --porcelain --untracked-files=no` ]]; then
-            git commit -a -m "Updated composer.json"
-            git push -f -u origin non-d11-compatible-versions
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            cp composer.json ../artifacts/non-d11-compatible-versions-composer.json
+          else
+            # Original commit and push logic
+            git add composer.json
+            if [[ `git status --porcelain --untracked-files=no` ]]; then
+              git commit -a -m "Updated composer.json"
+              git push -f -u origin non-d11-compatible-versions
+            fi
           fi
 
       - name: Generate no insecure versions release
         run: |
           cd bin
-          git checkout no-insecure-versions -f || git checkout -b no-insecure-versions 7c16065
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            git checkout no-insecure-versions -f || git checkout -b no-insecure-versions 7c16065
+          fi
           ./ddqg-generate-no-insecure-versions
           composer validate
-          # If this is a newly created branch then composer.json is not being tracked.
-          git add composer.json
-          if [[ `git status --porcelain --untracked-files=no` ]]; then
-            git commit -a -m "Updated composer.json"
-            git push -f -u origin no-insecure-versions
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            cp composer.json ../artifacts/no-insecure-versions-composer.json
+          else
+            # Original commit and push logic
+            git add composer.json
+            if [[ `git status --porcelain --untracked-files=no` ]]; then
+              git commit -a -m "Updated composer.json"
+              git push -f -u origin no-insecure-versions
+            fi
           fi
 
       - name: Generate non-Drupal 10 compatible versions release
         run: |
           cd bin
-          git checkout non-d10-compatible-versions -f || git checkout -b non-d10-compatible-versions 7c16065
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            git checkout non-d10-compatible-versions -f || git checkout -b non-d10-compatible-versions 7c16065
+          fi
           ./ddqg-generate-drupal-core-incompatible-versions 10.0.0
           composer validate
-          # If this is a newly created branch then composer.json is not being tracked.
-          git add composer.json
-          if [[ `git status --porcelain --untracked-files=no` ]]; then
-            git commit -a -m "Updated composer.json"
-            git push -f -u origin non-d10-compatible-versions
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            cp composer.json ../artifacts/non-d10-compatible-versions-composer.json
+          else
+            # Original commit and push logic
+            git add composer.json
+            if [[ `git status --porcelain --untracked-files=no` ]]; then
+              git commit -a -m "Updated composer.json"
+              git push -f -u origin non-d10-compatible-versions
+            fi
           fi
+
+      - name: Upload generated composer.json files
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-composer-files
+          path: artifacts/*.json
+          retention-days: 7
