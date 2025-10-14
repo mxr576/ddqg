@@ -1,6 +1,48 @@
 parameters:
 	ignoreErrors:
 		-
+			message: '#^Method mxr576\\ddqg\\Application\\DrupalCoreCompatibility\\Dto\\DoesNotHaveDrupalCoreCompatibleRelease\:\:getProjectTypeName\(\) should return ''module''\|''profile''\|''theme'' but returns string\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Application/DrupalCoreCompatibility/Dto/DoesNotHaveDrupalCoreCompatibleRelease.php
+
+		-
+			message: '#^Method mxr576\\ddqg\\Application\\DrupalCoreCompatibility\\Dto\\HasDrupalCoreCompatibleRelease\:\:getProjectTypeName\(\) should return ''module''\|''profile''\|''theme'' but returns string\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Application/DrupalCoreCompatibility/Dto/HasDrupalCoreCompatibleRelease.php
+
+		-
+			message: '#^\(ArrayObject&TReturn\)\|ArrayObject\<\*NEVER\*, \*NEVER\*\> does not accept mxr576\\ddqg\\Application\\DrupalCoreCompatibility\\Port\\ProjectInfo\.$#'
+			identifier: offsetAssign.valueType
+			count: 1
+			path: src/Application/DrupalCoreCompatibility/GenerateDrupalCoreCompatibilityReport.php
+
+		-
+			message: '#^Method mxr576\\ddqg\\Application\\DrupalCoreCompatibility\\GenerateDrupalCoreCompatibilityReport\:\:__invoke\(\) return type has no value type specified in iterable type Traversable\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Application/DrupalCoreCompatibility/GenerateDrupalCoreCompatibilityReport.php
+
+		-
+			message: '#^Parameter \#1 \$drupalCoreVersionConstraint of method mxr576\\ddqg\\Application\\DrupalCoreCompatibility\\Port\\ListReleasesWithDrupalCoreCompatibility\:\:fetchReleasesWithDrupalCoreCompatibility\(\) expects Composer\\Semver\\Constraint\\Constraint, Composer\\Semver\\Constraint\\ConstraintInterface given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Application/DrupalCoreCompatibility/GenerateDrupalCoreCompatibilityReport.php
+
+		-
+			message: '#^Parameter \#6 \$latestTaggedVersion of class mxr576\\ddqg\\Application\\DrupalCoreCompatibility\\Dto\\HasDrupalCoreCompatibleRelease constructor expects string, string\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Application/DrupalCoreCompatibility/GenerateDrupalCoreCompatibilityReport.php
+
+		-
+			message: '#^Parameter \#7 \$latestTaggedVersionReleaseDate of class mxr576\\ddqg\\Application\\DrupalCoreCompatibility\\Dto\\HasDrupalCoreCompatibleRelease constructor expects DateTimeImmutable, DateTimeImmutable\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Application/DrupalCoreCompatibility/GenerateDrupalCoreCompatibilityReport.php
+
+		-
 			message: '#^Method mxr576\\ddqg\\Domain\\DrupalCoreIncompatibleReleasesRepository\:\:findDrupalCoreIncompatibleVersions\(\) return type has no value type specified in iterable type array\.$#'
 			identifier: missingType.iterableValue
 			count: 1
@@ -115,9 +157,15 @@ parameters:
 			path: src/Infrastructure/DrupalOrg/UpdateStatusApi/DrupalUpdateStatusApiUsingGuzzleRepository.php
 
 		-
+			message: '#^Parameter \#2 \$releaseDate of class mxr576\\ddqg\\Application\\DrupalCoreCompatibility\\Port\\ReleaseMetada constructor expects DateTimeImmutable, DateTimeImmutable\|false given\.$#'
+			identifier: argument.type
+			count: 2
+			path: src/Infrastructure/DrupalOrg/UpdateStatusApi/DrupalUpdateStatusApiUsingGuzzleRepository.php
+
+		-
 			message: '#^Parameter \#2 \.\.\.\$values of function sprintf expects bool\|float\|int\|string\|null, mixed given\.$#'
 			identifier: argument.type
-			count: 8
+			count: 10
 			path: src/Infrastructure/DrupalOrg/UpdateStatusApi/DrupalUpdateStatusApiUsingGuzzleRepository.php
 
 		-
@@ -125,3 +173,9 @@ parameters:
 			identifier: missingType.checkedException
 			count: 1
 			path: src/Infrastructure/DrupalOrg/UpdateStatusApi/XmlStreamBridgeForPsrStream.php
+
+		-
+			message: '#^Method mxr576\\ddqg\\Presentation\\DrupalCoreCompatibilityReportGenerator\\MarkdownDrupalCompatibilityReportGenerator\:\:groupByPackageType\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Presentation/DrupalCoreCompatibilityReportGenerator/MarkdownDrupalCompatibilityReportGenerator.php

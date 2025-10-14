@@ -1,0 +1,45 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use Monolog\Logger;
+use mxr576\ddqg\Infrastructure\DrupalOrg\UpdateStatusApi\DrupalUpdateStatusApiClientFactory;
+use mxr576\ddqg\Infrastructure\DrupalOrg\UpdateStatusApi\DrupalUpdateStatusApiUsingGuzzleRepository;
+use Symfony\Component\Stopwatch\Stopwatch;
+
+require_once $_composer_autoload_path ?? __DIR__ . '/../vendor/autoload.php';
+
+$stopwatch = null;
+/* @phpstan-assert-if-true \Symfony\Component\Stopwatch\Stopwatch $stopwatch */
+if (class_exists(Stopwatch::class)) {
+    $stopwatch = new Stopwatch();
+    $stopwatch->start('process');
+}
+$logger = new Psr\Log\NullLogger();
+if (class_exists(Logger::class)) {
+    $logger = new Logger('mxr576/ddqg', [new Monolog\Handler\StreamHandler(STDERR)], [new Monolog\Processor\PsrLogMessageProcessor()]);
+}
+
+$drupalCoreVersionString = $argv[1] ?? null;
+if (null === $drupalCoreVersionString) {
+    printf("Missing required parameter: Drupal core version, e.g., 11.0.0\n");
+    exit(1);
+}
+
+$update_status_repo = new DrupalUpdateStatusApiUsingGuzzleRepository(new DrupalUpdateStatusApiClientFactory(), $logger);
+
+$query = new mxr576\ddqg\Application\DrupalCoreCompatibility\GenerateDrupalCoreCompatibilityReport(
+    $update_status_repo,
+);
+$project_info = ($query)($drupalCoreVersionString);
+$markdown = new mxr576\ddqg\Presentation\DrupalCoreCompatibilityReportGenerator\MarkdownDrupalCompatibilityReportGenerator();
+file_put_contents(__DIR__ . '/report.md', $markdown->generateMarkdownReport($project_info, $drupalCoreVersionString));
+
+if (isset($stopwatch)) {
+    $event = $stopwatch->stop('process');
+    echo $event->getDuration() / 1000 . 's' . PHP_EOL;
+    echo $event->getMemory() / 1024 / 1024 . 'MB' . PHP_EOL;
+}
+
+exit(0);

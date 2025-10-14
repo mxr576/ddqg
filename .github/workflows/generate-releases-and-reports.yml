@@ -1,4 +1,4 @@
-name: Generate no release versions
+name: Generate releases and reports
 
 on:
   workflow_dispatch:
@@ -146,10 +146,40 @@ jobs:
             fi
           fi
 
+      - name: Generate Drupal 11 compatibility report
+        run: |
+          cd bin
+          ./ddqg-generate-drupal-core-compatible-report 11.*
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            cp report.md ../artifacts/drupal-11-compatibility-report.md
+          else
+            # Move report to a permanent location or handle as needed
+            mv report.md ../drupal-11-compatibility-report.md
+          fi
+
+      - name: Generate Drupal 10.5 compatibility report
+        run: |
+          cd bin
+          ./ddqg-generate-drupal-core-compatible-report 10.5.*
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            cp report.md ../artifacts/drupal-10.5-compatibility-report.md
+          else
+            # Move report to a permanent location or handle as needed
+            mv report.md ../drupal-10.5-compatibility-report.md
+          fi
+
       - name: Upload generated composer.json files
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
           name: generated-composer-files
           path: artifacts/*.json
+          retention-days: 7
+
+      - name: Upload generated reports
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: compatibility-reports
+          path: artifacts/*.md
           retention-days: 7

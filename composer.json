@@ -26,7 +26,8 @@
         "league/flysystem": "^3.29.1",
         "loophp/collection": "^7.6.1",
         "prewk/xml-string-streamer": "^1.2",
-        "psr/log": "^3.0"
+        "psr/log": "^3.0",
+        "webmozart/assert": "^1.11"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.47",

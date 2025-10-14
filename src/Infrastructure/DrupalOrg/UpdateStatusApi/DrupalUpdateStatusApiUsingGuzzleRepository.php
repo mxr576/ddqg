@@ -6,12 +6,17 @@ namespace mxr576\ddqg\Infrastructure\DrupalOrg\UpdateStatusApi;
 
 use Composer\Semver\Comparator;
 use Composer\Semver\Constraint\Constraint;
+use Composer\Semver\Constraint\ConstraintInterface;
 use Composer\Semver\VersionParser;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Pool;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
+use mxr576\ddqg\Application\DrupalCoreCompatibility\Port\ListAllTaggedReleases;
+use mxr576\ddqg\Application\DrupalCoreCompatibility\Port\ListReleasesWithDrupalCoreCompatibility;
+use mxr576\ddqg\Application\DrupalCoreCompatibility\Port\ProjectInfo;
+use mxr576\ddqg\Application\DrupalCoreCompatibility\Port\ReleaseMetada;
 use mxr576\ddqg\Domain\DrupalCoreIncompatibleReleasesRepository;
 use mxr576\ddqg\Domain\InsecureVersionRangesRepository;
 use mxr576\ddqg\Domain\ProjectIdRepository;
@@ -30,7 +35,9 @@ final class DrupalUpdateStatusApiUsingGuzzleRepository implements
     ProjectIdRepository,
     UnsupportedReleasesRepository,
     InsecureVersionRangesRepository,
-    DrupalCoreIncompatibleReleasesRepository
+    DrupalCoreIncompatibleReleasesRepository,
+    ListReleasesWithDrupalCoreCompatibility,
+    ListAllTaggedReleases
 {
     private ClientInterface $client;
 
@@ -435,6 +442,138 @@ final class DrupalUpdateStatusApiUsingGuzzleRepository implements
         $promise->wait();
 
         return $conflicts;
+    }
+
+    public function fetchTaggedReleases(): array
+    {
+        return $this->fetchReleases();
+    }
+
+    public function fetchReleasesWithDrupalCoreCompatibility(ConstraintInterface $drupalCoreVersionConstraint): array
+    {
+        return $this->fetchReleases($drupalCoreVersionConstraint);
+    }
+
+    /**
+     * @return ProjectInfo[]
+     */
+    private function fetchReleases(?ConstraintInterface $drupalCoreVersionConstraint = null): array
+    {
+        $client = $this->client;
+        $version_parser = new VersionParser();
+
+        $project_ids = $this->fetchProjectIds();
+        // @todo Consider excluding it in fetchProjectIds().
+        $drupal_array_index = array_search('drupal', $project_ids, true);
+        if (false !== $drupal_array_index) {
+            unset($project_ids[$drupal_array_index]);
+        }
+
+        $requests = static function (string ...$project_ids) {
+            foreach ($project_ids as $project_id) {
+                yield $project_id => new Request('GET', $project_id . '/current');
+            }
+        };
+
+        $project_info = [];
+
+        $pool = new Pool($client, $requests(...$project_ids), [
+            'concurrency' => 10,
+            'fulfilled' => function (Response $response, $index) use (&$project_info, $version_parser, $drupalCoreVersionConstraint) {
+                $project_as_simple_xml = simplexml_load_string($response->getBody()->getContents());
+                assert(!is_bool($project_as_simple_xml));
+                $compatible_releases = [];
+
+                // No project release.
+                if (!empty($project_as_simple_xml->xpath('/error'))) {
+                    // TODO Consider logging this as it should not happen at this point.
+                    return $response;
+                }
+
+                // @todo Consider excluding these types by default in fetchProjectIds().
+                if (in_array((string) $project_as_simple_xml->type, ['project_core', 'project_general', 'project_distribution'], true)) {
+                    return $response;
+                }
+
+                $composer_namespace = $project_as_simple_xml->xpath('/project/composer_namespace/text()');
+                if (empty($composer_namespace)) {
+                    $composer_namespace = 'drupal/' . (string) $project_as_simple_xml->short_name;
+                } else {
+                    $composer_namespace = (string) $composer_namespace[0];
+                }
+
+                // @todo Find a better workaround for packages with invalid name,
+                //   like _config, or dummy__common that cannot be installed with
+                //   Composer anyway.
+                if (false == preg_match('#^[a-z0-9]([_.-]?[a-z0-9]+)*/[a-z0-9](([_.]?|-{0,2})[a-z0-9]+)*$#', $composer_namespace)) {
+                    return $response;
+                }
+
+                $releases = $project_as_simple_xml->xpath('//release');
+                if (!empty($releases)) {
+                    foreach ($releases as $release) {
+                        $release_version = SemVer::tryFromPackageVersionString((string) $release->version);
+                        if (null === $release_version) {
+                            $this->logger->warning(sprintf('Unable to parse release version of "%s" with "%s".', $index, (string) $release->version));
+                            continue;
+                        }
+
+                        if ($drupalCoreVersionConstraint) {
+                            if ($release->core_compatibility) {
+                                $core_version_constraint_string = (string) $release->core_compatibility;
+                            } elseif (str_contains((string) $release->version, '.x-')) {
+                                [$core_version_constraint_string] = explode('-', (string) $release->version, 2);
+                            } else {
+                                // The majority of this should be noise caused by weird
+                                // things done my maintainers... like a tagged 1.0.0
+                                // with a README only, etc.
+                                // It looks like the core compatibility information is
+                                // also missing from project_drupalorg and
+                                // project_general type of packages by design.
+                                // @see https://www.drupal.org/project/drupalorg/issues/3358784
+                                $this->logger->warning('Core version requirement could not be identified for "{project}:{version}" with "{type}" type.', [
+                                    'project' => (string) $project_as_simple_xml->short_name,
+                                    'type' => (string) $project_as_simple_xml->type,
+                                    'version' => (string) $release->version,
+                                ]);
+                                continue;
+                            }
+                            try {
+                                $parsed_constraints = $version_parser->parseConstraints($core_version_constraint_string);
+                            } catch (\Exception) {
+                                $this->logger->warning('Unable to parse "{core_compatibility_string}" core version compatibility string of {project}:{version}.', [
+                                    'core_compatibility_string' => $core_version_constraint_string,
+                                    'project' => (string) $project_as_simple_xml->short_name,
+                                    'version' => (string) $release->version,
+                                ]);
+                                continue;
+                            }
+                            if ($parsed_constraints->matches($drupalCoreVersionConstraint)) {
+                                $compatible_releases[] = new ReleaseMetada(
+                                    $release_version,
+                                    \DateTimeImmutable::createFromFormat('U', (string) $release->date)
+                                );
+                            }
+                        } else {
+                            $compatible_releases[] = new ReleaseMetada(
+                                $release_version,
+                                \DateTimeImmutable::createFromFormat('U', (string) $release->date)
+                            );
+                        }
+                    }
+                }
+
+                $project_info[] = new ProjectInfo($composer_namespace, (string) $project_as_simple_xml->title, str_replace('project_', '', (string) $project_as_simple_xml->type), $compatible_releases);
+            },
+            'rejected' => static function (GuzzleException $reason, $index): void {
+                throw new \RuntimeException(sprintf('Failed to fetch project information for "%s". Reason: "%s".', $index, $reason->getMessage()), $reason->getCode(), $reason);
+            },
+        ]);
+
+        $promise = $pool->promise();
+        $promise->wait();
+
+        return $project_info;
     }
 
     private function generateConstraint(string $composer_namespace, SemVer $lowest_boundary, SemVer $highest_boundary): string
