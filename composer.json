@@ -1064,6 +1064,7 @@
         "drupal/embed_widgets": "*",
         "drupal/ember": "*",
         "drupal/employment_field": "*",
+        "drupal/empty_headings_filter": "*",
         "drupal/empty_tags": "*",
         "drupal/emulsify_design_system": "*",
         "drupal/emulsify_ds": "*",
