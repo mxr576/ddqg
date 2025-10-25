@@ -6497,6 +6497,7 @@
         "drupal/linkedin_oauth": "1.0.0-beta1|1.0.0-rc1",
         "drupal/linkedinlogin": "1.1.0|3.1.0|3.x-dev",
         "drupal/linkicon": "1.0.0|1.0.0-alpha9|1.0.0-alpha10|1.0.0-alpha12|1.0.0-alpha15|1.0.0-beta6|1.0.0-beta7|1.0.0-beta9|1.0.0-beta70|1.0.0-rc1|1.1.0|1.2.0|1.3.0|1.4.0|1.5.0|1.6.0",
+        "drupal/linkimagefield": "1.x-dev",
         "drupal/linkit": "4.0.0|4.1.0|4.2.0|4.3.0|4.4.0|4.x-dev|5.0.0-alpha1|5.0.0-beta1|5.0.0-beta2|5.0.0-beta3|5.0.0-beta4|5.0.0-beta5|5.0.0-beta6|5.0.0-beta7|5.0.0-beta8|5.0.0-beta9|5.0.0-beta10|5.0.0-beta11|5.0.0-beta12|5.0.0-beta13|5.x-dev|6.0.0-beta1|6.0.0-beta2|6.0.0-beta3",
         "drupal/linkit_custom_link": "1.0.0-alpha1",
         "drupal/linkit_entity_browser": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3",
