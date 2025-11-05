@@ -3293,6 +3293,7 @@
         "drupal/wysiwyg_a11ychecker": "*",
         "drupal/wysiwyg_image": "*",
         "drupal/x_frame_fixer": "*",
+        "drupal/xbartik": "*",
         "drupal/xero_contact_sync": "*",
         "drupal/xml_content_filter": "*",
         "drupal/xml_form": "*",
