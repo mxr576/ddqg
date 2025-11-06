@@ -3775,7 +3775,7 @@
         "drupal/empty_fields": "1.0.0-alpha1|1.0.0-beta1",
         "drupal/empty_front_page": "1.0.0",
         "drupal/empty_page": "1.0.0|1.1.0|2.0.0|2.0.0-beta1|2.0.0-beta2|3.0.0",
-        "drupal/empty_theme": "1.0.0|1.x-dev",
+        "drupal/empty_theme": "1.0.0",
         "drupal/emptyparagraphkiller": "1.0.0-alpha1",
         "drupal/emulsify": "1.0.0|1.1.0|1.2.0|1.x-dev|2.1.0|2.2.0|2.3.0|2.4.0|2.6.0|2.7.0|3.0.0|3.1.0",
         "drupal/emulsify_design_system": "1.0.0-alpha5|1.0.0-alpha6",
