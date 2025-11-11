@@ -2449,6 +2449,7 @@
         "drupal/remote_file": "*",
         "drupal/remove_upcase_accents": "*",
         "drupal/renderfilter": "*",
+        "drupal/rendred_entity_list_formatter": "*",
         "drupal/replain": "*",
         "drupal/replicate_autopublish_off": "*",
         "drupal/repository": "*",
