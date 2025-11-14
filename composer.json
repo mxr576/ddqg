@@ -2753,7 +2753,6 @@
         "drupal/submit_once": "*",
         "drupal/submitagain": "*",
         "drupal/submitted_by_specific": "*",
-        "drupal/subrequest": "*",
         "drupal/subs_roles": "*",
         "drupal/subscounter": "*",
         "drupal/subscribe_to_feed": "*",
