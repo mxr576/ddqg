@@ -479,6 +479,7 @@
         "drupal/cm_airing_grid": "*",
         "drupal/cm_config_tools": "*",
         "drupal/cm_hotel": "*",
+        "drupal/cm_revision_delete": "*",
         "drupal/cmood": "*",
         "drupal/cmrf_form_processor_mollie": "*",
         "drupal/cms_blog": "*",
