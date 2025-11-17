@@ -8781,7 +8781,7 @@
         "drupal/raspberry": "1.0.0|1.0.x-dev",
         "drupal/rate": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-alpha6|1.0.0-alpha7|1.x-dev|2.0.0-alpha1|2.0.0-beta1|2.x-dev|3.0.0",
         "drupal/rate_limiter": "1.0.0|1.1.0|1.x-dev",
-        "drupal/rate_limits": "1.0.0|1.0.0-beta1|1.1.0|1.x-dev|2.0.1|2.x-dev",
+        "drupal/rate_limits": "1.0.0|1.0.0-beta1|1.1.0|1.x-dev|2.0.1",
         "drupal/rating_field": "1.0.0-alpha1|1.0.0-beta1|1.0.0-beta2",
         "drupal/ratio_crop": "1.0.0|1.0.0-alpha1|1.0.0-alpha2",
         "drupal/rave_alerts": "1.0.x-dev",
