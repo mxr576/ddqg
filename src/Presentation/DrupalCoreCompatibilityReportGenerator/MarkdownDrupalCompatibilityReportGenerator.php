@@ -4,200 +4,152 @@ declare(strict_types=1);
 
 namespace mxr576\ddqg\Presentation\DrupalCoreCompatibilityReportGenerator;
 
-use mxr576\ddqg\Application\DrupalCoreCompatibility\Dto\DoesNotHaveDrupalCoreCompatibleRelease;
-use mxr576\ddqg\Application\DrupalCoreCompatibility\Dto\HasDrupalCoreCompatibleRelease;
+use mxr576\ddqg\Application\DrupalCoreCompatibility\Dto\DrupalCoreCompatibilityReport;
 
 /**
+ * Generates a Markdown formatted report from a DrupalCoreCompatibilityReport.
+ *
+ * This class is responsible only for serializing the pre-calculated report data
+ * into Markdown format. It performs no calculations or data transformations.
+ *
  * @internal This class is not part of the module's public programming API.
  */
 final class MarkdownDrupalCompatibilityReportGenerator
 {
     /**
-     * @param \Traversable<HasDrupalCoreCompatibleRelease|DoesNotHaveDrupalCoreCompatibleRelease> $releases
+     * Generates a Markdown formatted compatibility report.
      *
-     * @return string Raw markdown content
+     * @param DrupalCoreCompatibilityReport $report The pre-calculated report data.
+     *
+     * @return string The Markdown formatted report.
      */
-    public function generateMarkdownReport(\Traversable $releases, string $drupalCoreVersion): string
+    public function generateMarkdownReport(DrupalCoreCompatibilityReport $report): string
     {
-        $compatibleReleases = [];
-        $incompatibleProjects = [];
+        $output = '';
 
-        foreach ($releases as $release) {
-            if ($release instanceof HasDrupalCoreCompatibleRelease) {
-                $compatibleReleases[] = $release;
-            } elseif ($release instanceof DoesNotHaveDrupalCoreCompatibleRelease) {
-                $incompatibleProjects[] = $release;
-            }
-        }
+        $output .= $this->renderHeader($report);
+        $output .= $this->renderSummary($report);
+        $output .= $this->renderDetailedStatus($report);
 
-        // Sort by project display name for consistent ordering
-        usort($compatibleReleases, static function ($a, $b) {
-            return strcasecmp($a->displayName, $b->displayName);
-        });
+        return $output;
+    }
 
-        usort($incompatibleProjects, static function ($a, $b) {
-            return strcasecmp($a->displayName, $b->displayName);
-        });
-
-        $markdown = $this->generateReportHeader($drupalCoreVersion);
-        $markdown .= $this->generateSummarySection($compatibleReleases, $incompatibleProjects);
-        $markdown .= $this->generateCompatibilityTable($compatibleReleases, $incompatibleProjects);
+    /**
+     * Renders the report header.
+     */
+    private function renderHeader(DrupalCoreCompatibilityReport $report): string
+    {
+        $markdown = "# Drupal contrib compatibility report for core {$report->drupalCoreVersion}\n\n";
+        $markdown .= '**Generated:** ' . date('Y-m-d H:i:s') . "\n\n";
+        $markdown .= "This report shows when contributed projects got their first stable release compatible with Drupal core {$report->drupalCoreVersion}.\n\n";
 
         return $markdown;
     }
 
-    private function generateReportHeader(string $drupalCoreVersion): string
+    /**
+     * Renders the summary section.
+     */
+    private function renderSummary(DrupalCoreCompatibilityReport $report): string
     {
-        $generatedDate = (new \DateTimeImmutable())->format('Y-m-d H:i:s');
+        $markdown = "## Summary\n\n";
+        $markdown .= $this->renderOverallCompatibilityTable($report);
+        $markdown .= $this->renderCompatibilityByTypeTable($report);
+        $markdown .= $this->renderReleaseTimelineTable($report);
 
-        return "# Drupal contrib compatibility report for core {$drupalCoreVersion}\n\n" .
-          "**Generated:** {$generatedDate}\n\n" .
-          'This report shows when contributed projects got their first stable release ' .
-          "compatible with Drupal core {$drupalCoreVersion}.\n\n";
+        return $markdown;
     }
 
     /**
-     * @param array<HasDrupalCoreCompatibleRelease> $compatibleReleases
-     * @param array<DoesNotHaveDrupalCoreCompatibleRelease> $incompatibleProjects
+     * Renders the overall compatibility table.
      */
-    private function generateSummarySection(array $compatibleReleases, array $incompatibleProjects): string
+    private function renderOverallCompatibilityTable(DrupalCoreCompatibilityReport $report): string
     {
-        $totalProjects = count($compatibleReleases) + count($incompatibleProjects);
-        $compatibleCount = count($compatibleReleases);
-        $incompatibleCount = count($incompatibleProjects);
-        $compatibilityRate = $totalProjects > 0 ?
-          round(($compatibleCount / $totalProjects) * 100, 1) : 0;
-
-        // Group by package type for detailed breakdown
-        $compatibleByType = $this->groupByPackageType($compatibleReleases);
-        $incompatibleByType = $this->groupByPackageType($incompatibleProjects);
-
-        $markdown = "## Summary\n\n";
-
-        // Overall statistics
-        $markdown .= "### Overall compatibility\n\n";
+        $markdown = "### Overall compatibility\n\n";
         $markdown .= "| Metric | Value |\n";
         $markdown .= "|--------|-------|\n";
-        $markdown .= "| Total projects analyzed | {$totalProjects} |\n";
-        $markdown .= "| Projects with stable releases | {$compatibleCount} |\n";
-        $markdown .= "| Projects without stable releases | {$incompatibleCount} |\n";
-        $markdown .= "| Overall compatibility rate | {$compatibilityRate}% |\n\n";
+        $markdown .= sprintf("| Total projects analyzed | %d |\n", $report->getTotalProjects());
+        $markdown .= sprintf("| Projects with stable releases | %d |\n", $report->totalCompatibleCount);
+        $markdown .= sprintf("| Projects without stable releases | %d |\n", $report->totalIncompatibleCount);
+        $markdown .= sprintf("| Overall compatibility rate | %.1f%% |\n\n", $report->getOverallCompatibilityRate());
 
-        // Package type breakdown
-        $markdown .= "### Compatibility by package type\n\n";
+        return $markdown;
+    }
+
+    private function renderCompatibilityByTypeTable(DrupalCoreCompatibilityReport $report): string
+    {
+        $markdown = "### Compatibility by package type\n\n";
         $markdown .= "| Package type | Compatible | Incompatible | Total | Compatibility rate |\n";
         $markdown .= "|--------------|------------|--------------|-------|-------------------|\n";
 
-        $packageTypes = array_unique(array_merge(
-            array_keys($compatibleByType),
-            array_keys($incompatibleByType)
-        ));
-        sort($packageTypes);
-
-        foreach ($packageTypes as $type) {
-            $compatibleForType = count($compatibleByType[$type] ?? []);
-            $incompatibleForType = count($incompatibleByType[$type] ?? []);
-            $totalForType = $compatibleForType + $incompatibleForType;
-            $typeCompatibilityRate = $totalForType > 0 ?
-              round(($compatibleForType / $totalForType) * 100, 1) : 0;
-
-            $markdown .= "| {$type} | {$compatibleForType} | {$incompatibleForType} | {$totalForType} | {$typeCompatibilityRate}% |\n";
+        foreach ($report->compatibilityByType as $type => $stats) {
+            $markdown .= sprintf(
+                "| %s | %d | %d | %d | %.1f%% |\n",
+                $type,
+                $stats['compatible'],
+                $stats['incompatible'],
+                $stats['total'],
+                $stats['rate']
+            );
         }
 
         $markdown .= "\n";
 
-        // Timeline information
-        if (!empty($compatibleReleases)) {
-            $markdown .= "### Release timeline\n\n";
+        return $markdown;
+    }
 
-            $sortedByDate = $compatibleReleases;
-            usort($sortedByDate, static function ($a, $b) {
-                return $a->firstCompatibleVersionReleaseDate <=> $b->firstCompatibleVersionReleaseDate;
-            });
+    /**
+     * Renders the release timeline table.
+     */
+    private function renderReleaseTimelineTable(DrupalCoreCompatibilityReport $report): string
+    {
+        $markdown = "### Release timeline\n\n";
+        $markdown .= "| Metric | Project | Date |\n";
+        $markdown .= "|--------|---------|------|\n";
 
-            $firstRelease = $sortedByDate[0];
-            $lastRelease = end($sortedByDate);
-
-            $markdown .= "| Metric | Project | Date |\n";
-            $markdown .= "|--------|---------|------|\n";
-            $markdown .= "| First project to get stable release | {$firstRelease->displayName} | {$firstRelease->firstCompatibleVersionReleaseDate->format('Y-m-d')} |\n";
-
-            if ($firstRelease !== $lastRelease) {
-                $markdown .= "| Most recent stable release | {$lastRelease->displayName} | {$lastRelease->firstCompatibleVersionReleaseDate->format('Y-m-d')} |\n";
-            }
-
-            $markdown .= "\n";
+        if (null !== $report->firstCompatibleProject) {
+            $markdown .= sprintf(
+                "| First project that got stable release | %s | %s |\n",
+                $report->firstCompatibleProject['name'],
+                $report->firstCompatibleProject['date']->format('Y-m-d')
+            );
         }
+
+        if (null !== $report->lastCompatibleProject) {
+            $markdown .= sprintf(
+                "| Most recent stable release | %s | %s |\n",
+                $report->lastCompatibleProject['name'],
+                $report->lastCompatibleProject['date']->format('Y-m-d')
+            );
+        }
+
+        $markdown .= "\n";
 
         return $markdown;
     }
 
     /**
-     * @param array<HasDrupalCoreCompatibleRelease> $compatibleReleases
-     * @param array<DoesNotHaveDrupalCoreCompatibleRelease> $incompatibleProjects
+     * Renders the detailed status table.
      */
-    private function generateCompatibilityTable(array $compatibleReleases, array $incompatibleProjects): string
+    private function renderDetailedStatus(DrupalCoreCompatibilityReport $report): string
     {
         $markdown = "## Detailed compatibility status\n\n";
-        $markdown .= "| Project name | Package ID  | Type | Status | Compatible stable version | Compatible stable released on | Latest tagged release | Latest tagged released on |\n";
+        $markdown .= "| Project name | Package ID  | Type | Status | First compatible stable version | First compatible stable released on | Latest tagged release | Latest tagged released on |\n";
         $markdown .= "|--------------|------|------|--------|---------------------|--------------|----------------|--------------------|\n";
 
-        // Add compatible releases
-        foreach ($compatibleReleases as $release) {
+        foreach ($report->allProjectsSorted as $project) {
             $markdown .= sprintf(
-                "| %s | %s | %s | ✅ Compatible | %s | %s | %s | %s |\n",
-                $this->escapeMarkdownTableCell($release->displayName),
-                $this->escapeMarkdownTableCell($release->name),
-                $this->escapeMarkdownTableCell($release->type),
-                $this->escapeMarkdownTableCell($release->firstCompatibleVersion),
-                $release->firstCompatibleVersionReleaseDate->format('Y-m-d'),
-                $this->escapeMarkdownTableCell($release->latestTaggedVersion),
-                $release->latestTaggedVersionReleaseDate->format('Y-m-d')
+                "| %s | %s | %s | %s | %s | %s | %s | %s |\n",
+                $project['name'],
+                $project['id'],
+                $project['type'],
+                'compatible' === $project['status'] ? '✅ Has compatible stable release' : '❌ No compatible stable release',
+                $project['compatibleVersion'] ?? 'N/A',
+                null !== $project['compatibleDate'] ? $project['compatibleDate']->format('Y-m-d') : 'N/A',
+                $project['latestVersion'] ?? 'N/A',
+                null !== $project['latestDate'] ? $project['latestDate']->format('Y-m-d') : 'N/A'
             );
         }
 
-        // Add incompatible projects
-        foreach ($incompatibleProjects as $project) {
-            $latestVersion = $project->latestTaggedVersion ?? '-';
-            $latestDate = $project->latestTaggedVersionReleaseDate?->format('Y-m-d') ?? '-';
-
-            $markdown .= sprintf(
-                "| %s | %s | %s | ❌ No stable release | - | - | %s | %s |\n",
-                $this->escapeMarkdownTableCell($project->displayName),
-                $this->escapeMarkdownTableCell($project->name),
-                $this->escapeMarkdownTableCell($project->type),
-                $this->escapeMarkdownTableCell($latestVersion),
-                $latestDate
-            );
-        }
-
-        return $markdown . "\n";
-    }
-
-    /**
-     * @param array<HasDrupalCoreCompatibleRelease|DoesNotHaveDrupalCoreCompatibleRelease> $projects
-     *
-     * @return array<string, array>
-     */
-    private function groupByPackageType(array $projects): array
-    {
-        $grouped = [];
-
-        foreach ($projects as $project) {
-            $type = $project->type;
-
-            if (!isset($grouped[$type])) {
-                $grouped[$type] = [];
-            }
-
-            $grouped[$type][] = $project;
-        }
-
-        return $grouped;
-    }
-
-    private function escapeMarkdownTableCell(string $text): string
-    {
-        return str_replace(['|', "\n", "\r"], ['\\|', ' ', ''], $text);
+        return $markdown;
     }
 }
