@@ -47,10 +47,6 @@ jobs:
           git remote add origin https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}
           git fetch origin
 
-      - name: Create artifacts directory
-        if: github.event_name == 'pull_request'
-        run: mkdir -p artifacts
-
       - name: Generate no unsupported versions release
         run: |
           cd bin
@@ -60,9 +56,8 @@ jobs:
           ./ddqg-generate-no-unsupported-versions
           composer validate
           if [ "${{ github.event_name }}" == "pull_request" ]; then
-            cp composer.json ../artifacts/no-unsupported-versions-composer.json
+            cp composer.json ../no-unsupported-versions-composer.json
           else
-            # Original commit and push logic
             git add composer.json
             if [[ `git status --porcelain --untracked-files=no` ]]; then
               git commit -a -m "Updated composer.json"
@@ -79,9 +74,8 @@ jobs:
           ./ddqg-generate-no-deprecated-versions
           composer validate
           if [ "${{ github.event_name }}" == "pull_request" ]; then
-            cp composer.json ../artifacts/no-deprecated-versions-composer.json
+            cp composer.json ../no-deprecated-versions-composer.json
           else
-            # Original commit and push logic
             git add composer.json
             if [[ `git status --porcelain --untracked-files=no` ]]; then
               git commit -a -m "Updated composer.json"
@@ -98,9 +92,8 @@ jobs:
           ./ddqg-generate-drupal-core-incompatible-versions 11.0.0
           composer validate
           if [ "${{ github.event_name }}" == "pull_request" ]; then
-            cp composer.json ../artifacts/non-d11-compatible-versions-composer.json
+            cp composer.json ../non-d11-compatible-versions-composer.json
           else
-            # Original commit and push logic
             git add composer.json
             if [[ `git status --porcelain --untracked-files=no` ]]; then
               git commit -a -m "Updated composer.json"
@@ -117,9 +110,8 @@ jobs:
           ./ddqg-generate-no-insecure-versions
           composer validate
           if [ "${{ github.event_name }}" == "pull_request" ]; then
-            cp composer.json ../artifacts/no-insecure-versions-composer.json
+            cp composer.json ../no-insecure-versions-composer.json
           else
-            # Original commit and push logic
             git add composer.json
             if [[ `git status --porcelain --untracked-files=no` ]]; then
               git commit -a -m "Updated composer.json"
@@ -136,9 +128,8 @@ jobs:
           ./ddqg-generate-drupal-core-incompatible-versions 10.0.0
           composer validate
           if [ "${{ github.event_name }}" == "pull_request" ]; then
-            cp composer.json ../artifacts/non-d10-compatible-versions-composer.json
+            cp composer.json ../non-d10-compatible-versions-composer.json
           else
-            # Original commit and push logic
             git add composer.json
             if [[ `git status --porcelain --untracked-files=no` ]]; then
               git commit -a -m "Updated composer.json"
@@ -150,36 +141,25 @@ jobs:
         run: |
           cd bin
           ./ddqg-generate-drupal-core-compatible-report 11.*
-          if [ "${{ github.event_name }}" == "pull_request" ]; then
-            cp report.md ../artifacts/drupal-11-compatibility-report.md
-          else
-            # Move report to a permanent location or handle as needed
-            mv report.md ../drupal-11-compatibility-report.md
-          fi
+          mv report.md ../drupal-11-compatibility-report.md
 
       - name: Generate Drupal 10.5 compatibility report
         run: |
           cd bin
           ./ddqg-generate-drupal-core-compatible-report 10.5.*
-          if [ "${{ github.event_name }}" == "pull_request" ]; then
-            cp report.md ../artifacts/drupal-10.5-compatibility-report.md
-          else
-            # Move report to a permanent location or handle as needed
-            mv report.md ../drupal-10.5-compatibility-report.md
-          fi
+          mv report.md ../drupal-10.5-compatibility-report.md
 
       - name: Upload generated composer.json files
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
           name: generated-composer-files
-          path: artifacts/*.json
+          path: ./*.json
           retention-days: 7
 
       - name: Upload generated reports
-        if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4
         with:
           name: compatibility-reports
-          path: artifacts/*.md
+          path: ./*.md
           retention-days: 7
