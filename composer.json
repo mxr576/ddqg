@@ -105,7 +105,7 @@
         "drupal/link_field_display_mode_formatter": ">=1.0.0,<1.6.0",
         "drupal/loft_data_grids": ">=1.0.0,<1.4.0",
         "drupal/login_disable": ">=2.1.0,<2.1.1",
-        "drupal/mail_login": ">=2.0.0,<2.9.0|>=3.0.0,<3.2.0|>=4.0.0,<4.2.0",
+        "drupal/mail_login": ">=3.0.0,<3.2.0|>=4.0.0,<4.2.0",
         "drupal/mailchimp": ">=2.2.0,<2.2.2",
         "drupal/mailjet": ">=4.0.0,<4.0.1",
         "drupal/matomo": ">=1.0.0,<1.24.0|>=2.0.0,<2.0.0-alpha2",
