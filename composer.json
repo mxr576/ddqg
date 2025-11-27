@@ -21,6 +21,7 @@
         "drupal/account_expiry": "*",
         "drupal/account_mail": "*",
         "drupal/accounting_content_types": "*",
+        "drupal/ach_attach_js": "*",
         "drupal/acm": "*",
         "drupal/acoldday": "*",
         "drupal/acquia_elements": "*",
