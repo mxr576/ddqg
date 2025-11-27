@@ -7283,7 +7283,7 @@
         "drupal/mobile_detect_twig_extensions": "1.0.0|1.1.0|1.2.0|1.4.0|1.5.0|1.x-dev",
         "drupal/mobile_device_detection": "1.x-dev|2.0.0|2.x-dev|3.0.0|3.1.0|3.2.0|3.x-dev",
         "drupal/mobile_js_redirect": "1.0.0-beta1|1.x-dev",
-        "drupal/mobile_native_share": "1.0.1|1.0.2|1.0.3|1.0.4|1.0.x-dev",
+        "drupal/mobile_native_share": "1.0.1|1.0.2|1.0.3|1.0.4|1.0.x-dev|1.1.x-dev",
         "drupal/mobile_navigation": "1.x-dev",
         "drupal/mobile_number": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha4|1.0.0-alpha5|1.x-dev|2.0.0-alpha5",
         "drupal/mobile_switch_varnish": "1.x-dev|2.0.0",
