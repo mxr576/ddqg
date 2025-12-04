@@ -548,6 +548,7 @@
         "drupal/commerce_epayco": "*",
         "drupal/commerce_epdq": "*",
         "drupal/commerce_etrans": "*",
+        "drupal/commerce_europabank": "*",
         "drupal/commerce_everyday": "*",
         "drupal/commerce_exactor": "*",
         "drupal/commerce_exchanger_hnb": "*",
