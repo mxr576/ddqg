@@ -10264,7 +10264,7 @@
         "drupal/starbase": "1.x-dev",
         "drupal/stardust": "2.x-dev",
         "drupal/starlight": "1.0.0-alpha1|1.x-dev",
-        "drupal/starrating": "1.x-dev|2.x-dev|3.0.0-alpha1|4.0.0-alpha2|4.1.0-alpha3",
+        "drupal/starrating": "1.x-dev|2.x-dev|3.0.0-alpha1|3.x-dev|4.0.0-alpha2|4.1.0-alpha3",
         "drupal/starrating_formdisplay": "1.0.0|1.1.0|1.2.0",
         "drupal/startup_zymphonies_theme": "1.1.0|2.0.1",
         "drupal/startupgrowth_lite": "1.0.0|1.1.0",
