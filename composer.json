@@ -1708,6 +1708,7 @@
         "drupal/l10n_context": "*",
         "drupal/l10n_update_bundled": "*",
         "drupal/la_el": "*",
+        "drupal/labour_code_widgets": "*",
         "drupal/lambda": "*",
         "drupal/lander": "*",
         "drupal/language_negotiation": "*",
