@@ -193,7 +193,6 @@
         "drupal/tb_megamenu": ">=1.0.0,<1.4.0",
         "drupal/tfa": ">=1.0.0,<1.11.0",
         "drupal/tmgmt": ">=1.0.0,<1.7.0",
-        "drupal/toc_js": ">=3.2.0,<3.2.1",
         "drupal/tooltip": ">=1.1.0,<1.1.2",
         "drupal/twig_field_value": ">=2.0.0,<2.0.1",
         "drupal/typogrify": ">=1.0.0,<1.3.0",
