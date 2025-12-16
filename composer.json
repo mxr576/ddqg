@@ -7428,7 +7428,7 @@
         "drupal/multilingual_revisions_helper": "1.0.0-alpha1",
         "drupal/multiple_dates": "1.1.0",
         "drupal/multiple_definition_files": "1.0.0|1.1.0",
-        "drupal/multiple_email": "2.0.0-alpha1|2.x-dev",
+        "drupal/multiple_email": "2.0.0-alpha1",
         "drupal/multiple_fields_remove_button": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-alpha6|1.0.0-alpha7|1.0.0-alpha8|1.0.0-alpha9|1.0.0-alpha10|1.0.0-alpha11|1.0.0-alpha12|1.0.0-alpha13",
         "drupal/multiple_node_menu": "1.0.0-alpha1|1.1.0-alpha1|1.x-dev",
         "drupal/multiple_recaptcha": "1.x-dev|2.x-dev",
