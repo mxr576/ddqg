@@ -6,7 +6,6 @@
     "conflict": {
         "drupal/a11y_keyboard": "*",
         "drupal/a_blueprint": "*",
-        "drupal/ab_paragraphs": "*",
         "drupal/ablock": "*",
         "drupal/ablogtheme": "*",
         "drupal/aboutpeople": "*",
