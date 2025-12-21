@@ -1648,6 +1648,7 @@
         "drupal/issue_assign": "*",
         "drupal/issuepop": "*",
         "drupal/it_cookie_compliance": "*",
+        "drupal/itok_config": "*",
         "drupal/itsme": "*",
         "drupal/iu": "*",
         "drupal/ixm_components": "*",
