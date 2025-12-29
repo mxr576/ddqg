@@ -65,6 +65,7 @@
         "drupal/entity_browser_block": ">=1.0.0,<1.2.0",
         "drupal/entity_embed": ">=1.0.0,<1.2.0",
         "drupal/entity_form_steps": ">=1.1.0,<1.1.4",
+        "drupal/entity_print": ">=2.0.0,<2.6.0",
         "drupal/entity_share": ">=3.0.0,<3.13.0|>=4.0.0,<4.0.0-alpha2",
         "drupal/etracker": ">=3.0.0,<3.1.0",
         "drupal/eu_cookie_compliance": ">=1.0.0,<1.26.0",
