@@ -1486,6 +1486,7 @@
         "drupal/guzzle": "*",
         "drupal/guzzle_oauth": "*",
         "drupal/gvkb": "*",
+        "drupal/gzip_dynamic_content": "*",
         "drupal/hackpad": "*",
         "drupal/harmonize": "*",
         "drupal/harvest": "*",
