@@ -590,6 +590,7 @@
         "drupal/commerce_sagepay_d8": "*",
         "drupal/commerce_sagepay_token": "*",
         "drupal/commerce_sandbox": "*",
+        "drupal/commerce_secupay_payments": "*",
         "drupal/commerce_secure_payment_settings": "*",
         "drupal/commerce_shipping_cart_estimate": "*",
         "drupal/commerce_shipping_express": "*",
