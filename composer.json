@@ -102,6 +102,7 @@
         "drupal/ajax_content": "*",
         "drupal/ajax_install": "*",
         "drupal/ajax_load": "*",
+        "drupal/ajax_session": "*",
         "drupal/ajax_tabs": "*",
         "drupal/ajax_todo": "*",
         "drupal/ajaxfriends": "*",
