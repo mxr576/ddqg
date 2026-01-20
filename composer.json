@@ -2293,6 +2293,7 @@
         "drupal/permissions_filter": "*",
         "drupal/permissiontree": "*",
         "drupal/persistent_ids": "*",
+        "drupal/perspectiveapi": "*",
         "drupal/pexels": "*",
         "drupal/phone_captcha": "*",
         "drupal/photo_albums": "*",
