@@ -126,7 +126,7 @@
         "drupal/minifyhtml": ">=2.0.0,<2.0.3",
         "drupal/minifyjs": ">=3.0.0,<3.0.3",
         "drupal/miniorange_2fa": ">=4.0.0,<4.8.0",
-        "drupal/miniorange_oauth_client": ">=3.0.0,<3.44.0|>=4.0.0,<4.0.19",
+        "drupal/miniorange_oauth_client": ">=4.0.0,<4.0.19",
         "drupal/minisite": ">=3.0.0,<3.0.2",
         "drupal/mollie": ">=2.2.0,<2.2.1",
         "drupal/next": ">=1.6.0,<1.6.4|>=2.0.0,<2.0.1",
