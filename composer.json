@@ -7021,7 +7021,7 @@
         "drupal/menu_item_limit": "1.x-dev|2.0.0",
         "drupal/menu_item_role_access": "1.0.0|1.0.0-alpha1|1.0.0-alpha2|1.0.0-beta1|1.x-dev|2.0.0",
         "drupal/menu_item_visibility": "1.x-dev",
-        "drupal/menu_items_visibility": "1.0.0|1.x-dev",
+        "drupal/menu_items_visibility": "1.0.0",
         "drupal/menu_link": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.x-dev|2.0.1|2.0.2|2.0.3|2.0.4",
         "drupal/menu_link_absolute_to_internal": "1.0.x-dev",
         "drupal/menu_link_attributes": "1.0.0|1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.0.0-beta4|1.0.0-beta5|1.1.0|1.2.0",
