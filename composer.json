@@ -152,7 +152,6 @@
         "drupal/paragraphs_table": ">=1.0.0,<1.23.0|>=2.0.0,<2.0.5",
         "drupal/permissions_by_term": ">=3.1.0,<3.1.19",
         "drupal/persistent_login": ">=1.0.0,<1.8.0|>=2.2.0,<2.2.2",
-        "drupal/photos": ">=6.0.0,<6.0.4",
         "drupal/php": ">=1.0.0,<1.2.0",
         "drupal/phpconfig": ">=1.0.0,<1.1.0",
         "drupal/pianoanalytics": ">=1.0.0,<1.0.1|>=2.3.0,<2.3.1",
