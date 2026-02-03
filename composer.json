@@ -370,6 +370,7 @@
         "drupal/carbon": "*",
         "drupal/carerix_form": "*",
         "drupal/carto": "*",
+        "drupal/carto_etl": "*",
         "drupal/cas_register_invite": "*",
         "drupal/casetracker_nag": "*",
         "drupal/cash_tab": "*",
