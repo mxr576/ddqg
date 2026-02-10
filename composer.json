@@ -1266,6 +1266,7 @@
         "drupal/field_maxlength_alter": "*",
         "drupal/field_scheduler": "*",
         "drupal/field_sync": "*",
+        "drupal/field_token": "*",
         "drupal/field_updater": "*",
         "drupal/field_visibility": "*",
         "drupal/field_word_boundary": "*",
