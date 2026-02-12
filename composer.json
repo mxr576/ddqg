@@ -1278,6 +1278,7 @@
         "drupal/fieldvariables": "*",
         "drupal/fieldx": "*",
         "drupal/file": "*",
+        "drupal/file_access_fix": "*",
         "drupal/file_checker": "*",
         "drupal/file_chooser_field": "*",
         "drupal/file_defer": "*",
