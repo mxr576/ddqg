@@ -2771,6 +2771,7 @@
         "drupal/crm_core": "1.x-dev|2.x-dev",
         "drupal/crm_core_commerce": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-rc1|1.x-dev|2.x-dev|3.0.0",
         "drupal/crm_core_subscriptions": "1.x-dev",
+        "drupal/crm_migrate_one_page_crm": "1.0.x-dev",
         "drupal/crocheteer": "1.0.0|1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.0.0-beta4|1.0.0-beta5|1.1.0",
         "drupal/cron_oracle": "1.0.0-beta1|1.0.0-beta2|1.x-dev",
         "drupal/cron_queue_invoker": "2.0.0-alpha1|2.0.0-alpha2|2.0.0-alpha3|2.0.0-alpha4",
