@@ -1205,6 +1205,7 @@
         "drupal/farm_log": "*",
         "drupal/farm_manager": "*",
         "drupal/farm_map": "*",
+        "drupal/farm_map_google": "*",
         "drupal/farm_mapknitter": "*",
         "drupal/farm_mushroom": "*",
         "drupal/farm_profile": "*",
