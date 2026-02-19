@@ -857,6 +857,7 @@
         "drupal/dnmcfg": "*",
         "drupal/do": "*",
         "drupal/doc": "*",
+        "drupal/doc_serialization": "*",
         "drupal/docreferences": "*",
         "drupal/docson": "*",
         "drupal/document_version": "*",
