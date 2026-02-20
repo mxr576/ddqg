@@ -6556,6 +6556,7 @@
         "drupal/locale_translation_context": "1.x-dev",
         "drupal/localgov_legacy_migration": "0.1.0|0.1.1",
         "drupal/localgov_menu_link_group": "1.0.1",
+        "drupal/localgov_os_places_geocoder_provider": "1.x-dev",
         "drupal/localized_config": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-alpha6|1.0.0-alpha7|1.0.0-alpha8|1.0.0-alpha9|1.0.0-alpha10",
         "drupal/localizedrupalorg": "2.x-dev",
         "drupal/localizejs": "1.0.0-alpha1|1.0.x-dev",
