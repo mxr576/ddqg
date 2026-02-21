@@ -2531,6 +2531,7 @@
         "drupal/rollout": "*",
         "drupal/rooms_node": "*",
         "drupal/rotoslider": "*",
+        "drupal/route_attributes": "*",
         "drupal/rsrv": "*",
         "drupal/rss_all_pages": "*",
         "drupal/rtfm": "*",
