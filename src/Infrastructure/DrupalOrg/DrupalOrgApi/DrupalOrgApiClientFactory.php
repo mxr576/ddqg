@@ -10,6 +10,7 @@ use GuzzleHttp\HandlerStack;
 use GuzzleRetry\GuzzleRetryMiddleware;
 use Kevinrob\GuzzleCache\CacheMiddleware;
 use Kevinrob\GuzzleCache\Strategy\PublicCacheStrategy;
+use mxr576\ddqg\Infrastructure\DrupalOrg\Guzzle\Middleware\VerboseErrorHandler;
 use mxr576\ddqg\Supportive\Guzzle\CacheStorage;
 use mxr576\ddqg\Supportive\Guzzle\Guzzle7ClientFactory;
 
@@ -29,7 +30,7 @@ final class DrupalOrgApiClientFactory implements Guzzle7ClientFactory
             $stack->remove('http_errors');
             $stack->push(GuzzleRetryMiddleware::factory(), 'retryAfter');
             $stack->push(new ZeroRetryAfterHeaderFixHandler(), 'zeroRetryAfterHeaderFix');
-            $stack->push(new CustomErrorHandler(), 'customErrorHandler');
+            $stack->push(new VerboseErrorHandler(), 'customErrorHandler');
             $this->client = new Client([
                 'base_uri' => 'https://www.drupal.org/api-d7/',
                 'headers' => [

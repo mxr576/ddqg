@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace mxr576\ddqg\Infrastructure\DrupalOrg\DrupalOrgApi;
+namespace mxr576\ddqg\Infrastructure\DrupalOrg\Guzzle\Middleware;
 
 use GuzzleHttp\BodySummarizerInterface;
 use GuzzleHttp\Exception\RequestException;
@@ -10,7 +10,7 @@ use Psr\Http\Message\MessageInterface;
 use Psr\Http\Message\ResponseInterface;
 
 /**
- * Custom Guzzle error handler.
+ * Verbose Guzzle error handler middleware.
  *
  * Features:
  *  * Does not truncate error response body. https://github.com/guzzle/guzzle/issues/1722
@@ -18,7 +18,7 @@ use Psr\Http\Message\ResponseInterface;
  *
  * @internal
  */
-final class CustomErrorHandler
+final class VerboseErrorHandler
 {
     /**
      * Throws exceptions when an HTTP error occurs.

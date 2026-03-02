@@ -13,36 +13,6 @@ parameters:
 			path: src/Application/DrupalCoreCompatibility/Dto/HasDrupalCoreCompatibleRelease.php
 
 		-
-			message: '#^\(ArrayObject&TReturn\)\|ArrayObject\<\*NEVER\*, \*NEVER\*\> does not accept mxr576\\ddqg\\Application\\DrupalCoreCompatibility\\Port\\ProjectInfo\.$#'
-			identifier: offsetAssign.valueType
-			count: 1
-			path: src/Application/DrupalCoreCompatibility/GenerateDrupalCoreCompatibilityReport.php
-
-		-
-			message: '#^Method mxr576\\ddqg\\Application\\DrupalCoreCompatibility\\GenerateDrupalCoreCompatibilityReport\:\:__invoke\(\) return type has no value type specified in iterable type Traversable\.$#'
-			identifier: missingType.iterableValue
-			count: 1
-			path: src/Application/DrupalCoreCompatibility/GenerateDrupalCoreCompatibilityReport.php
-
-		-
-			message: '#^Parameter \#1 \$drupalCoreVersionConstraint of method mxr576\\ddqg\\Application\\DrupalCoreCompatibility\\Port\\ListReleasesWithDrupalCoreCompatibility\:\:fetchReleasesWithDrupalCoreCompatibility\(\) expects Composer\\Semver\\Constraint\\Constraint, Composer\\Semver\\Constraint\\ConstraintInterface given\.$#'
-			identifier: argument.type
-			count: 1
-			path: src/Application/DrupalCoreCompatibility/GenerateDrupalCoreCompatibilityReport.php
-
-		-
-			message: '#^Parameter \#6 \$latestTaggedVersion of class mxr576\\ddqg\\Application\\DrupalCoreCompatibility\\Dto\\HasDrupalCoreCompatibleRelease constructor expects string, string\|null given\.$#'
-			identifier: argument.type
-			count: 1
-			path: src/Application/DrupalCoreCompatibility/GenerateDrupalCoreCompatibilityReport.php
-
-		-
-			message: '#^Parameter \#7 \$latestTaggedVersionReleaseDate of class mxr576\\ddqg\\Application\\DrupalCoreCompatibility\\Dto\\HasDrupalCoreCompatibleRelease constructor expects DateTimeImmutable, DateTimeImmutable\|null given\.$#'
-			identifier: argument.type
-			count: 1
-			path: src/Application/DrupalCoreCompatibility/GenerateDrupalCoreCompatibilityReport.php
-
-		-
 			message: '#^Method mxr576\\ddqg\\Domain\\DrupalCoreIncompatibleReleasesRepository\:\:findDrupalCoreIncompatibleVersions\(\) return type has no value type specified in iterable type array\.$#'
 			identifier: missingType.iterableValue
 			count: 1
@@ -91,24 +61,6 @@ parameters:
 			path: src/Infrastructure/ComposerJsonWriter.php
 
 		-
-			message: '#^Cannot call method then\(\) on mixed\.$#'
-			identifier: method.nonObject
-			count: 1
-			path: src/Infrastructure/DrupalOrg/DrupalOrgApi/CustomErrorHandler.php
-
-		-
-			message: '#^Method GuzzleHttp\\BodySummarizerInterface@anonymous/src/Infrastructure/DrupalOrg/DrupalOrgApi/CustomErrorHandler\.php\:40\:\:summarize\(\) never returns null so it can be removed from the return type\.$#'
-			identifier: return.unusedType
-			count: 1
-			path: src/Infrastructure/DrupalOrg/DrupalOrgApi/CustomErrorHandler.php
-
-		-
-			message: '#^Parameter \#1 \$request of static method GuzzleHttp\\Exception\\RequestException\:\:create\(\) expects Psr\\Http\\Message\\RequestInterface, mixed given\.$#'
-			identifier: argument.type
-			count: 1
-			path: src/Infrastructure/DrupalOrg/DrupalOrgApi/CustomErrorHandler.php
-
-		-
 			message: '#^Anonymous function should return string but returns mixed\.$#'
 			identifier: return.type
 			count: 2
@@ -145,6 +97,18 @@ parameters:
 			path: src/Infrastructure/DrupalOrg/DrupalOrgApi/ZeroRetryAfterHeaderFixHandler.php
 
 		-
+			message: '#^Cannot call method then\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: src/Infrastructure/DrupalOrg/Guzzle/Middleware/VerboseErrorHandler.php
+
+		-
+			message: '#^Parameter \#1 \$request of static method GuzzleHttp\\Exception\\RequestException\:\:create\(\) expects Psr\\Http\\Message\\RequestInterface, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Infrastructure/DrupalOrg/Guzzle/Middleware/VerboseErrorHandler.php
+
+		-
 			message: '#^Cannot access offset 0 on non\-empty\-array\<SimpleXMLElement\>\|false\|null\.$#'
 			identifier: offsetAccess.nonOffsetAccessible
 			count: 1
@@ -173,9 +137,3 @@ parameters:
 			identifier: missingType.checkedException
 			count: 1
 			path: src/Infrastructure/DrupalOrg/UpdateStatusApi/XmlStreamBridgeForPsrStream.php
-
-		-
-			message: '#^Method mxr576\\ddqg\\Presentation\\DrupalCoreCompatibilityReportGenerator\\MarkdownDrupalCompatibilityReportGenerator\:\:groupByPackageType\(\) return type has no value type specified in iterable type array\.$#'
-			identifier: missingType.iterableValue
-			count: 1
-			path: src/Presentation/DrupalCoreCompatibilityReportGenerator/MarkdownDrupalCompatibilityReportGenerator.php

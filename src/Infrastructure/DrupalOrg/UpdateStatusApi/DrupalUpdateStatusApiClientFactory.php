@@ -10,7 +10,7 @@ use GuzzleHttp\HandlerStack;
 use GuzzleRetry\GuzzleRetryMiddleware;
 use Kevinrob\GuzzleCache\CacheMiddleware;
 use Kevinrob\GuzzleCache\Strategy\GreedyCacheStrategy;
-use mxr576\ddqg\Infrastructure\DrupalOrg\DrupalOrgApi\CustomErrorHandler;
+use mxr576\ddqg\Infrastructure\DrupalOrg\Guzzle\Middleware\VerboseErrorHandler;
 use mxr576\ddqg\Supportive\Guzzle\CacheStorage;
 use mxr576\ddqg\Supportive\Guzzle\Guzzle7ClientFactory;
 
@@ -38,7 +38,7 @@ final class DrupalUpdateStatusApiClientFactory implements Guzzle7ClientFactory
                 ),
                 'cache'
             );
-            $stack->push(new CustomErrorHandler(), 'customErrorHandler');
+            $stack->push(new VerboseErrorHandler(), 'customErrorHandler');
             $stack->push(GuzzleRetryMiddleware::factory());
             $this->client = new Client([
                 'base_uri' => 'https://updates.drupal.org/release-history/',
