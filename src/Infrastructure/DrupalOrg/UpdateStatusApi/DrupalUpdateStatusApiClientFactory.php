@@ -10,6 +10,7 @@ use GuzzleHttp\HandlerStack;
 use GuzzleRetry\GuzzleRetryMiddleware;
 use Kevinrob\GuzzleCache\CacheMiddleware;
 use Kevinrob\GuzzleCache\Strategy\GreedyCacheStrategy;
+use mxr576\ddqg\Infrastructure\DrupalOrg\DrupalOrgApi\CustomErrorHandler;
 use mxr576\ddqg\Supportive\Guzzle\CacheStorage;
 use mxr576\ddqg\Supportive\Guzzle\Guzzle7ClientFactory;
 
@@ -24,7 +25,7 @@ final class DrupalUpdateStatusApiClientFactory implements Guzzle7ClientFactory
     {
         if (null === $this->client) {
             $stack = HandlerStack::create();
-            $stack->push(GuzzleRetryMiddleware::factory());
+            $stack->remove('http_errors');
             $stack->push(
                 new CacheMiddleware(
                     // Greedy strategy is necessary because important Cache-Control
@@ -37,8 +38,11 @@ final class DrupalUpdateStatusApiClientFactory implements Guzzle7ClientFactory
                 ),
                 'cache'
             );
+            $stack->push(new CustomErrorHandler(), 'customErrorHandler');
+            $stack->push(GuzzleRetryMiddleware::factory());
             $this->client = new Client([
-                'base_uri' => 'https://updates.drupal.org/release-history/',
+                'base_uri' => 'https://updates.drupal.org/',
+                'http_errors' => true,
                 'headers' => [
                     'User-Agent' => 'mxr576/ddqg',
                     'Accept' => 'application/xml',
