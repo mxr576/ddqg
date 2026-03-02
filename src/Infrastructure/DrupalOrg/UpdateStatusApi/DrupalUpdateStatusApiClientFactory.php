@@ -41,7 +41,7 @@ final class DrupalUpdateStatusApiClientFactory implements Guzzle7ClientFactory
             $stack->push(new CustomErrorHandler(), 'customErrorHandler');
             $stack->push(GuzzleRetryMiddleware::factory());
             $this->client = new Client([
-                'base_uri' => 'https://updates.drupal.org/',
+                'base_uri' => 'https://updates.drupal.org/release-history/',
                 'http_errors' => true,
                 'headers' => [
                     'User-Agent' => 'mxr576/ddqg',
