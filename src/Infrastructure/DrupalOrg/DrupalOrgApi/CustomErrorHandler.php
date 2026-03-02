@@ -26,10 +26,6 @@ final class CustomErrorHandler
     public function __invoke(callable $handler): callable
     {
         return static function ($request, array $options) use ($handler) {
-            if (empty($options['http_errors'])) {
-                return $handler($request, $options);
-            }
-
             return $handler($request, $options)->then(
                 static function (ResponseInterface $response) use ($request) {
                     $code = $response->getStatusCode();
@@ -38,11 +34,11 @@ final class CustomErrorHandler
                     }
 
                     throw RequestException::create($request, $response, null, [], new class implements BodySummarizerInterface {
-                        public function summarize(MessageInterface $message): ?string
+                        public function summarize(MessageInterface $message): string
                         {
                             $parts = [];
                             $parts['headers'] = json_encode($message->getHeaders(), JSON_PRETTY_PRINT);
-                            $parts['body'] = $message->getBody();
+                            $parts['body'] = (string) $message->getBody();
 
                             return implode("\n", $parts);
                         }
