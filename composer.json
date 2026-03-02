@@ -1897,6 +1897,7 @@
         "drupal/mdb": "*",
         "drupal/mdc": "*",
         "drupal/mdrop_suite": "*",
+        "drupal/media_acquiadam": "*",
         "drupal/media_amazon": "*",
         "drupal/media_cloudcast": "*",
         "drupal/media_embed_focal_point": "*",
