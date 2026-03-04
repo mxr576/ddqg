@@ -699,6 +699,7 @@
         "drupal/context_panels_layouts": "*",
         "drupal/context_resolution": "*",
         "drupal/contextual_cleaner": "*",
+        "drupal/contextual_reports": "*",
         "drupal/contrib_toggle": "*",
         "drupal/contribution_notify": "*",
         "drupal/convert2drupal": "*",
@@ -2076,6 +2077,7 @@
         "drupal/ngdrupal": "*",
         "drupal/nice_primary_menus": "*",
         "drupal/nicedit": "*",
+        "drupal/niobi_app_scheduler": "*",
         "drupal/nirvana": "*",
         "drupal/nirvana_fluid": "*",
         "drupal/nitty": "*",
@@ -3140,6 +3142,7 @@
         "drupal/vbco": "*",
         "drupal/vbo_csv": "*",
         "drupal/vbo_file_status_toggler": "*",
+        "drupal/vc_base": "*",
         "drupal/vcs_module": "*",
         "drupal/velo": "*",
         "drupal/velocity_animate": "*",
@@ -3378,7 +3381,9 @@
         "drupal/zohozeptomail": "*",
         "drupal/zoomify": "*",
         "drupal/zoomit": "*",
+        "drupal/zsm": "*",
         "drupal/zurb_foundation_companion": "*",
+        "drupal/zwc": "*",
         "drupal/zws": "*"
     }
 }
