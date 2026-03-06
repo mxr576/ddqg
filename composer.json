@@ -3415,7 +3415,7 @@
         "drupal/drupalcoders_bootstrap": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-alpha6|1.0.0-beta01|1.0.0-beta02|1.0.0-beta03|1.0.0-beta04|1.0.0-rc1|1.0.0-rc2|1.x-dev",
         "drupal/drupalexp_lite": "1.0.0|1.x-dev",
         "drupal/drupalgap": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.x-dev|2.x-dev",
-        "drupal/drupalmoduleupgrader": "0.3.0|0.4.0|0.5.0|0.6.0|0.7.0|1.0.0|1.1.0|1.2.0|1.3.0|1.4.0|1.5.0|1.6.0|1.7.0|1.8.0|1.9.0|1.x-dev",
+        "drupal/drupalmoduleupgrader": "0.3.0|0.4.0|0.5.0|0.6.0|0.7.0|1.0.0|1.1.0|1.2.0|1.3.0|1.4.0|1.5.0|1.6.0|1.7.0|1.8.0|1.9.0|1.x-dev|2.0.0-alpha1",
         "drupal/drupalmonitor": "1.0.0|1.0.0-alpha1|1.0.0-alpha2|1.1.0",
         "drupal/drupalorg_links": "1.0.0|1.1.0",
         "drupal/drupalpractice": "1.0.0-alpha1|1.0.0-beta1|1.x-dev",
