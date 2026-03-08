@@ -93,7 +93,6 @@
         "drupal/ginvite": ">=2.3.0,<2.3.9|>=3.0.0,<3.0.4|>=4.0.0,<4.0.4",
         "drupal/glightbox": ">=1.0.0,<1.0.16",
         "drupal/google_tag": ">=1.0.0,<1.8.0|>=2.0.0,<2.0.8",
-        "drupal/govuk_theme": ">=1.0.0,<1.9.0",
         "drupal/graphql": ">=3.0.0,<3.4.0|>=4.0.0,<4.6.0",
         "drupal/group": ">=1.0.0,<1.2.0",
         "drupal/group_forum": ">=2.0.0,<2.0.2",
