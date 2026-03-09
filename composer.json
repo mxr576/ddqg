@@ -3572,7 +3572,7 @@
         "drupal/custom_menu_breadcrumbs": "1.0.0|1.x-dev",
         "drupal/custom_messages": "1.x-dev",
         "drupal/custom_meta": "1.0.0-beta1|2.0.0|2.0.0-alpha1|2.0.0-alpha2|2.0.0-beta1|2.0.x-dev|2.1.0",
-        "drupal/custom_metatag": "1.0.x-dev",
+        "drupal/custom_metatag": "1.0.x-dev|2.0.0",
         "drupal/custom_metatags": "1.1.0|1.x-dev",
         "drupal/custom_mid": "1.x-dev",
         "drupal/custom_mouse_pointer": "1.0.0-alpha1",
