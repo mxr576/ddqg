@@ -1800,6 +1800,7 @@
         "drupal/live_update": "*",
         "drupal/livehelperchat": "*",
         "drupal/living_style_guide": "*",
+        "drupal/livre": "*",
         "drupal/llm_provider": "*",
         "drupal/llmmanager": "*",
         "drupal/lms_classes": "*",
