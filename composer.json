@@ -709,7 +709,7 @@
         "drupal/badcamp_sight": "1.x-dev",
         "drupal/badge_notification": "1.0.0-alpha1|1.0.1-alpha1|1.0.2|1.0.3|1.0.4",
         "drupal/badges_async": "1.0.x-dev",
-        "drupal/badgr_badge": "1.0.0|1.1.0|1.x-dev",
+        "drupal/badgr_badge": "1.0.0|1.1.0",
         "drupal/baguettebox": "1.0.0|1.0.0-rc1|1.0.0-rc2|1.0.0-rc3|1.0.0-rc4|1.1.0|1.2.0|1.7.0|1.x-dev",
         "drupal/baidu_analytics": "1.x-dev",
         "drupal/baidu_map": "1.0.0|1.1.0",
