@@ -1094,6 +1094,7 @@
         "drupal/entity_access_conditions": "*",
         "drupal/entity_access_log": "*",
         "drupal/entity_action": "*",
+        "drupal/entity_autocomplete_details": "*",
         "drupal/entity_autocomplete_extended": "*",
         "drupal/entity_backreference": "*",
         "drupal/entity_citation": "*",
