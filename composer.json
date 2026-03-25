@@ -2046,6 +2046,7 @@
         "drupal/multicron": "*",
         "drupal/multilang": "*",
         "drupal/multilevelpushmenu": "*",
+        "drupal/multiline_config": "*",
         "drupal/multilingual_login_redirect": "*",
         "drupal/multipage": "*",
         "drupal/multireference": "*",
