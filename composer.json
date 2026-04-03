@@ -1899,6 +1899,7 @@
         "drupal/mautic_helper_endpoints": "*",
         "drupal/maxlength_js": "*",
         "drupal/mbat": "*",
+        "drupal/mcp_remote": "*",
         "drupal/mcs": "*",
         "drupal/mdb": "*",
         "drupal/mdc": "*",
