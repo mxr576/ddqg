@@ -720,6 +720,7 @@
         "drupal/country_code": "*",
         "drupal/course_manager": "*",
         "drupal/cove_api": "*",
+        "drupal/cover": "*",
         "drupal/covid19": "*",
         "drupal/craftyclicks": "*",
         "drupal/cram": "*",
