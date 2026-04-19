@@ -2375,6 +2375,7 @@
         "drupal/pluginformalter": "*",
         "drupal/plup": "*",
         "drupal/plus": "*",
+        "drupal/plus_suite_module": "*",
         "drupal/pm_chat": "*",
         "drupal/pm_lite": "*",
         "drupal/pmetrics": "*",
