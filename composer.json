@@ -3173,6 +3173,7 @@
         "drupal/velo": "*",
         "drupal/velocity_animate": "*",
         "drupal/velocity_core": "*",
+        "drupal/velocity_theme": "*",
         "drupal/vencf": "*",
         "drupal/venga_translator": "*",
         "drupal/ventrilo_status": "*",
