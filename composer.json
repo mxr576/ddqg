@@ -1273,6 +1273,7 @@
         "drupal/field_gatekeeper": "*",
         "drupal/field_group_vertical_tabs": "*",
         "drupal/field_image_label": "*",
+        "drupal/field_instance_sync": "*",
         "drupal/field_lock": "*",
         "drupal/field_login_simple_oauth": "*",
         "drupal/field_maxlength_alter": "*",
