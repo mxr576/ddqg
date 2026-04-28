@@ -2907,6 +2907,7 @@
         "drupal/tbp": "*",
         "drupal/tc": "*",
         "drupal/tcm": "*",
+        "drupal/tcr": "*",
         "drupal/teachest": "*",
         "drupal/teacosy": "*",
         "drupal/tealeaf": "*",
