@@ -11784,6 +11784,7 @@
         "drupal/views_rest_feed": "1.0.0-alpha1|1.x-dev|2.0.0|2.x-dev",
         "drupal/views_restricted": "1.x-dev",
         "drupal/views_role_based_global_text": "1.0.0|1.1.0|1.x-dev|2.0.0|2.x-dev",
+        "drupal/views_row_display_selector": "1.0.x-dev",
         "drupal/views_row_insert": "1.0.0|1.1.0|1.2.0|1.x-dev|2.0.0",
         "drupal/views_rows_wrapper": "1.0.0|1.1.0|1.x-dev|2.0.0",
         "drupal/views_rss": "2.0.0-rc1|2.0.0-rc2",
