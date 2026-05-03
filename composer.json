@@ -194,6 +194,7 @@
         "drupal/atrium_home": "*",
         "drupal/atrium_realname": "*",
         "drupal/atsmarttag_domain": "*",
+        "drupal/atta": "*",
         "drupal/attach_library_in_views": "*",
         "drupal/attachments": "*",
         "drupal/attributionapi": "*",
