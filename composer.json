@@ -406,6 +406,7 @@
         "drupal/centreon_status": "*",
         "drupal/cerf": "*",
         "drupal/cgroups": "*",
+        "drupal/change_field_type": "*",
         "drupal/channel": "*",
         "drupal/char_count_formatter": "*",
         "drupal/chartjs": "*",
