@@ -105,7 +105,6 @@
         "drupal/ignition": ">=1.0.0,<1.0.4",
         "drupal/image_sizes": ">=3.0.0,<3.0.2",
         "drupal/img_annotator": ">=1.0.0,<1.2.0",
-        "drupal/islandora": ">=2.17.0,<2.17.5",
         "drupal/iubenda_integration": ">=4.0.0,<4.0.1",
         "drupal/jquery_ui_datepicker": ">=1.0.0,<1.2.0",
         "drupal/json_field": ">=1.0.0,<1.5.0",
