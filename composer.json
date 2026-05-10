@@ -89,7 +89,7 @@
         "drupal/ga4_google_analytics": ">=1.1.0,<1.1.14",
         "drupal/gdpr": ">=3.0.0,<3.0.1|>=3.1.0,<3.1.2",
         "drupal/gdpr_alert": ">=1.0.0,<1.0.1",
-        "drupal/gifplayer": ">=1.0.0,<1.5.0|>=2.0.0,<2.0.4",
+        "drupal/gifplayer": ">=2.0.0,<2.0.4",
         "drupal/ginvite": ">=2.3.0,<2.3.9|>=3.0.0,<3.0.4|>=4.0.0,<4.0.4",
         "drupal/glightbox": ">=1.0.0,<1.0.16",
         "drupal/google_tag": ">=1.0.0,<1.8.0|>=2.0.0,<2.0.8",
