@@ -2278,6 +2278,7 @@
         "drupal/paragraph_force_remove": "*",
         "drupal/paragraph_iframe_preview": "*",
         "drupal/paragraphs_base": "*",
+        "drupal/paragraphs_component": "*",
         "drupal/paragraphs_filter_and_pagination_widget": "*",
         "drupal/paragraphs_in_api": "*",
         "drupal/paragraphs_responsive_bg_image_formatter": "*",
