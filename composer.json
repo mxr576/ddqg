@@ -592,6 +592,7 @@
         "drupal/commerce_order_number": "*",
         "drupal/commerce_order_types": "*",
         "drupal/commerce_order_user_revision": "*",
+        "drupal/commerce_packaging": "*",
         "drupal/commerce_parcel_monkey": "*",
         "drupal/commerce_payment_icons": "*",
         "drupal/commerce_payment_onsite_gateway": "*",
