@@ -260,6 +260,7 @@
         "drupal/better_normalizers": "*",
         "drupal/bettermenus": "*",
         "drupal/betterselect": "*",
+        "drupal/bfap_sb": "*",
         "drupal/bh_bootstrap": "*",
         "drupal/bh_bootstrapextras": "*",
         "drupal/bible_reference": "*",
