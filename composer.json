@@ -48,7 +48,6 @@
         "drupal/config_split": ">=1.0.0,<1.10.0|>=2.0.0,<2.0.2",
         "drupal/config_terms": ">=1.0.0,<1.6.0",
         "drupal/consent_popup": ">=1.0.0,<1.0.3",
-        "drupal/content_entity_clone": ">=1.0.0,<1.0.4",
         "drupal/content_moderation_notifications": ">=3.0.0,<3.6.0",
         "drupal/cookiebot_gtm": ">=1.0.0,<1.0.18",
         "drupal/cookies": ">=1.2.0,<1.2.16|>=2.0.0,<2.0.0-alpha5",
