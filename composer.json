@@ -921,6 +921,7 @@
         "drupal/drupal_admin": "*",
         "drupal/drupal_content_sync": "*",
         "drupal/drupal_im": "*",
+        "drupal/drupal_knowledge_assistant": "*",
         "drupal/drupal_ldap_ad": "*",
         "drupal/drupal_override_function": "*",
         "drupal/drupal_recur_conflict": "*",
