@@ -1813,6 +1813,7 @@
         "drupal/lightning_media_video_file": "*",
         "drupal/lineage": "*",
         "drupal/link_esi": "*",
+        "drupal/link_partners": "*",
         "drupal/link_redirect_formatter": "*",
         "drupal/linked_entity": "*",
         "drupal/linkimagefields": "*",
