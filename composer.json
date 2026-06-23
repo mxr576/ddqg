@@ -6,6 +6,7 @@
     "conflict": {
         "drupal/a11y_keyboard": "*",
         "drupal/a_blueprint": "*",
+        "drupal/aaabc_d": "*",
         "drupal/ablock": "*",
         "drupal/ablogtheme": "*",
         "drupal/aboutpeople": "*",
@@ -1030,6 +1031,7 @@
         "drupal/ee_commerce": "*",
         "drupal/efq_vbo": "*",
         "drupal/egate": "*",
+        "drupal/eh_test": "*",
         "drupal/eid": "*",
         "drupal/eight": "*",
         "drupal/elastic_appsearch": "*",
@@ -2507,6 +2509,7 @@
         "drupal/reactive": "*",
         "drupal/read_and_understood": "*",
         "drupal/readme": "*",
+        "drupal/readme_help": "*",
         "drupal/real_estate_we": "*",
         "drupal/realname_userreference": "*",
         "drupal/rearrange_child_pages": "*",
