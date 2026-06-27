@@ -7757,6 +7757,7 @@
         "drupal/og_message": "1.0.0-alpha1|1.1.0-alpha1|1.1.0-beta1|1.1.0-beta2|1.1.0-beta3|1.1.0-rc1|1.x-dev",
         "drupal/og_nonmember_editor": "1.0.0-beta1|1.0.0-rc1|1.0.0-rc2|1.0.0-rc3|1.0.0-rc4|1.x-dev",
         "drupal/og_sm": "1.0.0|1.x-dev|2.0.0|2.x-dev",
+        "drupal/ogcb": "1.x-dev",
         "drupal/ogd": "1.0.0|1.1.0",
         "drupal/ogmedia": "1.x-dev",
         "drupal/oh": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.x-dev|2.0.0|2.0.0-alpha5|2.0.0-beta1|2.0.0-beta2|2.0.1|2.x-dev",
