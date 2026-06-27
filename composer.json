@@ -3010,6 +3010,7 @@
         "drupal/token_data_hash": "*",
         "drupal/token_language": "*",
         "drupal/tokenize": "*",
+        "drupal/tool_workspace": "*",
         "drupal/topspin": "*",
         "drupal/topsy": "*",
         "drupal/tour_enhancements": "*",
