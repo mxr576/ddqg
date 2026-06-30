@@ -2473,6 +2473,7 @@
         "drupal/pure_storage": "*",
         "drupal/purl_static": "*",
         "drupal/pushbullet": "*",
+        "drupal/pushup": "*",
         "drupal/pwa_firebase_notification": "*",
         "drupal/python_services": "*",
         "drupal/qedit": "*",
