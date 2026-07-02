@@ -500,6 +500,7 @@
         "drupal/cloudflare_whitelist": "*",
         "drupal/cloudflare_worker_purge": "*",
         "drupal/cloudfront_cache_invalidate": "*",
+        "drupal/cloudfront_invalidate_all": "*",
         "drupal/cm_airing_grid": "*",
         "drupal/cm_config_tools": "*",
         "drupal/cm_hotel": "*",
