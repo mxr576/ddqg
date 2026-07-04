@@ -2637,6 +2637,7 @@
         "drupal/sdc_list": "*",
         "drupal/sdc_story_generator": "*",
         "drupal/searcch_api_string_sanitization": "*",
+        "drupal/search_alter": "*",
         "drupal/search_api_acquia": "*",
         "drupal/search_api_ai": "*",
         "drupal/search_api_attacchments_php": "*",
