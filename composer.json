@@ -174,7 +174,7 @@
         "drupal/phpconfig": ">=1.0.0,<1.1.0",
         "drupal/pianoanalytics": ">=1.0.0,<1.0.1|>=2.3.0,<2.3.1",
         "drupal/plausible_tracking": ">=1.0.0,<1.0.2",
-        "drupal/plotly_js": "4.0.0|>=3.0.0,<3.0.2",
+        "drupal/plotly_js": "4.0.0",
         "drupal/postfile": ">=1.0.0,<1.0.2",
         "drupal/private_content": ">=2.0.0,<2.1.0",
         "drupal/prlp": ">=1.0.0,<1.5.0",
