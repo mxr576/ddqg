@@ -497,6 +497,7 @@
         "drupal/cleverdrupal": "*",
         "drupal/click_pledge_connect": "*",
         "drupal/clickbank_download": "*",
+        "drupal/cloudflare_ai_gateway": "*",
         "drupal/cloudflare_stream_sync": "*",
         "drupal/cloudflare_whitelist": "*",
         "drupal/cloudflare_worker_purge": "*",
