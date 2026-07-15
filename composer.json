@@ -2301,6 +2301,7 @@
         "drupal/panels_bootstrap": "*",
         "drupal/panels_createnode": "*",
         "drupal/panels_media": "*",
+        "drupal/panels_mini_ipe": "*",
         "drupal/panels_plugin_example": "*",
         "drupal/panels_sections": "*",
         "drupal/panels_teasers": "*",
