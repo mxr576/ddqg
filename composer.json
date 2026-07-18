@@ -179,7 +179,6 @@
         "drupal/private_content": ">=2.0.0,<2.1.0",
         "drupal/prlp": ">=1.0.0,<1.5.0",
         "drupal/profile": ">=1.0.0,<1.1.0",
-        "drupal/protected_pages": ">=1.0.0,<1.8.0",
         "drupal/quick_node_block": ">=2.0.0,<2.0.1",
         "drupal/quick_node_clone": ">=1.0.0,<1.15.0",
         "drupal/quickedit": ">=1.0.0,<1.0.5|>=2.0.0,<2.0.1",
