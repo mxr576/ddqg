@@ -1561,6 +1561,7 @@
         "drupal/help_topics_backlinks": "*",
         "drupal/helpinjector": "*",
         "drupal/hexidecimal_color": "*",
+        "drupal/hfcbase": "*",
         "drupal/hi5": "*",
         "drupal/hidden_captcha": "*",
         "drupal/hide_login": "*",
