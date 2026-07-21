@@ -12052,7 +12052,7 @@
         "drupal/webform_mail_attachments": "1.x-dev|2.x-dev",
         "drupal/webform_mailchimp": "5.0.0|5.1.0|5.2.0|5.3.0|5.4.0|5.5.0|5.6.0|5.7.0|5.8.0|5.9.0",
         "drupal/webform_mass_email": "1.0.0|1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.0.0-beta4|1.0.0-beta5|1.0.0-beta6",
-        "drupal/webform_mattermost": "1.0.0|1.1.0|1.2.0|1.x-dev",
+        "drupal/webform_mattermost": "1.0.0|1.1.0|1.2.0",
         "drupal/webform_mautic": "1.0.0|1.0.0-alpha1|1.1.0|1.2.0",
         "drupal/webform_media": "1.0.0-beta1",
         "drupal/webform_migrate": "1.0.0|1.0.0-alpha1|1.0.0-alpha2|1.1.0|1.2.0",
