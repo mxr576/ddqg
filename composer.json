@@ -3062,6 +3062,7 @@
         "drupal/translation_status": "*",
         "drupal/translations_import_export": "*",
         "drupal/translator": "*",
+        "drupal/trash_digest_notifications": "*",
         "drupal/trashbin": "*",
         "drupal/travelmap": "*",
         "drupal/treeable": "*",
