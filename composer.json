@@ -3443,7 +3443,6 @@
         "drupal/crm_core_subscriptions": "1.x-dev",
         "drupal/crm_email": "1.0.x-dev",
         "drupal/crm_group": "1.0.x-dev",
-        "drupal/crm_search_api": "1.0.x-dev",
         "drupal/crocheteer": "1.0.0|1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.0.0-beta4|1.0.0-beta5|1.1.0|1.2.0|1.x-dev",
         "drupal/cron_fail_alert": "1.0.0|1.0.1|1.0.2",
         "drupal/cron_ghost": "1.0.0",
