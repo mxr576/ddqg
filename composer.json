@@ -109,7 +109,7 @@
         "drupal/gutenberg": ">=2.0.0,<2.13.0|>=3.0.0,<3.0.5",
         "drupal/h5p": ">=2.0.0,<2.0.0-alpha3",
         "drupal/highlight_php": ">=1.0.0,<1.0.1",
-        "drupal/http_client_manager": ">=9.3.0,<9.3.13|>=10.0.0,<10.0.2|>=11.0.0,<11.0.1",
+        "drupal/http_client_manager": ">=10.0.0,<10.0.2|>=11.0.0,<11.0.1",
         "drupal/i18n_sso": ">=1.0.0,<1.8.0",
         "drupal/iframeremove": ">=2.0.0,<2.0.5",
         "drupal/ignition": ">=1.0.0,<1.0.4",
