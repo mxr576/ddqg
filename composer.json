@@ -88,7 +88,6 @@
         "drupal/file_download": ">=2.0.0,<2.0.1",
         "drupal/filefield_paths": ">=1.0.0,<1.0.0-beta6",
         "drupal/flag_attendance_field": ">=1.0.0,<1.2.0",
-        "drupal/flowdrop": ">=1.0.0,<1.6.0",
         "drupal/fontawesome": ">=2.0.0,<2.12.0",
         "drupal/formatter_field": "2.0.0",
         "drupal/forms_steps": ">=1.0.0,<1.2.0",
