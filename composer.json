@@ -32,7 +32,6 @@
         "drupal/browser_back_button": ">=2.0.0,<2.0.2",
         "drupal/business_responsive_theme": ">=2.0.0,<2.0.3",
         "drupal/calculation_fields": ">=1.0.0,<1.0.4",
-        "drupal/canvas": ">=1.7.0,<1.7.1",
         "drupal/captcha": ">=1.0.0,<1.17.0|>=2.0.0,<2.0.10",
         "drupal/cas_server": ">=2.0.0,<2.0.3|>=2.1.0,<2.1.2",
         "drupal/ckeditor5_youtube": ">=1.0.0,<1.0.4",
