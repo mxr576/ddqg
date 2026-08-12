@@ -8134,7 +8134,7 @@
         "drupal/locale_download": "1.0.0-rc1|1.0.x-dev",
         "drupal/locale_extend": "1.0.x-dev",
         "drupal/locale_migrate": "1.0.0-alpha1|1.x-dev",
-        "drupal/locale_override": "1.0.0|1.0.0-alpha1|1.1.0|1.2.0|1.3.0|1.4.0|1.x-dev",
+        "drupal/locale_override": "1.0.0|1.0.0-alpha1|1.1.0|1.2.0|1.3.0|1.4.0",
         "drupal/locale_tamper": "1.x-dev",
         "drupal/locale_trans_file": "1.0.0|1.1.0|1.2.0",
         "drupal/locale_translation_context": "1.x-dev|2.0.0",
