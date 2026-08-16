@@ -253,6 +253,7 @@
         "drupal/bartik_bootstrap": "*",
         "drupal/base_bootstrap_4": "*",
         "drupal/basetheme": "*",
+        "drupal/basic_cart_stripe": "*",
         "drupal/basic_ncbi": "*",
         "drupal/basic_paragraphs": "*",
         "drupal/basic_sass": "*",
