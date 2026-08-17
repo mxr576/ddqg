@@ -3462,6 +3462,7 @@
         "drupal/webstruct": "*",
         "drupal/webtorrent": "*",
         "drupal/webvitalsreport": "*",
+        "drupal/weight_range": "*",
         "drupal/weixin": "*",
         "drupal/wetkit_project": "*",
         "drupal/wf": "*",
