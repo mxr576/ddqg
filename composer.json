@@ -2570,6 +2570,7 @@
         "drupal/quiz_evaluation": "*",
         "drupal/quiz_services": "*",
         "drupal/rabbitmq_logs": "*",
+        "drupal/rain_theme": "*",
         "drupal/ramda": "*",
         "drupal/ranch": "*",
         "drupal/raven_release": "*",
