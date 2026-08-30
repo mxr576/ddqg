@@ -185,7 +185,6 @@
         "drupal/plausible_tracking": ">=1.0.0,<1.0.2",
         "drupal/plotly_js": "4.0.0",
         "drupal/postfile": ">=1.0.0,<1.0.2",
-        "drupal/private_content": ">=2.0.0,<2.1.0",
         "drupal/prlp": ">=1.0.0,<1.5.0",
         "drupal/profile": ">=1.0.0,<1.1.0",
         "drupal/quick_node_block": ">=2.0.0,<2.0.1",
