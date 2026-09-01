@@ -2405,6 +2405,7 @@
         "drupal/patchinfo": "*",
         "drupal/pathauto_persist": "*",
         "drupal/pathauto_uncheck": "*",
+        "drupal/pathcache": "*",
         "drupal/pathfilter": "*",
         "drupal/pathinfo": "*",
         "drupal/pathmenu": "*",
