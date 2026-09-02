@@ -164,7 +164,6 @@
         "drupal/apollo": "*",
         "drupal/apollo_xiii": "*",
         "drupal/app_manifest": "*",
-        "drupal/app_store_server_notifications": "*",
         "drupal/appear2mee": "*",
         "drupal/applique": "*",
         "drupal/appnexus": "*",
