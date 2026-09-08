@@ -3098,6 +3098,7 @@
         "drupal/tfa_ga_totp": "*",
         "drupal/theme": "*",
         "drupal/theme_compiler_scss": "*",
+        "drupal/theme_suggestion_api": "*",
         "drupal/themedev": "*",
         "drupal/themesgrid": "*",
         "drupal/thimble": "*",
