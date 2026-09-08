@@ -7788,6 +7788,7 @@
         "drupal/one": "1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.0.0-beta4|1.x-dev",
         "drupal/one_api": "1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.0.0-beta4|1.x-dev",
         "drupal/one_page": "1.0.x-dev",
+        "drupal/one_page_crm_eca": "1.0.x-dev",
         "drupal/one_time_key_auth": "1.0.0-rc1|2.0.0|2.0.1",
         "drupal/one_time_link": "1.0.0|1.x-dev|2.0.0-alpha2",
         "drupal/one_time_login_link_admin": "1.0.2-alpha5|1.0.3-rc1|1.0.4-rc2|1.0.4-rc3|1.0.4-rc4|1.0.4-rc5|1.0.4-rc6|1.0.4-rc7|1.0.5",
