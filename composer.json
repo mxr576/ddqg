@@ -3462,6 +3462,7 @@
         "drupal/web3_signer": "*",
         "drupal/webalizer": "*",
         "drupal/webautoselect2": "*",
+        "drupal/webdashbord": "*",
         "drupal/webdrop_apps": "*",
         "drupal/webducateapi": "*",
         "drupal/webengage": "*",
