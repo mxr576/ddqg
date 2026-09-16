@@ -5,6 +5,7 @@
     "license": "MIT",
     "conflict": {
         "drupal/a11y_keyboard": "*",
+        "drupal/a11y_suite": "*",
         "drupal/a_blueprint": "*",
         "drupal/aaabc_d": "*",
         "drupal/ablock": "*",
@@ -952,6 +953,7 @@
         "drupal/dream960": "*",
         "drupal/dreditor": "*",
         "drupal/droopfuse": "*",
+        "drupal/droost_ui_patterns": "*",
         "drupal/drop": "*",
         "drupal/dropdown_taxonomy": "*",
         "drupal/dropguard": "*",
