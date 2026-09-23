@@ -647,6 +647,7 @@
         "drupal/commerce_product_personalization": "*",
         "drupal/commerce_qbo_ui": "*",
         "drupal/commerce_qmbs": "*",
+        "drupal/commerce_responsive_ui": "*",
         "drupal/commerce_sagepay_d8": "*",
         "drupal/commerce_sagepay_token": "*",
         "drupal/commerce_sandbox": "*",
