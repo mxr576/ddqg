@@ -202,7 +202,7 @@
         "drupal/photoswipe": ">=5.0.0,<5.0.9",
         "drupal/php": ">=1.0.0,<1.2.0",
         "drupal/phpconfig": ">=1.0.0,<1.1.0",
-        "drupal/pianoanalytics": ">=1.0.0,<1.0.1|>=2.3.0,<2.3.1",
+        "drupal/pianoanalytics": ">=1.0.0,<1.0.1",
         "drupal/plausible_tracking": ">=1.0.0,<1.0.2",
         "drupal/plotly_js": "4.0.0",
         "drupal/postfile": ">=1.0.0,<1.0.2",
