@@ -2484,6 +2484,7 @@
         "drupal/php_variables": "*",
         "drupal/phpcolors": "*",
         "drupal/phpedu": "*",
+        "drupal/phpfreechat": "*",
         "drupal/phpgedview": "*",
         "drupal/phpseclib": "*",
         "drupal/phpstorm_metadata": "*",
