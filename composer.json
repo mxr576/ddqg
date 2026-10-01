@@ -9616,7 +9616,7 @@
         "drupal/shiv": "1.0.0|1.1.0|1.x-dev",
         "drupal/shoelace_messages": "1.0.0|1.0.1|1.0.2|1.0.3|1.0.x-dev",
         "drupal/shop_item": "1.x-dev",
-        "drupal/shopify": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-alpha6|1.x-dev",
+        "drupal/shopify": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.0-alpha4|1.0.0-alpha5|1.0.0-alpha6|1.0.0-alpha7|1.x-dev",
         "drupal/shopify_api": "1.0.0-alpha1|1.x-dev",
         "drupal/shopify_app": "1.0.0|1.1.0",
         "drupal/shopify_buy_button": "1.0.1|1.0.2|1.0.3|1.0.4|1.0.5|1.x-dev",
