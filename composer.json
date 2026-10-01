@@ -738,6 +738,7 @@
         "drupal/contact_scheduler": "*",
         "drupal/contact_tos_checkbox": "*",
         "drupal/contemplate": "*",
+        "drupal/content_callback": "*",
         "drupal/content_compose": "*",
         "drupal/content_export": "*",
         "drupal/content_export_import": "*",
