@@ -105,6 +105,7 @@
         "drupal/ai_chatblock": "*",
         "drupal/ai_chatbot": "*",
         "drupal/ai_content": "*",
+        "drupal/ai_decision": "*",
         "drupal/ai_eca": "*",
         "drupal/ai_ecosystem_recipe": "*",
         "drupal/ai_evals": "*",
