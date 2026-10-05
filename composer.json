@@ -7604,7 +7604,7 @@
         "drupal/keyvalue_ui": "1.x-dev",
         "drupal/khan": "1.x-dev",
         "drupal/killadblock": "1.0.0|1.x-dev",
-        "drupal/kinescope": "1.0.x-dev|1.1.x-dev|1.2.x-dev",
+        "drupal/kinescope": "1.1.x-dev|1.2.x-dev",
         "drupal/kite": "1.0.0-beta1|1.x-dev",
         "drupal/kits": "1.x-dev|2.0.0-beta1|2.0.0-beta2|2.0.0-beta3",
         "drupal/kiyoh_klantenvertellen_data_provider": "1.0.0|1.1.0|1.2.0|1.3.0|1.x-dev|6.x-dev",
