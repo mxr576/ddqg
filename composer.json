@@ -435,6 +435,7 @@
         "drupal/center": "*",
         "drupal/centreon_status": "*",
         "drupal/cerf": "*",
+        "drupal/cfpurge": "*",
         "drupal/cgroups": "*",
         "drupal/change_field_type": "*",
         "drupal/channel": "*",
