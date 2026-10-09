@@ -1897,6 +1897,7 @@
         "drupal/leftpad": "*",
         "drupal/legacypath": "*",
         "drupal/levelup": "*",
+        "drupal/lexicon": "*",
         "drupal/libbootstrap4": "*",
         "drupal/libdb": "*",
         "drupal/libraries_cdn": "*",
