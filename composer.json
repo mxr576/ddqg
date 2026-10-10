@@ -2487,7 +2487,7 @@
         "drupal/commerce_gocardless_payment": "1.x-dev",
         "drupal/commerce_google_analytics": "1.0.0-beta1|1.x-dev",
         "drupal/commerce_google_tag_manager": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.x-dev|2.0.0-beta1|2.x-dev",
-        "drupal/commerce_gpwebpay": "1.0.0|1.0.1|1.0.x-dev",
+        "drupal/commerce_gpwebpay": "1.0.0|1.0.1",
         "drupal/commerce_gravity_payments": "1.0.x-dev",
         "drupal/commerce_guest_registration": "1.0.0|1.x-dev|2.0.1",
         "drupal/commerce_heidelpay": "1.x-dev",
