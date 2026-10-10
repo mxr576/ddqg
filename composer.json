@@ -3506,7 +3506,6 @@
         "drupal/webform_as_block": "*",
         "drupal/webform_associate": "*",
         "drupal/webform_autofill_attribute": "*",
-        "drupal/webform_background_color": "*",
         "drupal/webform_component_reuse": "*",
         "drupal/webform_config_ease": "*",
         "drupal/webform_date_picker_duet": "*",
