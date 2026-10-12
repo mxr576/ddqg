@@ -3010,6 +3010,7 @@
         "drupal/strongarm": "*",
         "drupal/strongleg": "*",
         "drupal/structontology": "*",
+        "drupal/style_management": "*",
         "drupal/styles": "*",
         "drupal/stylewriter": "*",
         "drupal/stylish": "*",
