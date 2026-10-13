@@ -300,7 +300,6 @@
         "drupal/workbench_moderation": ">=1.0.0,<1.4.0",
         "drupal/xmlsitemap": ">=1.0.0,<1.0.0-alpha2",
         "drupal/xray_audit": ">=1.6.0,<1.6.3|>=2.0.0,<2.0.4|>=3.1.0,<3.1.1",
-        "drupal/xsendfile": ">=1.0.0,<1.2.0",
         "drupal/yoast_seo": ">=2.0.0,<2.2.0"
     }
 }
