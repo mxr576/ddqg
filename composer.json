@@ -797,6 +797,7 @@
         "drupal/createcontentblock": "*",
         "drupal/creation": "*",
         "drupal/crm_core_subscriptions": "*",
+        "drupal/crmngp": "*",
         "drupal/crocheteer": "*",
         "drupal/cron_mt": "*",
         "drupal/crowd_sourced": "*",
