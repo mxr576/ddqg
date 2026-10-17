@@ -2232,6 +2232,7 @@
         "drupal/next_tag_revalidator": "*",
         "drupal/nfdvce": "*",
         "drupal/ngdrupal": "*",
+        "drupal/ngpvan": "*",
         "drupal/nice_primary_menus": "*",
         "drupal/nicedit": "*",
         "drupal/niobi_app_scheduler": "*",
