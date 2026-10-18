@@ -3557,6 +3557,7 @@
         "drupal/webform_share": "*",
         "drupal/webform_submission_entity": "*",
         "drupal/webform_tokens": "*",
+        "drupal/webform_unsubscribe": "*",
         "drupal/webform_upload": "*",
         "drupal/webform_validation_brazilian_ids": "*",
         "drupal/webform_views_submitted": "*",
