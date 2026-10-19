@@ -612,6 +612,7 @@
         "drupal/commerce_fix_orders": "*",
         "drupal/commerce_google_tag_manager": "*",
         "drupal/commerce_guest_registration": "*",
+        "drupal/commerce_heidelpay": "*",
         "drupal/commerce_hutko": "*",
         "drupal/commerce_ideal": "*",
         "drupal/commerce_instamozo": "*",
