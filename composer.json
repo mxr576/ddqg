@@ -1688,6 +1688,7 @@
         "drupal/human": "*",
         "drupal/hwwss": "*",
         "drupal/hyperpay": "*",
+        "drupal/i18_page_views": "*",
         "drupal/i18n_auto": "*",
         "drupal/i18n_views_fbcl": "*",
         "drupal/i18n_views_filterbylanguage": "*",
