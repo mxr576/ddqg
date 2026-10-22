@@ -1129,7 +1129,7 @@
         "drupal/brightcove_dynamic_ingest": "1.0.x-dev",
         "drupal/brightcove_player": "1.0.0-beta1|1.0.x-dev",
         "drupal/brightcove_text_tracks": "1.0.x-dev",
-        "drupal/brightedge_publisher_agent": "1.0.0",
+        "drupal/brightedge_publisher_agent": "1.0.0|1.0.1",
         "drupal/brightedge_seo_check": "1.0.0|1.1.0|1.2.0",
         "drupal/brighttalk_field": "1.0.0|1.x-dev",
         "drupal/bring_postal_code": "1.0.0|1.1.0|1.2.0",
