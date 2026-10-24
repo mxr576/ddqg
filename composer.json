@@ -659,6 +659,7 @@
         "drupal/commerce_sandbox": "*",
         "drupal/commerce_secupay_payments": "*",
         "drupal/commerce_secure_payment_settings": "*",
+        "drupal/commerce_securetrading": "*",
         "drupal/commerce_shipengine": "*",
         "drupal/commerce_shipping_best_method": "*",
         "drupal/commerce_shipping_cart_estimate": "*",
