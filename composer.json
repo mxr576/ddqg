@@ -3206,6 +3206,7 @@
         "drupal/trackduck_integration": "*",
         "drupal/tracking_code": "*",
         "drupal/tracking_opt_out": "*",
+        "drupal/tracking_options": "*",
         "drupal/tracrss": "*",
         "drupal/trademark": "*",
         "drupal/trailscout": "*",
