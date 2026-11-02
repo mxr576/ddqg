@@ -14359,7 +14359,7 @@
         "drupal/view_modes_display": "1.0.0|1.1.0|1.x-dev|2.0.0|2.1.0|2.2.0|2.3.0|2.4.0|2.x-dev|3.0.0",
         "drupal/view_modes_formatter_settings": "1.0.0-alpha1",
         "drupal/view_password": "4.0.0|4.x-dev|5.0.0|5.1.0|5.x-dev|6.0.0|6.0.2|6.0.3|6.0.4",
-        "drupal/view_profiles_perms": "1.0.0|1.0.0-alpha1|1.x-dev|2.0.0|2.0.x-dev|2.1.0|2.1.1|2.1.x-dev",
+        "drupal/view_profiles_perms": "1.0.0|1.0.0-alpha1|1.x-dev|2.0.0|2.0.x-dev|2.1.0|2.1.1",
         "drupal/view_publish_toggle": "1.0.0|1.0.2",
         "drupal/view_transitions": "1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3",
         "drupal/view_unpublished": "1.0.0|1.0.0-alpha1|1.0.0-rc1|1.0.0-rc2|1.0.0-rc3|1.1.0|1.2.0",
