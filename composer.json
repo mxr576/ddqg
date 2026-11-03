@@ -3994,7 +3994,7 @@
         "drupal/entity_reference_views": "1.0.0|1.0.0-alpha1|1.0.0-alpha2|1.0.0-beta1|1.0.0-beta2|1.0.0-rc1",
         "drupal/entity_reference_views_backfill": "1.0.0-beta1|1.0.0-beta2|1.0.0-beta3|1.0.x-dev",
         "drupal/entity_reference_views_select": "1.0.0|1.1.0|1.2.0|1.3.0|1.4.0",
-        "drupal/entity_reference_views_token": "1.0.0-beta1|1.0.0-beta2|1.x-dev",
+        "drupal/entity_reference_views_token": "1.0.0-beta1|1.0.0-beta2",
         "drupal/entity_reference_weight": "1.x-dev",
         "drupal/entity_reference_widget_helpers": "1.x-dev",
         "drupal/entity_reference_widgets": "1.0.0|1.0.0-alpha1|1.0.0-alpha2|1.0.0-alpha3|1.0.4|1.0.5",
