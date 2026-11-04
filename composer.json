@@ -6132,7 +6132,7 @@
         "drupal/keycdn": "1.0.0",
         "drupal/keycloak": "1.0.0|1.1.0|1.2.0|1.3.0|1.4.0|1.5.0|1.6.0|1.7.0|2.0.0-beta1|2.0.x-dev|2.1.x-dev|2.2.0-beta1",
         "drupal/keyspider_site_search": "1.0.0|1.0.x-dev",
-        "drupal/keyvalue_filestore": "1.0.0|1.x-dev",
+        "drupal/keyvalue_filestore": "1.0.0",
         "drupal/keyvalue_ui": "1.x-dev",
         "drupal/khan": "1.x-dev",
         "drupal/killadblock": "1.0.0|1.x-dev",
