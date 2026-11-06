@@ -1501,6 +1501,7 @@
         "drupal/friendly_autocomplete": "*",
         "drupal/frontpage": "*",
         "drupal/fruity": "*",
+        "drupal/fsk_demo": "*",
         "drupal/fully_translatable_menu_links": "*",
         "drupal/function_autoload": "*",
         "drupal/functional_content": "*",
