@@ -757,6 +757,7 @@
         "drupal/content_moderation_scheduled_updates": "*",
         "drupal/content_moderator": "*",
         "drupal/content_security_policy": "*",
+        "drupal/content_taxonomy": "*",
         "drupal/content_type_cleanup": "*",
         "drupal/content_type_exporter": "*",
         "drupal/content_types": "*",
